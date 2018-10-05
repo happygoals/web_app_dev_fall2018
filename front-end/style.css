@@ -19,6 +19,9 @@ body {
     background-color: #444444;
     color: white;
 }
+.col-sm-8{
+    background-color: #FFFFFF;
+}
             
 .nav-link {
     color: white;
@@ -27,3 +30,48 @@ body {
 .nav-item:hover {
     background-color: grey;
 }
+
+
+
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 2;
+    margin: 0 auto;
+}
+    .navbar-brand{
+        padding: 3px 25px 3px 2px;
+    }
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    .row.content{
+        height: 3000px;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
