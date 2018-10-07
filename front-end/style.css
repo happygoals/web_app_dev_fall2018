@@ -57,7 +57,14 @@ body {
 }
 
 .row.content {
-    height: 3000px;
+    min-height: 3000px;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
 }
 
 /* Set black background color, white text and some padding */
