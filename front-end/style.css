@@ -63,6 +63,11 @@ body {
   display:         flex;
 }
 
+.chartBox {
+    max-width: 200px;
+    max-height: 200px;
+}
+
 /* Set black background color, white text and some padding */
 footer {
     background-color: #555;
