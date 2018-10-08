@@ -14,13 +14,10 @@ body {
     margin: 0 auto;
     width: 100%;
 }
-            
-.col-sm-2 {
-    background-color: #444444;
-    color: white;
-}
-.col-sm-8{
+
+.col-sm-8 {
     background-color: #FFFFFF;
+    min-height: 550px;
 }
             
 .nav-link {
@@ -48,12 +45,11 @@ body {
 .row.content {
     height: 450px
 }
-    
+
 /* Set gray background color and 100% height */
 .sidenav {
     padding-top: 20px;
     background-color: #f1f1f1;
-    height: 100%;
 }
 
 .row.content {
