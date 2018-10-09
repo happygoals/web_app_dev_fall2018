@@ -1,92 +1,5 @@
-
-    body {
-        background-color: #444444;
-    }
-                
-    .col-lg {
-        height: 700px;
-        background-color: #d8d8d8;
-        width: 100%;
-        border-top-left-radius: 20px;
-    }
-                
-    .header {
-        background-color: #444444;
-        margin: 0 auto;
-        width: 100%;
-    }
-      
-    .col-sm-2.sidenav{
-        margin-top: 60px; 
-        background-color: #f9efff;
-        color: Black;
-    }            
-    .col-sm-2{
-        background-color: #444444;
-        color: Black;
-    }
-    .col-sm-6{
-        background-color: #FFFFFF;
-    }
-    .col-sm-7{
-        margin-top: 150px; 
-        background-color: #FFFFFF;
-    }           
-                
-    .nav-link {
-        color: white;
-    }
-    
-    .nav-item{
-        color: white;
-    }
-                
-    .nav-item:hover {
-        background-color: grey;
-    }
-
-
-    .navbar {
-        overflow: hidden;
-        background-color: #333;
-        position: fixed; /* Set the navbar to fixed position */
-        top: 0; /* Position the navbar at the top of the page */
-        width: 100%; /* Full width */
-        z-index: 2;
-        margin: 0 auto;
-        font-family: 'Font Awesome 5 Free';
-        text-align: center;
-    }
-    .navbar-brand{
-        padding: 3px 28px 3px 2px;
-    }
-
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      background-color: #cecece;
-      height: 100%;
-    }
-    
-    
-    
-    .row.content{
-        height: 3000px;
-    }
-    
-    .form-group{
-        margin-top: 40px;
-    }
-
 body {
     background-color: #444444;
-}
-            
-.col-lg {
-    height: 700px;
-    background-color: #d8d8d8;
-    width: 100%;
-    border-top-left-radius: 20px;
 }
             
 .header {
@@ -97,7 +10,8 @@ body {
 
 .col-sm-8 {
     background-color: #FFFFFF;
-    min-height: 550px;
+    padding-top: 30px;
+    min-height: 525px; /* need to figure out how to do this responsively. Need JS for it, not natively supported in CSS itself */
 }
             
 .nav-link {
@@ -115,11 +29,12 @@ body {
     width: 100%; /* Full width */
     z-index: 2;
     margin: 0 auto;
+    text-align: center;
+    font-family: 'Font Awesome 5 Free';
 }
 
-
 .navbar-brand {
-    padding: 3px 25px 3px 2px;
+    padding: 3px 28px 3px 2px;
 }
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -130,12 +45,7 @@ body {
 /* Set gray background color and 100% height */
 .sidenav {
     padding-top: 20px;
-    background-color: #f1f1f1;
-            height: 3000px;
-}
-
-.row.content {
-    min-height: 3000px;
+    background-color: #f9efff;
 }
 
 .row-eq-height {
