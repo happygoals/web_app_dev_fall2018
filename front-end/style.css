@@ -17,7 +17,7 @@
     }
       
     .col-sm-2.sidenav{
-        margin-top: 150px; 
+        margin-top: 60px; 
         background-color: #f9efff;
         color: Black;
     }            
@@ -131,6 +131,7 @@ body {
 .sidenav {
     padding-top: 20px;
     background-color: #f1f1f1;
+            height: 3000px;
 }
 
 .row.content {
