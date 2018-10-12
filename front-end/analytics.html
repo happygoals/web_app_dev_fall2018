@@ -38,9 +38,6 @@
             table.one {
                 border-spacing: 5px;
             }
-            
-            .one
-            
         </style>
     </head>
     
@@ -96,7 +93,7 @@
             <div class="row row-eq-height" style="padding-top: 70px">
         <div class="col-sm-2 sidenavl">
             <h3>Analytics</h3>
-            <p style="color:rgba(255, 255, 255, 0.4); text-align:left; font-style:italic">Keep a competitive vendingmachine by truly understanding the voice of your customers.</p>
+            <p style="color:rgba(255, 255, 255, 0.4); text-align:left; font-style:italic">Keep a competitive vending machine by truly understanding the voice of your customers.</p>
            
                     <select id="option" class="form-control">
                         <option value="bar">Bar chart</option>
@@ -105,9 +102,21 @@
                         <option value="Polar">Polar area chart</option>
                         <option value="Scatter">Scatter chart</option>
                     </select>
+                    
+                    
+                    <script>
+                        document.getElementById("option").addEventListener('change', function () {
+                            
+                        }
+                    </script>
         
         </div>
-        <div class="col-sm-8 text-left"> 
+        
+        <div class="col-sm-8 text-left" id="test2">
+            <h1>test</h1>
+        </div>
+        
+        <div class="col-sm-8 text-left" id="test1"> 
             
             <table class="one">
 			<tr>
