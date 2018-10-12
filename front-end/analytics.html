@@ -27,6 +27,20 @@
                 max-width: 200px;
                 max-height: 200px;
             }
+            
+            .box1 {
+                width: 320px;
+                padding: 10px;
+                border: 5px solid gray;
+                margin: 0;
+            }
+            
+            table.one {
+                border-spacing: 5px;
+            }
+            
+            .one
+            
         </style>
     </head>
     
@@ -94,15 +108,23 @@
         
         </div>
         <div class="col-sm-8 text-left"> 
-          <p>Divisions will be added here.</p>
+            
+            <table class="one">
+			<tr>
+				<th class="box1">New Tickets</th>
+				<th class="box1">New Visitors</th>
+				<th class="box1">New Comments</th>
+				<th class="box1">New Tasks</th>
+			</tr>
+			</table>
           
-          <div class="chartBox">
-            <canvas id="myChart1" width="400" height="400"></canvas>
-        </div>
+            <div class="chartBox">
+                <canvas id="myChart1" width="400" height="400"></canvas>
+            </div>
         
-        <div class="chartBox">
-            <canvas id="chart2" width="400" height="400"></canvas>
-        </div>
+            <div class="chartBox">
+                <canvas id="chart2" width="400" height="400"></canvas>
+            </div>
         
         <!-- can someone figure out if theres a way to put this in an outside file or at least <head>? I tried but it broke stuff, and Im notsure why-->
         <script>
@@ -183,6 +205,9 @@
             });
         </script>
         </div>
+        
+        
+        
         <div class="col-sm-2 sidenav">
 
         </div>
