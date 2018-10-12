@@ -95,18 +95,17 @@
       
         <div class="container-fluid text-center">
             <div class="row row-eq-height" style="padding-top: 70px">
-        <div class="col-sm-2 sidenavl">
-            <h3>Analytics</h3>
-            <p style="color:rgba(255, 255, 255, 0.4); text-align:left; font-style:italic">Keep a competitive vending machine by truly understanding the voice of your customers.</p>
+                <div class="col-sm-2 sidenavl">
+                    <h3>Analytics</h3>
+                    <p style="color:rgba(255, 255, 255, 0.4); text-align:left; font-style:italic">Keep a competitive vending machine by truly understanding the voice of your customers.</p>
            
                     <select id="option" class="form-control">
                         <option value="bar">Bar chart</option>
-                        <option value="Pie">Pie chart</option>
-                        <option value="Line chart">Line chart</option>
-                        <option value="Polar">Polar area chart</option>
-                        <option value="Scatter">Scatter chart</option>
+                        <option value="pie">Pie chart</option>
+                        <option value="line">Line chart</option>
+                        <option value="polar">Polar area chart</option>
+                        <option value="scatter">Scatter chart</option>
                     </select>
-                    
                     
                     <script>
                         document.getElementById("option").addEventListener('change', function () {
@@ -123,13 +122,7 @@
         
         </div>
         <div class="col-sm-8 text-left">
-            <div class="inv" id="Pie">
-                <h1>Test</h1>
-                <p>PIE CHART GOES HERE</p>
-            </div>
-            
-            
-            <div class="inv" id="bar">
+            <div class="vis" id="bar"> <!--vis does nothing here, just differentiates it from invisible for code readability -->
                 <table class="one">
     			<tr>
     				<th class="box1">New Tickets</th>
@@ -148,87 +141,26 @@
                 </div>
             
                 <!-- can someone figure out if theres a way to put this in an outside file or at least <head>? I tried but it broke stuff, and Im notsure why-->
-                <script>
-                    var ctx = document.getElementById("myChart1").getContext('2d');
-                    var myChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                            datasets: [{
-                                label: '# of Votes',
-                                data: [12, 19, 3, 5, 2, 3],
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
-                                ],
-                                borderColor: [
-                                    'rgba(255,99,132,1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)',
-                                    'rgba(255, 159, 64, 1)'
-                                ],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero:true
-                                    }
-                                }]
-                            }
-                        }
-                    });
-                    
-                    var ctx2 = document.getElementById("chart2").getContext('2d');
-                    var myChart2 = new Chart(ctx2, {
-                        type: 'bar',
-                        data: {
-                            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                            datasets: [{
-                                label: '# of Votes',
-                                data: [1, 9, 23, 7, 12, 3],
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)'
-                                ],
-                                borderColor: [
-                                    'rgba(255,99,132,1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)',
-                                    'rgba(153, 102, 255, 1)',
-                                    'rgba(255, 159, 64, 1)'
-                                ],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero:true
-                                    }
-                                }]
-                            }
-                        }
-                    });
-                </script>
-            </div> 
+                <script src="barGraphs.js"></script>
+            </div>
+            
+            <div class="inv" id="pie">
+                <h1>Test</h1>
+                <p>PIE CHART GOES HERE</p>
+            </div>
+            
+            <div class="inv" id="line">
+                LINE CHART GOES HERE
+            </div>
+            
+            <div class="inv" id="polar">
+                POLAR CHART GOES HERE
+            </div>
+            
+            <div class="inv" id="scatter">
+                SCATTER PLOT GOES HERE
+            </div>
         </div>
-        
-        
         
         <div class="col-sm-2 sidenav">
 
