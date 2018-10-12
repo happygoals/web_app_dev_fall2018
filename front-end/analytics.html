@@ -38,6 +38,10 @@
             table.one {
                 border-spacing: 5px;
             }
+            
+            .inv {
+                display: none;
+            }
         </style>
     </head>
     
@@ -106,113 +110,122 @@
                     
                     <script>
                         document.getElementById("option").addEventListener('change', function () {
-                            
-                        }
+                            'use strict';
+                            var vis = document.querySelector('.vis'), target = document.getElementById(this.value);
+                            if (vis !== null) {
+                                vis.className = 'inv';
+                            }
+                            if (target !== null ) {
+                                target.className = 'vis';
+                            }
+                        });
                     </script>
         
         </div>
-        
-        <div class="col-sm-8 text-left" id="test2">
-            <h1>test</h1>
-        </div>
-        
-        <div class="col-sm-8 text-left" id="test1"> 
-            
-            <table class="one">
-			<tr>
-				<th class="box1">New Tickets</th>
-				<th class="box1">New Visitors</th>
-				<th class="box1">New Comments</th>
-				<th class="box1">New Tasks</th>
-			</tr>
-			</table>
-          
-            <div class="chartBox">
-                <canvas id="myChart1" width="400" height="400"></canvas>
+        <div class="col-sm-8 text-left">
+            <div class="inv" id="Pie">
+                <h1>Test</h1>
+                <p>PIE CHART GOES HERE</p>
             </div>
-        
-            <div class="chartBox">
-                <canvas id="chart2" width="400" height="400"></canvas>
-            </div>
-        
-        <!-- can someone figure out if theres a way to put this in an outside file or at least <head>? I tried but it broke stuff, and Im notsure why-->
-        <script>
-            var ctx = document.getElementById("myChart1").getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255,99,132,1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero:true
-                            }
-                        }]
-                    }
-                }
-            });
             
-            var ctx2 = document.getElementById("chart2").getContext('2d');
-            var myChart2 = new Chart(ctx2, {
-                type: 'bar',
-                data: {
-                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [1, 9, 23, 7, 12, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255,99,132,1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero:true
+            
+            <div class="inv" id="bar">
+                <table class="one">
+    			<tr>
+    				<th class="box1">New Tickets</th>
+    				<th class="box1">New Visitors</th>
+    				<th class="box1">New Comments</th>
+    				<th class="box1">New Tasks</th>
+    			</tr>
+    			</table>
+              
+                <div class="chartBox">
+                    <canvas id="myChart1" width="400" height="400"></canvas>
+                </div>
+            
+                <div class="chartBox">
+                    <canvas id="chart2" width="400" height="400"></canvas>
+                </div>
+            
+                <!-- can someone figure out if theres a way to put this in an outside file or at least <head>? I tried but it broke stuff, and Im notsure why-->
+                <script>
+                    var ctx = document.getElementById("myChart1").getContext('2d');
+                    var myChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                            datasets: [{
+                                label: '# of Votes',
+                                data: [12, 19, 3, 5, 2, 3],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgba(255,99,132,1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero:true
+                                    }
+                                }]
                             }
-                        }]
-                    }
-                }
-            });
-        </script>
+                        }
+                    });
+                    
+                    var ctx2 = document.getElementById("chart2").getContext('2d');
+                    var myChart2 = new Chart(ctx2, {
+                        type: 'bar',
+                        data: {
+                            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                            datasets: [{
+                                label: '# of Votes',
+                                data: [1, 9, 23, 7, 12, 3],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgba(255,99,132,1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero:true
+                                    }
+                                }]
+                            }
+                        }
+                    });
+                </script>
+            </div> 
         </div>
         
         
