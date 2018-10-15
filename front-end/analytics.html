@@ -51,6 +51,10 @@
                 width:100px;
                 border: 5px solid gray;
             }
+            
+            
+            
+            
             /*
              .box {
 		        width: 200px;
@@ -90,11 +94,9 @@
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search"></i>
-                </button>
+                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
               </div>
-            </div>
+              </div>
           </form>
       
           <!-- Navbar -->
@@ -144,18 +146,44 @@
         <div class="col-sm-8 text-left">
             <div class="vis" id="bar"> <!--vis does nothing here, just differentiates it from invisible for code readability -->
                 
-                <div class="row row-eq-height" style="padding-top: 70px">
-                <div class="col-sm-2 text-left">New Tickets</div>
-                <div class="col-sm-2 text-left">New Visitors</div>
-                <div class="col-sm-2 text-left">New Comments</div>
-                <div class="col-sm-2 text-left">New Tasks</div>
+                <div class="row justify-content-around" >
+                    
+                
+                <span class="p-2 flex-fill" style="background-color:Orange  ;"><img class="img-valign" src="qmark.png" alt="img1test" style="width:50px; height:50px " />
+                New Tickets:257</span>
+    
+                
+                <span class="p-2 flex-fill" style="background-color:SkyBlue  ;"><img class="img-valign" src="user.png" alt="img2test" style="width:50px; height:50px " /> New Visitors: 19</span>
+                
+                
+                <span class="p-2 flex-fill" style="background-color:YellowGreen ;"><img class="img-valign" src="snack.png" alt="img3test" style="width:50px; height:50px "/>Popular Snack</span>   
+                    
+                
+                <span class="p-2 flex-fill" style="background-color:OrangeRed ;"><img class="img-valign" src="hot.png" alt="img2test" style="width:50px; height:50px " />Today's Hot Item</span>
+                </div>
+                
+                <div class="row justify-content-around">
+                    <div class="chartBox">
+                        <canvas id="myChart1" width="400" height="400"></canvas>
+                    </div>
+                
+                    <div class="2">
+                        <li>
+                        <ul>Today's hot lists</ul>
+                        <ul>Coke</ul>
+                        <ul>Oreo</ul>
+                        </li>
+                    </div>
+                
+                
+                </div>
+                <div>
+                    
                 </div>
                 
                 
-                <div class="chartBox">
-                    <canvas id="myChart1" width="400" height="400"></canvas>
-                </div>
-            
+                
+                
                 <div class="chartBox">
                     <canvas id="chart2" width="400" height="400"></canvas>
                 </div>
