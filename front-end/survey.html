@@ -74,28 +74,23 @@
                     <!--Name and Email Gather START-->
                     <p>To begin this survey we ask that you provide your name and email. The purpose of these provisions is to create a pdf version that can be sent to your email.
                     The email will not be used to send advertisements or spam. Thanks for your cooperation!</p>
-                    <div>
-                        <form  action="" id="contact" method="get" onsubmit="return validate">
-                        	<label>Name: <input id="name" name="name" type="text"></label>
-            				<br><br>
-            				<label>Email: <input id="email" name="email" type="text"></label>
-            				<br><br>
-                        </form>
-                    </div>
-                    <!--Name and Email Gather END-->
-                    <!--Question 1 START-->
+                    <form  action="" id="survey" method="get" onsubmit="return validate();">
+                        Name: <input id="name" name="name" type="text"><br><br>
+        				Email: <input id="email" name="email" type="text"><br><br>
+                        <!--Name and Email Gather END-->
+                        <!--Question 1 START-->
                         <form id="radio-question-group-1">
                             <h6>1) Do you purchase snacks on campus currently?</h6>
-                            <label class="radio-inline"><input type="radio" id="yes1" name="opt" onclick="javascript:yesnoCheck();">Yes</label>
-                            <label class="radio-inline"><input type="radio" id="no1" name="opt" onclick="javascript:yesnoCheck();">No</label>
+                            <label class="radio-inline"><input type="radio" id="yes1" name="opt" onclick="yesnoCheck();">Yes</label>
+                            <label class="radio-inline"><input type="radio" id="no1" name="opt" onclick="yesnoCheck();">No</label>
                         </form>
                         <form id="why-group1" style="visibility:hidden">
                             <h6>Could you please explain your decision?</h6>
                             <textarea rows="5" cols="75" name="Why"></textarea>
                             <br>
                         </form>
-                    <!--Question 1 END-->
-                    <!--Question 2 START-->
+                        <!--Question 1 END-->
+                        <!--Question 2 START-->
                         <form id="radio-question-group-1">
                             <h6>2) Do you purchase beverages on campus currently?</h6>
                             <label class="radio-inline"><input type="radio" id="yes2" name="opt" onclick="javascript:yesnoCheck();">Yes</label>
@@ -106,7 +101,9 @@
                             <textarea rows="5" cols="75" name="why"></textarea>
                             <br>
                         </form>
-                    <!-- Question 2 END-->
+                        <!-- Question 2 END-->
+                        <input type="submit" value="Finish Survey">
+                    </form>
                 </div>
                 <div class="col-sm-1 sidebg" >
                 </div>
