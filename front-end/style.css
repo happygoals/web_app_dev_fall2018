@@ -63,7 +63,9 @@ h3{
     padding: 3px 28px 3px 2px;
 }
 
-
+input[type="radio"]{
+  margin: 0 10px 0 10px;
+}
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {
