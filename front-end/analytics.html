@@ -41,6 +41,27 @@
             .inv {
                 display: none;
             }
+            
+            .div1 {
+                width:100px;
+                border: 5px solid gray;
+            }
+            
+            .div2 {
+                width:100px;
+                border: 5px solid gray;
+            }
+            /*
+             .box {
+		        width: 200px;
+			    border: 2px solid #0088dd;
+			    display: flex;
+			    flex-wrap:         nowrap;
+			    
+               justify-content: space-around;
+		    }
+            */
+            
         </style>
     </head>
     
@@ -122,15 +143,15 @@
         </div>
         <div class="col-sm-8 text-left">
             <div class="vis" id="bar"> <!--vis does nothing here, just differentiates it from invisible for code readability -->
-                <table class="one">
-    			<tr>
-    				<th class="box1">New Tickets</th>
-    				<th class="box1">New Visitors</th>
-    				<th class="box1">New Comments</th>
-    				<th class="box1">New Tasks</th>
-    			</tr>
-    			</table>
-              
+                
+                <div class="row row-eq-height" style="padding-top: 70px">
+                <div class="col-sm-2 text-left">New Tickets</div>
+                <div class="col-sm-2 text-left">New Visitors</div>
+                <div class="col-sm-2 text-left">New Comments</div>
+                <div class="col-sm-2 text-left">New Tasks</div>
+                </div>
+                
+                
                 <div class="chartBox">
                     <canvas id="myChart1" width="400" height="400"></canvas>
                 </div>
