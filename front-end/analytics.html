@@ -22,25 +22,25 @@
         <style>
             @import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700'); 
             @import url('https://fonts.googleapis.com/css?family=Raleway:200i,400,400i,500,600,700,800,900');
-
             .chartBox {
                 max-width: 200px;
                 max-height: 200px;
             }
             
-            td {
+            .box1 {
                 width: 320px;
                 padding: 10px;
                 border: 5px solid gray;
                 margin: 0;
-                border-spacing: 5px;
             }
             
             table.one {
                 border-spacing: 5px;
             }
             
-            
+            .inv {
+                display: none;
+            }
         </style>
     </head>
     
@@ -94,119 +94,88 @@
       
         <div class="container-fluid text-center">
             <div class="row row-eq-height" style="padding-top: 70px">
-        <div class="col-sm-2 sidenavl">
-            <h3>Analytics</h3>
-            <p style="color:rgba(255, 255, 255, 0.4); text-align:left; font-style:italic">Keep a competitive vendingmachine by truly understanding the voice of your customers.</p>
+                <div class="col-sm-2 sidenavl">
+                    <h3>Analytics</h3>
+                    <p style="color:rgba(255, 255, 255, 0.4); text-align:left; font-style:italic">Keep a competitive vending machine by truly understanding the voice of your customers.</p>
            
                     <select id="option" class="form-control">
                         <option value="bar">Bar chart</option>
-                        <option value="Pie">Pie chart</option>
-                        <option value="Line chart">Line chart</option>
-                        <option value="Polar">Polar area chart</option>
-                        <option value="Scatter">Scatter chart</option>
+                        <option value="pie">Pie chart</option>
+                        <option value="line">Line chart</option>
+                        <option value="polar">Polar area chart</option>
+                        <option value="scatter">Scatter chart</option>
                     </select>
+                    
+                    <script>
+                        document.getElementById("option").addEventListener('change', function () {
+                            'use strict';
+                            var vis = document.querySelector('.vis'), target = document.getElementById(this.value);
+                            if (vis !== null) {
+                                vis.className = 'inv';
+                            }
+                            if (target !== null ) {
+                                target.className = 'vis';
+                            }
+                        });
+                    </script>
         
         </div>
-        <div class="col-sm-8 text-left"> 
+        <div class="col-sm-8 text-left">
+            <div class="vis" id="bar"> <!--vis does nothing here, just differentiates it from invisible for code readability -->
+                <table class="one">
+    			<tr>
+    				<th class="box1">New Tickets</th>
+    				<th class="box1">New Visitors</th>
+    				<th class="box1">New Comments</th>
+    				<th class="box1">New Tasks</th>
+    			</tr>
+    			</table>
+              
+                <div class="chartBox">
+                    <canvas id="myChart1" width="400" height="400"></canvas>
+                </div>
             
-            <table class="one">
-			<tr>
-			    <td> New Tickets </td>
-			    <td> New Visitors </td>
-			    <td> New Comments </td>
-			    <td> New Tasks </td>
-			</tr>
-			</table>
-          
-            <div class="chartBox">
-                <canvas id="myChart1" width="400" height="400"></canvas>
-            </div>
-        
-            <div class="chartBox">
-                <canvas id="chart2" width="400" height="400"></canvas>
-            </div>
-        
-        <!-- can someone figure out if theres a way to put this in an outside file or at least <head>? I tried but it broke stuff, and Im notsure why-->
-        <script>
-            var ctx = document.getElementById("myChart1").getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255,99,132,1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero:true
-                            }
-                        }]
-                    }
-                }
-            });
+                <div class="chartBox">
+                    <canvas id="chart2" width="400" height="400"></canvas>
+                </div>
             
-            var ctx2 = document.getElementById("chart2").getContext('2d');
-            var myChart2 = new Chart(ctx2, {
-                type: 'bar',
-                data: {
-                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [1, 9, 23, 7, 12, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255,99,132,1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero:true
-                            }
-                        }]
-                    }
-                }
-            });
-        </script>
+                <!-- can someone figure out if theres a way to put this in an outside file or at least <head>? I tried but it broke stuff, and Im notsure why-->
+                <script src="barGraphs.js"></script>
+            </div>
+            
+            <div class="inv" id="pie">
+                <table class="one">
+    			<tr>
+    				<th class="box1">New Tickets</th>
+    				<th class="box1">New Visitors</th>
+    				<th class="box1">New Comments</th>
+    				<th class="box1">New Tasks</th>
+    			</tr>
+    			</table>
+              
+                <div class="chartBox">
+                    <canvas id="pieChart1" width="400" height="400"></canvas>
+                </div>
+            
+                <div class="chartBox">
+                    <canvas id="pieChart2" width="400" height="400"></canvas>
+                </div>
+            
+                <script src="pieChart.js"></script>
+            </div>
+            
+            <div class="inv" id="line">
+                LINE CHART GOES HERE
+            </div>
+            
+            <div class="inv" id="polar">
+                POLAR CHART GOES HERE
+            </div>
+            
+            <div class="inv" id="scatter">
+                SCATTER PLOT GOES HERE
+            </div>
         </div>
-        
-        
         
         <div class="col-sm-2 sidenav">
 
