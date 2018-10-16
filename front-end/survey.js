@@ -25,12 +25,7 @@ function moredetails() {
 function disable()
 {   
     /* Allows the submit button to be either disabled or enabled */
-    if (document.forms.survey.submitsurvey.checked) {
-        document.getElementById('submit').disabled = false;
-    }
-    else{
-        document.getElementById('submit').disabled = true;
-    }
+    document.getElementById("submit").disabled = !document.getElementById("submit").disabled;
 }
 
 function validate()
