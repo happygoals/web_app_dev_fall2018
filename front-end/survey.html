@@ -236,6 +236,7 @@
                         <h6>3) What sex are you?</h6>
                         <label class="radio-inline"><input type="radio" id="yes2" name="opt" >Male</label>
                         <label class="radio-inline"><input type="radio" id="no2" name="opt">Female</label>
+                        <label class="radio-inline"><input type="radio" id="no2" name="opt">Other</label>
                         <br>
                     </form>
                     <!-- Question 3 END-->
@@ -253,22 +254,24 @@
                             <li><input type="checkbox" id="gum" name="gum" value="gum"> Gum<br></li>
                             <li><input type="checkbox" id="other" name="other" value="other" onclick="moredetails();"> Other Snack or Beverage<br></li>
                         </ul>
-                        <br>
+                    </form>
                     <form id="why-group3" style="visibility:hidden">
                         <h6>Could you please write down the option not present in the listed options above?</h6>
                         <textarea rows="5" cols="75" name="Why"></textarea>
                         <br>
                     </form>
-                    </form>
                     <!-- Question 4 END-->
-                    <input type="submit" value="Submit">
                     <!--Name and Email Gather START-->
                     <p style="width:80%">To complete this survey we ask that you provide your name and email. The purpose of these provisions is to create a PDF version that can be sent to your email.
                     The email will not be used to send advertisements or spam. Thanks for your cooperation!</p>
+                    <br>
                     <form  action="" id="survey" method="get" onsubmit="return validate();">
-                        Name: <input id="name" name="name" type="text"><br><br>
-    				    Email: <input id="email" name="email" type="text"><br><br>
-				    </form>
+                      Name: <input id="name" name="name" type="text"><br>
+  				            Email: <input id="email" name="email" type="text"><br>
+				              I agree to Snackfacts' terms and conditions: <input id="agreement" name="agreement" type="checkbox" onclick="disable();"><br>
+  				            <input id="submit" type="submit" value="Submit" disabled>
+  				            <br>
+				            </form>
                     <!--Name and Email Gather END-->
                 </div>
             </div>
