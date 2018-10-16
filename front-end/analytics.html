@@ -8,16 +8,10 @@
 	<link href="favicon address" rel="shortcut icon">
 	<link href="bootstrap-4.1.3-dist/css/bootstrap.min.css" rel="stylesheet"><!-- scripts -->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-	</script>
-	<!-- Popper JS -->
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
-	</script>
-	<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js">
-	</script>
-	<!-- Custom styles for this template-->
-	<link href="./style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> <!-- Popper JS -->
+	<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+	<link href="css/style.css" rel="stylesheet"> <!-- Custom styles for this template-->
 	<script src="Chart.js/Chart.min.js">
 	</script>
 	<style>
@@ -52,26 +46,11 @@
 	               width:100px;
 	               border: 5px solid gray;
 	           }
-	           
-	           
-	           
-	           
-	           /*
-	            .box {
-	               width: 200px;
-	               border: 2px solid #0088dd;
-	               display: flex;
-	               flex-wrap:         nowrap;
-	               
-	              justify-content: space-around;
-	           }
-	           */
-	           
 	</style>
 </head>
 <body>
 	<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-		<a class="navbar-brand mr-1" href="home.html"><img alt="Logo" src="snackfactsLogoOrangePurple.png" style="width:171px; height:47px;"></a>
+		<a class="navbar-brand mr-1" href="home.html"><img alt="Logo" src="resource/logo.png" style="width:171px; height:47px;"></a>
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link" href="home.html">Home</a>
@@ -139,7 +118,7 @@
 				<div class="vis" id="bar">
 					<!--vis does nothing here, just differentiates it from invisible for code readability -->
 					<div class="row justify-content-around">
-						<span class="p-2 flex-fill" style="background-color:Orange ;"><img alt="img1test" class="img-valign" src="qmark.png" style="width:50px; height:50px"> New Tickets:257</span> <span class="p-2 flex-fill" style="background-color:SkyBlue ;"><img alt="img2test" class="img-valign" src="user.png" style="width:50px; height:50px"> New Visitors: 19</span> <span class="p-2 flex-fill" style="background-color:YellowGreen ;"><img alt="img3test" class="img-valign" src="snack.png" style="width:50px; height:50px">Popular Snack</span> <span class="p-2 flex-fill" style="background-color:OrangeRed ;"><img alt="img2test" class="img-valign" src="hot.png" style="width:50px; height:50px">Today's Hot Item</span>
+						<span class="p-2 flex-fill" style="background-color:Orange ;"><img alt="img1test" class="img-valign" src="resource/qmark.png" style="width:50px; height:50px"> New Tickets:257</span> <span class="p-2 flex-fill" style="background-color:SkyBlue ;"><img alt="img2test" class="img-valign" src="resource/user.png" style="width:50px; height:50px"> New Visitors: 19</span> <span class="p-2 flex-fill" style="background-color:YellowGreen ;"><img alt="img3test" class="img-valign" src="resource/snack.png" style="width:50px; height:50px">Popular Snack</span> <span class="p-2 flex-fill" style="background-color:OrangeRed ;"><img alt="img2test" class="img-valign" src="resource/hot.png" style="width:50px; height:50px">Today's Hot Item</span>
 					</div>
 					<div class="row justify-content-around">
 						<div class="chartBox">
@@ -203,12 +182,12 @@
                 </div>
             -->
 					<!-- can someone figure out if theres a way to put this in an outside file or at least <head>? I tried but it broke stuff, and Im notsure why-->
-					<script src="barGraphs.js">
+					<script src="js/barGraphs.js">
 					</script>
 				</div>
 				<div class="inv" id="pie">
 					<div class="row justify-content-around">
-						<span class="p-2 flex-fill" style="background-color:Orange ;"><img alt="img1test" class="img-valign" src="qmark.png" style="width:50px; height:50px"> New Tickets:257</span> <span class="p-2 flex-fill" style="background-color:SkyBlue ;"><img alt="img2test" class="img-valign" src="user.png" style="width:50px; height:50px"> New Visitors: 19</span> <span class="p-2 flex-fill" style="background-color:YellowGreen ;"><img alt="img3test" class="img-valign" src="snack.png" style="width:50px; height:50px">Popular Snack</span> <span class="p-2 flex-fill" style="background-color:OrangeRed ;"><img alt="img2test" class="img-valign" src="hot.png" style="width:50px; height:50px">Today's Hot Item</span>
+						<span class="p-2 flex-fill" style="background-color:Orange ;"><img alt="img1test" class="img-valign" src="resource/qmark.png" style="width:50px; height:50px"> New Tickets:257</span> <span class="p-2 flex-fill" style="background-color:SkyBlue ;"><img alt="img2test" class="img-valign" src="resource/user.png" style="width:50px; height:50px"> New Visitors: 19</span> <span class="p-2 flex-fill" style="background-color:YellowGreen ;"><img alt="img3test" class="img-valign" src="resource/snack.png" style="width:50px; height:50px">Popular Snack</span> <span class="p-2 flex-fill" style="background-color:OrangeRed ;"><img alt="img2test" class="img-valign" src="resource/hot.png" style="width:50px; height:50px">Today's Hot Item</span>
 					</div>
 					<div class="chartBox">
 						<canvas height="400" id="pieChart1" width="400"></canvas>
@@ -261,7 +240,7 @@
                     <canvas id="pieChart2" width="400" height="400"></canvas>
                 </div>
             -->
-					<script src="pieChart.js">
+					<script src="js/pieChart.js">
 					</script>
 				</div>
 				<div class="inv" id="line">
