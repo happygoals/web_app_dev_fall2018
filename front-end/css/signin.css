@@ -146,7 +146,7 @@ body {
 	}
 }
 .modal-body {
-	background-image: url('red-vending.svg');
+	background-image: url('/front-end/resource/red-vending.svg');
 	background-size: cover;
 	background-color: transparent;
 	z-index: 1;

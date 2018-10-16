@@ -222,7 +222,7 @@ input[type="radio"] {
 .sidenavl {
 	padding-top: 20px;
 	background-color: RGB(150, 110, 213);
-	background: RGB(150, 110, 213) url("background-machine.png") left bottom;
+	background: RGB(150, 110, 213) url("/front-end/resource/red-vending.svg") left bottom;
 	background-size: 1400px;
 	text-align: right;
 }
