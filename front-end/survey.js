@@ -22,6 +22,18 @@ function moredetails() {
     }
 }
 
+
+function expandCollapseBox() {
+    var x = "why-group1";
+    
+    if (document.getElementById(x).style.display == "none") {
+        document.getElementById(x).style.display = "block";
+    }
+    else {
+        document.getElementById(x).style.display = "none";
+    }
+}
+
 function disable()
 {   
     /* Allows the submit button to be either disabled or enabled */
