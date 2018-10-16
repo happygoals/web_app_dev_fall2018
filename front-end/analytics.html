@@ -29,7 +29,7 @@
 	               margin: 0;
 	           }
 	           
-	           table.one {
+	           .one {
 	               border-spacing: 5px;
 	           }
 	           
@@ -102,24 +102,24 @@
 					</option>
 				</select> 
 				<script>
-				                    document.getElementById("option").addEventListener('change', function () {
-				                        'use strict';
-				                        var vis = document.querySelector('.vis'), target = document.getElementById(this.value);
-				                        if (vis !== null) {
-				                            vis.className = 'inv';
-				                        }
-				                        if (target !== null ) {
-				                            target.className = 'vis';
-				                        }
-				                    });
+					document.getElementById("option").addEventListener('change', function () {
+						'use strict';
+						var vis = document.querySelector('.vis'), target = document.getElementById(this.value);
+						if (vis !== null) {
+							vis.className = 'inv';
+						}
+						if (target !== null ) {
+							target.className = 'vis';
+						}
+					});
 				</script>
 			</div>
 			<div class="col-sm-8 text-left">
-				<div class="vis" id="bar">
-					<!--vis does nothing here, just differentiates it from invisible for code readability -->
-					<div class="row justify-content-around">
-						<span class="p-2 flex-fill" style="background-color:Orange ;"><img alt="img1test" class="img-valign" src="resource/qmark.png" style="width:50px; height:50px"> New Tickets:257</span> <span class="p-2 flex-fill" style="background-color:SkyBlue ;"><img alt="img2test" class="img-valign" src="resource/user.png" style="width:50px; height:50px"> New Visitors: 19</span> <span class="p-2 flex-fill" style="background-color:YellowGreen ;"><img alt="img3test" class="img-valign" src="resource/snack.png" style="width:50px; height:50px">Popular Snack</span> <span class="p-2 flex-fill" style="background-color:OrangeRed ;"><img alt="img2test" class="img-valign" src="resource/hot.png" style="width:50px; height:50px">Today's Hot Item</span>
-					</div>
+				<div class="row justify-content-around">
+					<span class="p-2 flex-fill" style="background-color:Orange"><img alt="img1test" class="img-valign" src="resource/qmark.png" style="width:50px; height:50px"> New Tickets:257</span> <span class="p-2 flex-fill" style="background-color:SkyBlue ;"><img alt="img2test" class="img-valign" src="resource/user.png" style="width:50px; height:50px"> New Visitors: 19</span> <span class="p-2 flex-fill" style="background-color:YellowGreen ;"><img alt="img3test" class="img-valign" src="resource/snack.png" style="width:50px; height:50px">Popular Snack</span> <span class="p-2 flex-fill" style="background-color:OrangeRed ;"><img alt="img2test" class="img-valign" src="resource/hot.png" style="width:50px; height:50px">Today's Hot Item</span>
+				</div>
+				
+				<div class="vis" id="bar"> <!--vis does nothing here, just differentiates it from invisible for code readability -->
 					<div class="row justify-content-around">
 						<div class="chartBox">
 							<canvas height="400" id="myChart1" width="400"></canvas>
@@ -176,19 +176,12 @@
 								</tr>
 							</tbody>
 						</table>
-					</div><!--
-                <div class="chartBox">
-                    <canvas id="chart2" width="400" height="400"></canvas>
-                </div>
-            -->
+					</div>
+					
 					<!-- can someone figure out if theres a way to put this in an outside file or at least <head>? I tried but it broke stuff, and Im notsure why-->
-					<script src="js/barGraphs.js">
-					</script>
+					<script src="js/barGraphs.js"></script>
 				</div>
 				<div class="inv" id="pie">
-					<div class="row justify-content-around">
-						<span class="p-2 flex-fill" style="background-color:Orange ;"><img alt="img1test" class="img-valign" src="resource/qmark.png" style="width:50px; height:50px"> New Tickets:257</span> <span class="p-2 flex-fill" style="background-color:SkyBlue ;"><img alt="img2test" class="img-valign" src="resource/user.png" style="width:50px; height:50px"> New Visitors: 19</span> <span class="p-2 flex-fill" style="background-color:YellowGreen ;"><img alt="img3test" class="img-valign" src="resource/snack.png" style="width:50px; height:50px">Popular Snack</span> <span class="p-2 flex-fill" style="background-color:OrangeRed ;"><img alt="img2test" class="img-valign" src="resource/hot.png" style="width:50px; height:50px">Today's Hot Item</span>
-					</div>
 					<div class="chartBox">
 						<canvas height="400" id="pieChart1" width="400"></canvas>
 					</div>
@@ -235,16 +228,20 @@
 								</tr>
 							</tbody>
 						</table>
-					</div><!--
-                <div class="chartBox">
-                    <canvas id="pieChart2" width="400" height="400"></canvas>
-                </div>
-            -->
-					<script src="js/pieChart.js">
-					</script>
+					</div>
+					
+					<script src="js/pieChart.js"></script>
 				</div>
 				<div class="inv" id="line">
-					LINE CHART GOES HERE
+					<div class="chartBox">
+						<canvas height="400" id="lineChart1" width="400"></canvas>
+					</div>
+					
+					<div class="chartBox">
+						<canvas height="400" id="lineChart2" width="400"></canvas>
+					</div>
+					
+					<script src="js/lineChart.js"></script>
 				</div>
 				<div class="inv" id="polar">
 					POLAR CHART GOES HERE
