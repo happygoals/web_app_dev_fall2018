@@ -237,8 +237,9 @@ input::-moz-focus-inner {
 .nav-link {
     color: white;
 }
-.nav-current {
-   background-color: RGB(242,188,46); 
+
+.nav-item.active {
+   color: RGB(242,188,46); 
 }
             
 .nav-item:hover {
