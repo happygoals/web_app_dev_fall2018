@@ -210,8 +210,8 @@
                     <!--Question 1 START-->
                     <form id="radio-question-group-1">
                         <h6>1) Do you purchase snacks on campus currently?</h6>
-                        <label class="radio-inline"><input type="radio" id="yes1" name="opt" onclick="expandCollapseBox();">Yes</label>
-                        <label class="radio-inline"><input type="radio" id="no1" name="opt" onclick="expandCollapseBox();">No</label>
+                        <label class="radio-inline"><input type="radio" id="yes1" name="opt" onclick="expandCollapseBox('why-group1', 0);">Yes</label>
+                        <label class="radio-inline"><input type="radio" id="no1" name="opt" onclick="expandCollapseBox('why-group1', 1);">No</label>
                     </form>
                     <form id="why-group1" style="display: none">
                         <h6>Could you please explain your decision?</h6>
@@ -222,10 +222,10 @@
                     <!--Question 2 START-->
                     <form id="radio-question-group-2">
                         <h6>2) Do you purchase beverages on campus currently?</h6>
-                        <label class="radio-inline"><input type="radio" id="yes2" name="opt" onclick="moredetails();">Yes</label>
-                        <label class="radio-inline"><input type="radio" id="no2" name="opt" onclick="moredetails();">No</label>
+                        <label class="radio-inline"><input type="radio" id="yes2" name="opt" onclick="expandCollapseBox('why-group2', 0);">Yes</label>
+                        <label class="radio-inline"><input type="radio" id="no2" name="opt" onclick="expandCollapseBox('why-group2', 1);">No</label>
                     </form>
-                    <form id="why-group2" style="visibility:hidden">
+                    <form id="why-group2" style="display: none">
                         <h6>Could you please explain your decision?</h6>
                         <textarea rows="5" cols="75" name="why"></textarea>
                         <br>
@@ -252,10 +252,11 @@
                             <li><input type="checkbox" id="candy" name="candy" value="candy"> Candy <br></li>
                             <li><input type="checkbox" id="pretzels" name="pretzels" value="pretzels"> Pretzels<br></li>
                             <li><input type="checkbox" id="gum" name="gum" value="gum"> Gum<br></li>
-                            <li><input type="checkbox" id="other" name="other" value="other" onclick="moredetails();"> Other Snack or Beverage<br></li>
+                            <li><input type="checkbox" id="other" name="other" value="other" onclick="expandCollapseBox('why-group3', 1);"> Other Snack or Beverage<br></li>
+                            <!-- this doesn't quite work yet because it can't be re-closed. Probably will need a dedicated method for this?-->
                         </ul>
                     </form>
-                    <form id="why-group3" style="visibility:hidden">
+                    <form id="why-group3" style="display: none">
                         <h6>Could you please write down the option not present in the listed options above?</h6>
                         <textarea rows="5" cols="75" name="Why"></textarea>
                         <br>

@@ -1,32 +1,5 @@
-function moredetails() {
-    /* Pops up a text area on the first question */
-    if (document.getElementById('yes1').checked || document.getElementById('no1').checked) {
-        document.getElementById('why-group1').style.visibility = 'visible';
-    }
-    else{
-        document.getElementById('why-group1').style.visibility = 'hidden';
-    }
-     /* Pops up a text area on the second question */
-    if (document.getElementById('yes2').checked || document.getElementById('no2').checked) {
-        document.getElementById('why-group2').style.visibility = 'visible';
-    }
-    else{
-        document.getElementById('why-group2').style.visibility = 'hidden';
-    }
-     /* Pops up a text area on the fourth question question */
-    if (document.forms.chk1.other.checked) {
-        document.getElementById('why-group3').style.visibility = 'visible';
-    }
-    else{
-        document.getElementById('why-group3').style.visibility = 'hidden';
-    }
-}
-
-
-function expandCollapseBox() {
-    var x = "why-group1";
-    
-    if (document.getElementById(x).style.display == "none") {
+function expandCollapseBox(x, val) {
+    if (val == 1) {
         document.getElementById(x).style.display = "block";
     }
     else {
