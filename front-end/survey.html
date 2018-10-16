@@ -67,39 +67,71 @@
                    
                 </div>
                 <div class="col-sm-8 text-left">
+                    <p style="width:80%">Snackfacts would like to thank you in advance for your participation in the survey, the data you provide will be used to generate analyzed date on this webpage.
+                    In doing so we hope that this data can help inform companies about what consumers like you, want in the vending machines around your campus.</p>
+                    <!--Question 1 START-->
+                    <form id="radio-question-group-1">
+                        <h6>1) Do you purchase snacks on campus currently?</h6>
+                        <label class="radio-inline"><input type="radio" id="yes1" name="opt" onclick="moredetails();">Yes</label>
+                        <label class="radio-inline"><input type="radio" id="no1" name="opt" onclick="moredetails();">No</label>
+                    </form>
+                    <form id="why-group1" style="visibility:hidden">
+                        <h6>Could you please explain your decision?</h6>
+                        <textarea rows="5" cols="75" name="Why"></textarea>
+                        <br>
+                    </form>
+                    <!--Question 1 END-->
+                    <!--Question 2 START-->
+                    <form id="radio-question-group-2">
+                        <h6>2) Do you purchase beverages on campus currently?</h6>
+                        <label class="radio-inline"><input type="radio" id="yes2" name="opt" onclick="moredetails();">Yes</label>
+                        <label class="radio-inline"><input type="radio" id="no2" name="opt" onclick="moredetails();">No</label>
+                    </form>
+                    <form id="why-group2" style="visibility:hidden">
+                        <h6>Could you please explain your decision?</h6>
+                        <textarea rows="5" cols="75" name="why"></textarea>
+                        <br>
+                    </form>
+                    <!-- Question 2 END-->
+                    <!-- Question 3 START-->
+                    <form id="radio-question-group-3">
+                        <h6>3) What sex are you?</h6>
+                        <label class="radio-inline"><input type="radio" id="yes2" name="opt" >Male</label>
+                        <label class="radio-inline"><input type="radio" id="no2" name="opt">Female</label>
+                        <br>
+                    </form>
+                    <!-- Question 3 END-->
+                    <!-- Question 4 START-->
+                    <form id="chk1">
+                        <h6>4) What products do you most commonly purchase from vending machines on campus?</h6>
+                        <ul style="list-style:none;">
+                            <li><input type="checkbox" id="soda/pop" name="soda/pop" value="sode/pop"> Soda/Pop<br></li>
+                            <li><input type="checkbox" id="water" name="water" value="water"> Water <br></li>
+                            <li><input type="checkbox" id="coffee" name="coffee" value="coffee" > Coffee <br></li>
+                            <li><input type="checkbox" id="energy" name="energy" value="energy"> Energy Drink<br></li>
+                            <li><input type="checkbox" id="chips" name="chips" value="chips"> Chips <br></li>
+                            <li><input type="checkbox" id="candy" name="candy" value="candy"> Candy <br></li>
+                            <li><input type="checkbox" id="pretzels" name="pretzels" value="pretzels"> Pretzels<br></li>
+                            <li><input type="checkbox" id="gum" name="gum" value="gum"> Gum<br></li>
+                            <li><input type="checkbox" id="other" name="other" value="other" onclick="moredetails();"> Other Snack or Beverage<br></li>
+                        </ul>
+                        <br>
+                    <form id="why-group3" style="visibility:hidden">
+                        <h6>Could you please write down the option not present in the listed options above?</h6>
+                        <textarea rows="5" cols="75" name="Why"></textarea>
+                        <br>
+                    </form>
+                    </form>
+                    <!-- Question 4 END-->
+                    <input type="submit" value="Submit">
                     <!--Name and Email Gather START-->
-                    <p>To begin this survey we ask that you provide your name and email. The purpose of these provisions is to create a pdf version that can be sent to your email.
+                    <p style="width:80%">To complete this survey we ask that you provide your name and email. The purpose of these provisions is to create a PDF version that can be sent to your email.
                     The email will not be used to send advertisements or spam. Thanks for your cooperation!</p>
                     <form  action="" id="survey" method="get" onsubmit="return validate();">
                         Name: <input id="name" name="name" type="text"><br><br>
     				    Email: <input id="email" name="email" type="text"><br><br>
-                        <!--Name and Email Gather END-->
-                        <!--Question 1 START-->
-                        <form id="radio-question-group-1">
-                            <h6>1) Do you purchase snacks on campus currently?</h6>
-                            <label class="radio-inline"><input type="radio" id="yes1" name="opt" onclick="yesnoCheck();">Yes</label>
-                            <label class="radio-inline"><input type="radio" id="no1" name="opt" onclick="yesnoCheck();">No</label>
-                        </form>
-                        <form id="why-group1" style="visibility:hidden">
-                            <h6>Could you please explain your decision?</h6>
-                            <textarea rows="5" cols="75" name="Why"></textarea>
-                            <br>
-                        </form>
-                        <!--Question 1 END-->
-                        <!--Question 2 START-->
-                        <form id="radio-question-group-1">
-                            <h6>2) Do you purchase beverages on campus currently?</h6>
-                            <label class="radio-inline"><input type="radio" id="yes2" name="opt" onclick="javascript:yesnoCheck();">Yes</label>
-                            <label class="radio-inline"><input type="radio" id="no2" name="opt" onclick="javascript:yesnoCheck();">No</label>
-                        </form>
-                        <form id="why-group2" style="visibility:hidden">
-                            <h6>Could you please explain your decision?</h6>
-                            <textarea rows="5" cols="75" name="why"></textarea>
-                            <br>
-                        </form>
-                        <!-- Question 2 END-->
-                        <input type="submit" value="Finish Survey">
-                    </form>
+				    </form>
+                    <!--Name and Email Gather END-->
                 </div>
             </div>
         </div>

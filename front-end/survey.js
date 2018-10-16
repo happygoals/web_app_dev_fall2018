@@ -1,4 +1,4 @@
-function yesnoCheck() {
+function moredetails() {
     if (document.getElementById('yes1').checked || document.getElementById('no1').checked) {
         document.getElementById('why-group1').style.visibility = 'visible';
     }
@@ -11,7 +11,12 @@ function yesnoCheck() {
     else{
         document.getElementById('why-group2').style.visibility = 'hidden';
     }
-
+    if (document.forms.chk1.other.checked) {
+        document.getElementById('why-group3').style.visibility = 'visible';
+    }
+    else{
+        document.getElementById('why-group3').style.visibility = 'hidden';
+    }
 }
 
 function validate()
