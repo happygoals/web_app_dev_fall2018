@@ -1,12 +1,12 @@
+var labels = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
 var data = [12, 19, 3, 5, 2, 3];
-var color = ['255, 99, 132'];
-
-addChart("lineChart1", data, color);
-
 var data2 = [10, 9, 9, 15, 20, 4];
-addChart("lineChart2", data2, color);
+var lineColor = ['255, 99, 132']; //line graph takes only a single color, at least with a single function graph. Reuse the same method though
 
-function addChart(targetID, inputData, backgroundColorsIn) {
+addChart("lineChart1", labels, data, lineColor);
+addChart("lineChart2", labels, data2, lineColor);
+
+function addChart(targetID, inputLabels, inputData, backgroundColorsIn) {
 	var ctx = document.getElementById(targetID).getContext('2d');
 	var borderColors = [];
 	var backgroundColors = [];
@@ -20,9 +20,9 @@ function addChart(targetID, inputData, backgroundColorsIn) {
 	}
 
 	var myChart = new Chart(ctx, {
-		type: 'line',
+		type: "line",
 		data: {
-			labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+			labels: inputLabels,
 			datasets: [{
 				label: '# of Votes',
 				data: inputData,

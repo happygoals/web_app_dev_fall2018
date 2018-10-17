@@ -18,7 +18,7 @@ function addChart(targetID, inputLabels, inputData, backgroundColorsIn) {
 	}
 
 	var myChart = new Chart(ctx, {
-		type: 'bar',
+		type: "bar",
 		data: {
 			labels: inputLabels,
 			datasets: [{

@@ -9,7 +9,8 @@ addChart("bar", "myChart1", labels, data, color);
 addChart("line", "lineChart1", labels, data, lineColor);
 addChart("line", "lineChart2", labels, data2, lineColor);
 addChart("pie", "pieChart1", labels, data, color);
-//addChart("polarArea", "polarChart1", labels, data, color);
+addChart("polarArea", "polarChart1", labels, data, color);
+//addChart("scatter", "scatterChart1", labels, data, color);
 
 function addChart(type, targetID, inputLabels, inputData, backgroundColorsIn) {
 	var ctx = document.getElementById(targetID).getContext('2d');
