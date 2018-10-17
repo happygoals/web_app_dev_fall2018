@@ -15,37 +15,16 @@
 	<script src="Chart.js/Chart.min.js">
 	</script>
 	<style>
-	           @import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700'); 
-	           @import url('https://fonts.googleapis.com/css?family=Raleway:200i,400,400i,500,600,700,800,900');
-	           .chartBox {
-	               max-width: 400px;
-	               max-height: 400px;
-	           }
-	           
-	           .box1 {
-	               width: 320px;
-	               padding: 10px;
-	               border: 5px solid gray;
-	               margin: 0;
-	           }
-	           
-	           .one {
-	               border-spacing: 5px;
-	           }
-	           
-	           .inv {
-	               display: none;
-	           }
-	           
-	           .div1 {
-	               width:100px;
-	               border: 5px solid gray;
-	           }
-	           
-	           .div2 {
-	               width:100px;
-	               border: 5px solid gray;
-	           }
+		@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700'); 
+		@import url('https://fonts.googleapis.com/css?family=Raleway:200i,400,400i,500,600,700,800,900');
+		.chartBox {
+			max-width: 400px;
+			max-height: 400px;
+		}
+
+		.inv {
+			display: none;
+		}
 	</style>
 </head>
 <body>
@@ -124,7 +103,8 @@
 						<div class="chartBox">
 							<canvas height="400" id="barGraph1" width="400"></canvas>
 						</div>
-						<div class="2">
+						<!--unfortunately, i think we have to duplicate this for each chart...-->
+						<div>
 							Today's hot lists
 							<ul>
 								<li>Coke</li>
