@@ -122,7 +122,7 @@
 				<div class="vis" id="bar"> <!--vis does nothing here, just differentiates it from invisible for code readability -->
 					<div class="row justify-content-around">
 						<div class="chartBox">
-							<canvas height="400" id="myChart1" width="400"></canvas>
+							<canvas height="400" id="barGraph1" width="400"></canvas>
 						</div>
 						<div class="2">
 							Today's hot lists
@@ -133,8 +133,6 @@
 							</ul>
 						</div>
 					</div>
-					
-					<!-- can someone figure out if theres a way to put this in an outside file or at least <head>? I tried but it broke stuff, and Im notsure why-->
 					<script src="js/barGraph.js"></script>
 				</div>
 				<div class="inv" id="pie">
@@ -155,14 +153,15 @@
 					<script src="js/lineGraph.js"></script>
 				</div>
 				<div class="inv" id="polar">
+					<h2>Polar charts are disabled, severely broken</h2>
 					<div class="chartBox">
 						<canvas height="400" id="polarChart1" width="400"></canvas>
 					</div>
-					<script src="js/polarChart.js"></script>
+					<!--<script src="js/polarChart.js"></script>-->
 				</div>
 				<div class="inv" id="scatter">
 					<div class="chartBox">
-						<canvas height="400" id="scatterChart1" width="400"></canvas>
+						<canvas height="400" id="scatterPlot1" width="400"></canvas>
 					</div>
 					
 					<script src="js/scatterPlot.js"></script>
@@ -212,7 +211,19 @@
 					</table>
 				</div>
 			</div>
-			<div class="col-sm-2 sidenav"></div>
+			<div class="col-sm-2 sidenav">
+				<div style="background: #009588; color: white; min-height: 100px; text-align: left; padding: 5px">
+					<h4>test</h4>
+					
+					Something something<br>something
+				</div>
+				
+				<div style="background: #01bcd4; color: white; min-height: 100px; text-align: left; padding: 5px; margin-top: 20px">
+					<h4>test 2</h4>
+					
+					Something something<br>something
+				</div>
+			</div>
 		</div>
 	</div>
 	<footer class="container-fluid text-center">
