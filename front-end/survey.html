@@ -176,9 +176,14 @@
 			</div>
 			<div class="col-sm-1 sidebg"></div>
 			<div class="col-sm-8 text-left">
-				<p style="width:80%">Snackfacts would like to thank you in advance for your participation in the survey, the data you provide will be used to generate analyzed date on this webpage. In doing so we hope that this data can help inform companies about what consumers like you, want in the vending machines around your campus.</p><!--Question 1 START-->
+				<p style="width:80%">Snackfacts would like to thank you in advance for your participation in the survey, the data you provide will 
+				be used to generate analyzed date on this webpage. In doing so we hope that this data can help inform companies about what consumers like you,
+				want in the vending machines around your campus.</p>
+				<!--Question 1 START-->
 				<form id="radio-question-group-1" name="radio-question-group-1">
-					<h6>1) Do you purchase snacks on campus currently?</h6><label class="radio-inline"><input id="yes1" name="opt" onclick="expandCollapseBox('why-group1', 0);" type="radio">Yes</label> <label class="radio-inline"><input id="no1" name="opt" onclick="expandCollapseBox('why-group1', 1);" type="radio">No</label>
+					<h6>1) Do you purchase snacks on campus currently?</h6><label class="radio-inline">
+					<input id="yes1" name="opt" onclick="expandCollapseBox('why-group1', 0);" type="radio">Yes</label> 
+					<label class="radio-inline"><input id="no1" name="opt" onclick="expandCollapseBox('why-group1', 1);" type="radio">No</label>
 				</form>
 				<form id="why-group1" name="why-group1" style="display: none">
 					<h6>Could you please explain your decision?</h6>
@@ -187,7 +192,9 @@
 				<!--Question 1 END-->
 				<!--Question 2 START-->
 				<form id="radio-question-group-2" name="radio-question-group-2">
-					<h6>2) Do you purchase beverages on campus currently?</h6><label class="radio-inline"><input id="yes2" name="opt" onclick="expandCollapseBox('why-group2', 0);" type="radio">Yes</label> <label class="radio-inline"><input id="no2" name="opt" onclick="expandCollapseBox('why-group2', 1);" type="radio">No</label>
+					<h6>2) Do you purchase beverages on campus currently?</h6><label class="radio-inline">
+					<input id="yes2" name="opt" onclick="expandCollapseBox('why-group2', 0);" type="radio">Yes</label> 
+					<label class="radio-inline"><input id="no2" name="opt" onclick="expandCollapseBox('why-group2', 1);" type="radio">No</label>
 				</form>
 				<form id="why-group2" name="why-group2" style="display: none">
 					<h6>Could you please explain your decision?</h6>
@@ -196,7 +203,10 @@
 				<!-- Question 2 END-->
 				<!-- Question 3 START-->
 				<form id="radio-question-group-3" name="radio-question-group-3">
-					<h6>3) What sex are you?</h6><label class="radio-inline"><input id="yes2" name="opt" type="radio">Male</label> <label class="radio-inline"><input id="no2" name="opt" type="radio">Female</label> <label class="radio-inline"><input id="no2" name="opt" type="radio">Other</label><br>
+					<h6>3) What sex are you?</h6><label class="radio-inline">
+					<input id="yes2" name="opt" type="radio">Male</label> <label class="radio-inline">
+					<input id="no2" name="opt" type="radio">Female</label> <label class="radio-inline">
+					<input id="no2" name="opt" type="radio">Other</label><br>
 				</form>
 				<!-- Question 3 END-->
 				<!-- Question 4 START-->
@@ -211,7 +221,7 @@
 						<li><input id="candy" name="candy" type="checkbox" value="candy"> Candy<br></li>
 						<li><input id="pretzels" name="pretzels" type="checkbox" value="pretzels"> Pretzels<br></li>
 						<li><input id="gum" name="gum" type="checkbox" value="gum"> Gum<br></li>
-						<li><input id="other" name="other" onclick="expandCollapseBox('why-group3', 1);" type="checkbox" value="other"> Other Snack or Beverage<br></li><!-- this doesn't quite work yet because it can't be re-closed. Probably will need a dedicated method for this?-->
+						<li><input id="other" name="other" onclick="expandCollapseBox('why-group3', 1);" type="checkbox" value="other"> Other Snack or Beverage<br></li>
 					</ul>
 				</form>
 				<form id="why-group3" name="why-group3" style="display: none">
@@ -219,8 +229,17 @@
 					<textarea cols="75" name="Why" rows="5"></textarea><br>
 				</form>
 				<!-- Question 4 END-->
+				<!-- Question 5 START-->
+				<form id="radio-question-group-4" name="radio-question-group-4">
+					<h6>5) How much are you wiling to spend on a snack from the vending machine?</h6><label class="radio-inline">
+					<input id="yes2" name="opt" type="radio">Male</label> <label class="radio-inline">
+					<input id="no2" name="opt" type="radio">Female</label> <label class="radio-inline">
+					<input id="no2" name="opt" type="radio">Other</label><br>
+				</form>
+				<!-- Question 5 END-->
 				<!--Name and Email Gather START-->
-				<p style="width:80%">To complete this survey we ask that you provide your name and email. The purpose of these provisions is to create a PDF version that can be sent to your email. The email will not be used to send advertisements or spam. Thanks for your cooperation!</p><br>
+				<p style="width:80%">To complete this survey we ask that you provide your name and email. The purpose of these provisions is to create 
+				a PDF version that can be sent to your email. The email will not be used to send advertisements or spam. Thanks for your cooperation!</p><br>
 				<form action="" id="survey" method="get" name="survey" onsubmit="return validate();">
 					Name: <input id="name" name="name" type="text"><br>
 					Email: <input id="email" name="email" type="text"><br>
