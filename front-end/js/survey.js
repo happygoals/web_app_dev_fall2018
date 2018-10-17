@@ -6,6 +6,11 @@ function expandCollapseBox(x, val) {
 	}
 }
 
+function expandCollapseBox(x, y) {
+	document.getElementById(x).style.display = "block";
+	document.getElementById(y).style.display = "none";
+}
+
 function disable() {
 	/* Allows the submit button to be either disabled or enabled */
 	document.getElementById("submit").disabled = !document.getElementById("submit").disabled;

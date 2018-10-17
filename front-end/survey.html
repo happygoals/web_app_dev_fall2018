@@ -180,33 +180,53 @@
 				be used to generate analyzed date on this webpage. In doing so we hope that this data can help inform companies about what consumers like you,
 				want in the vending machines around your campus.</p>
 				<!--Question 1 START-->
-				<form id="radio-question-group-1" name="radio-question-group-1">
-					<h6>1) Do you purchase snacks on campus currently?</h6><label class="radio-inline">
-					<input id="yes1" name="opt" onclick="expandCollapseBox('why-group1', 0);" type="radio">Yes</label> 
-					<label class="radio-inline"><input id="no1" name="opt" onclick="expandCollapseBox('why-group1', 1);" type="radio">No</label>
+				<form id="question1" name="question1">
+					<h6>1) Do you purchase snacks on campus currently?</h6>
+					<label class="radio-inline"><input id="yes1" name="opt" onclick="expandCollapseBox('question1.2', 'question1.1', 1);" type="radio">Yes</label> 
+					<label class="radio-inline"><input id="no1" name="opt" onclick="expandCollapseBox('question1.1', 'question1.2', 1);" type="radio">No</label>
 				</form>
-				<form id="why-group1" name="why-group1" style="display: none">
-					<h6>Could you please explain your decision?</h6>
-					<textarea cols="75" name="Why" rows="5"></textarea><br>
+				<form id="question1.1" name="question1.1" style="display: none">
+					<h6>Why not?</h6>
+					<textarea id="question1.1.1" cols="75" name="Why" rows="5"></textarea><br>
+				</form>
+				<form id="question1.2" name="question1.2" style="display: none">
+					<h6>How Often?</h6>
+					<ul style="list-style:none;">
+						<li><input id="question1.2.1" name="question1.2.1" type="radio"> Once a Week<br></li>
+						<li><input id="question1.2.2" name="question1.2.1" type="radio"> One to Two times a Week<br></li>
+						<li><input id="question1.2.3" name="question1.2.1" type="radio"> Three to Four times a Week<br></li>
+						<li><input id="question1.2.4" name="question1.2.1" type="radio"> Five to Size times a Week<br></li>
+						<li><input id="question1.2.5" name="question1.2.1" type="radio"> Seven or More times a Week<br></li>
+					</ul>
 				</form>
 				<!--Question 1 END-->
 				<!--Question 2 START-->
-				<form id="radio-question-group-2" name="radio-question-group-2">
-					<h6>2) Do you purchase beverages on campus currently?</h6><label class="radio-inline">
-					<input id="yes2" name="opt" onclick="expandCollapseBox('why-group2', 0);" type="radio">Yes</label> 
-					<label class="radio-inline"><input id="no2" name="opt" onclick="expandCollapseBox('why-group2', 1);" type="radio">No</label>
+				<form id="question2" name="question2">
+					<h6>2) Do you purchase beverages on campus currently?</h6>
+					<label class="radio-inline"><input id="yes2" name="opt" onclick="expandCollapseBox('question2.2', 'question2.1');" type="radio">Yes</label> 
+					<label class="radio-inline"><input id="no2" name="opt" onclick="expandCollapseBox('question2.1', 'question2.2');" type="radio">No</label>
 				</form>
-				<form id="why-group2" name="why-group2" style="display: none">
+				<form id="question2.1" name="question2.1" style="display: none">
 					<h6>Could you please explain your decision?</h6>
-					<textarea cols="75" name="why" rows="5"></textarea><br>
+					<textarea id="2.1.1" cols="75" name="why" rows="5"></textarea><br>
+				</form>
+				<form id="question2.2" name="question2.2" style="display: none">
+					<h6>How Often?</h6>
+					<ul style="list-style:none;">
+						<li><input id="question2.2.1" name="question2.2.1" type="radio"> Once a Week<br></li>
+						<li><input id="question2.2.2" name="question2.2.1" type="radio"> One to Two times a Week<br></li>
+						<li><input id="question2.2.3" name="question2.2.1" type="radio"> Three to Four times a Week<br></li>
+						<li><input id="question2.2.4" name="question2.2.1" type="radio"> Five to Size times a Week<br></li>
+						<li><input id="question2.2.5" name="question2.2.1" type="radio"> Seven or More times a Week<br></li>
+					</ul>
 				</form>
 				<!-- Question 2 END-->
 				<!-- Question 3 START-->
-				<form id="radio-question-group-3" name="radio-question-group-3">
-					<h6>3) What sex are you?</h6><label class="radio-inline">
-					<input id="yes2" name="opt" type="radio">Male</label> <label class="radio-inline">
-					<input id="no2" name="opt" type="radio">Female</label> <label class="radio-inline">
-					<input id="no2" name="opt" type="radio">Other</label><br>
+				<form id="question3" name="question3">
+					<h6>3) What sex are you?</h6>
+					<label class="radio-inline"><input id="q3.1" name="opt" type="radio">Male</label>
+					<label class="radio-inline"><input id="q3.2" name="opt" type="radio">Female</label>
+					<label class="radio-inline"><input id="q3.3" name="opt" type="radio">Other</label><br>
 				</form>
 				<!-- Question 3 END-->
 				<!-- Question 4 START-->
@@ -231,10 +251,11 @@
 				<!-- Question 4 END-->
 				<!-- Question 5 START-->
 				<form id="radio-question-group-4" name="radio-question-group-4">
-					<h6>5) How much are you wiling to spend on a snack from the vending machine?</h6><label class="radio-inline">
-					<input id="yes2" name="opt" type="radio">Male</label> <label class="radio-inline">
-					<input id="no2" name="opt" type="radio">Female</label> <label class="radio-inline">
-					<input id="no2" name="opt" type="radio">Other</label><br>
+					<h6>5) How much are you wiling to spend on a snack from the vending machine?</h6>
+					<label class="radio-inline"><input id="op5.1" name="opt" type="radio">$0.75</label> 
+					<label class="radio-inline"><input id="op5.2" name="opt" type="radio">$1.00</label> 
+					<label class="radio-inline"><input id="op5.3" name="opt" type="radio">$1.25</label>
+					<label class="radio-inline"><input id="op5.4" name="opt" type="radio">$1.50</label><br>
 				</form>
 				<!-- Question 5 END-->
 				<!--Name and Email Gather START-->
