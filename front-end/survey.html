@@ -182,8 +182,8 @@
 				<!--Question 1 START-->
 				<form id="question1" name="question1">
 					<h6>1) Do you purchase snacks on campus currently?</h6>
-					<label class="radio-inline"><input id="yes1" name="opt" onclick="expandCollapseBox('question1.2', 'question1.1', 1);" type="radio">Yes</label> 
-					<label class="radio-inline"><input id="no1" name="opt" onclick="expandCollapseBox('question1.1', 'question1.2', 1);" type="radio">No</label>
+					<label class="radio-inline"><input id="yes1" name="opt" onclick="expandCollapseBox('question1.2', 'question1.1');" type="radio">Yes</label> 
+					<label class="radio-inline"><input id="no1" name="opt" onclick="expandCollapseBox('question1.1', 'question1.2');" type="radio">No</label>
 				</form>
 				<form id="question1.1" name="question1.1" style="display: none">
 					<h6>Why not?</h6>
@@ -193,10 +193,10 @@
 					<h6>How Often?</h6>
 					<ul style="list-style:none;">
 						<li><input id="question1.2.1" name="question1.2.1" type="radio"> Once a Week<br></li>
-						<li><input id="question1.2.2" name="question1.2.1" type="radio"> One to Two times a Week<br></li>
-						<li><input id="question1.2.3" name="question1.2.1" type="radio"> Three to Four times a Week<br></li>
-						<li><input id="question1.2.4" name="question1.2.1" type="radio"> Five to Size times a Week<br></li>
-						<li><input id="question1.2.5" name="question1.2.1" type="radio"> Seven or More times a Week<br></li>
+						<li><input id="question1.2.2" name="question1.2.2" type="radio"> One to Two times a Week<br></li>
+						<li><input id="question1.2.3" name="question1.2.3" type="radio"> Three to Four times a Week<br></li>
+						<li><input id="question1.2.4" name="question1.2.4" type="radio"> Five to Size times a Week<br></li>
+						<li><input id="question1.2.5" name="question1.2.5" type="radio"> Seven or More times a Week<br></li>
 					</ul>
 				</form>
 				<!--Question 1 END-->
@@ -230,7 +230,7 @@
 				</form>
 				<!-- Question 3 END-->
 				<!-- Question 4 START-->
-				<form id="chk1" name="chk1">
+				<form id="question4" name="question4">
 					<h6>4) What products do you most commonly purchase from vending machines on campus?</h6>
 					<ul style="list-style:none;">
 						<li><input id="soda/pop" name="soda/pop" type="checkbox" value="sode/pop"> Soda/Pop<br></li>
@@ -241,31 +241,45 @@
 						<li><input id="candy" name="candy" type="checkbox" value="candy"> Candy<br></li>
 						<li><input id="pretzels" name="pretzels" type="checkbox" value="pretzels"> Pretzels<br></li>
 						<li><input id="gum" name="gum" type="checkbox" value="gum"> Gum<br></li>
-						<li><input id="noting" name="gum" type="checkbox" value="gum"> Gum<br></li>
-						<li><input id="other" name="other" onclick="expandCollapseBox('why-group3', 1);" type="checkbox" value="other"> Other Snack or Beverage<br></li>
+						<li><input id="nothing" name="nothing" type="checkbox" value="gum"> Nothing<br></li>
+						<li><input id="other" name="other" onclick="expandCollapseBoxB('question4.1');" type="checkbox"> Other Snack or Beverage<br></li>
 					</ul>
 				</form>
-				<form id="why-group3" name="why-group3" style="display: none">
+				<form id="question4.1" name="question4.1" style="display: none">
 					<h6>Could you please write down the option not present in the listed options above?</h6>
 					<textarea cols="75" name="Why" rows="5"></textarea><br>
 				</form>
 				<!-- Question 4 END-->
 				<!-- Question 5 START-->
-				<form id="radio-question-group-4" name="radio-question-group-4">
+				<form id="question5" name="question5">
 					<h6>5) How much are you wiling to spend on a snack from the vending machine?</h6>
-					<label class="radio-inline"><input id="op5.1" name="opt" type="radio">$0.75</label> 
-					<label class="radio-inline"><input id="op5.2" name="opt" type="radio">$1.00</label> 
-					<label class="radio-inline"><input id="op5.3" name="opt" type="radio">$1.25</label>
-					<label class="radio-inline"><input id="op5.4" name="opt" type="radio">$1.50</label><br>
+					<ul style="list-style:none;">
+						<li><label class="radio-inline"><input id="op5.1" name="opt" type="radio">$0.75</label><br></li>
+						<li><label class="radio-inline"><input id="op5.2" name="opt" type="radio">$1.00</label><br></li>
+						<li><label class="radio-inline"><input id="op5.3" name="opt" type="radio">$1.25</label><br></li>
+						<li><label class="radio-inline"><input id="op5.4" name="opt" type="radio">$1.50</label><br></li>
+					</ul>
 				</form>
 				<!-- Question 5 END-->
+				<!-- Question 6 START-->
+				<form id="question6" name="question5">
+					<h6>6) When purchasing a snack or beverage, what most influences your purchase?</h6>
+					<ul style="list-style:none;">
+						<li><input id="question6.1" name="question6.1" type="radio"> Interest in a new snack or beverage<br></li>
+						<li><input id="question6.2" name="question6.2" type="radio"> Snack or beverage taste<br></li>
+						<li><input id="question6.3" name="question6.3" type="radio"> Snack or beverage price<br></li>
+						<li><input id="question6.4" name="question6.4" type="radio"> How healthy a snack or beverage is<br></li>
+						<li><input id="question6.5" name="question6.5" type="radio"> How hungry you might be at a given time.<br></li>
+					</ul>
+				</form>
+				<!-- Question 6 END-->
 				<!--Name and Email Gather START-->
 				<p style="width:80%">To complete this survey we ask that you provide your name and email. The purpose of these provisions is to create 
 				a PDF version that can be sent to your email. The email will not be used to send advertisements or spam. Thanks for your cooperation!</p><br>
 				<form action="" id="survey" method="get" name="survey" onsubmit="return validate();">
-					Name: <input id="name" name="name" type="text"><br>
-					Email: <input id="email" name="email" type="text"><br>
-					I agree to Snackfacts' terms and conditions: <input id="agreement" name="agreement" onclick="disable();" type="checkbox"><br>
+					<label style="width:6%">Name:</label><input id="name" name="name" type="text"><br>
+					<label style="width:6%">Email:</label><input id="email" name="email" type="text"><br>
+					I agree to Snackfacts' terms and conditions: <input id="agreement" name="agreement" onclick="disable();" type="checkbox"><br><br>
 					<input disabled id="submit" type="submit" value="Submit"><br>
 				</form>
 				<!--Name and Email Gather END-->
