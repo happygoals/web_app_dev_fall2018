@@ -133,104 +133,15 @@
 							</ul>
 						</div>
 					</div>
-					<div>
-						<table class="table">
-							<thead>
-								<tr>
-									<th scope="col">#</th>
-									<th scope="col">Product Name</th>
-									<th scope="col">Location</th>
-									<th scope="col">Price</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">1</th>
-									<td>Kitkat</td>
-									<td>Vending machine 1</td>
-									<td>1 $</td>
-								</tr>
-								<tr>
-									<th scope="row">2</th>
-									<td>Starbucks coffee</td>
-									<td>Vending machine 2</td>
-									<td>2.5 $</td>
-								</tr>
-								<tr>
-									<th scope="row">3</th>
-									<td>Cute cookie</td>
-									<td>Vending machine 1</td>
-									<td>2 $</td>
-								</tr>
-								<tr>
-									<th scope="row">4</th>
-									<td>Sandwich</td>
-									<td>Vending machine 3</td>
-									<td>2.3 $</td>
-								</tr>
-								<tr>
-									<th scope="row">5</th>
-									<td>Pizza</td>
-									<td>Vending machine 3</td>
-									<td>3 $</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
 					
 					<!-- can someone figure out if theres a way to put this in an outside file or at least <head>? I tried but it broke stuff, and Im notsure why-->
-					<script src="js/barGraphs.js"></script>
+					<!--<script src="js/combinedGraphs.js"></script>-->
 				</div>
 				<div class="inv" id="pie">
 					<div class="chartBox">
 						<canvas height="400" id="pieChart1" width="400"></canvas>
 					</div>
-					<div>
-						<table class="table">
-							<thead>
-								<tr>
-									<th scope="col">#</th>
-									<th scope="col">Product Name</th>
-									<th scope="col">Location</th>
-									<th scope="col">Price</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">1</th>
-									<td>Kitkat</td>
-									<td>Vending machine 1</td>
-									<td>1 $</td>
-								</tr>
-								<tr>
-									<th scope="row">2</th>
-									<td>Starbucks coffee</td>
-									<td>Vending machine 2</td>
-									<td>2.5 $</td>
-								</tr>
-								<tr>
-									<th scope="row">3</th>
-									<td>Cute cookie</td>
-									<td>Vending machine 1</td>
-									<td>2 $</td>
-								</tr>
-								<tr>
-									<th scope="row">4</th>
-									<td>Sandwich</td>
-									<td>Vending machine 3</td>
-									<td>2.3 $</td>
-								</tr>
-								<tr>
-									<th scope="row">5</th>
-									<td>Pizza</td>
-									<td>Vending machine 3</td>
-									<td>3 $</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					
-					<script src="js/pieChart.js"></script>
+					<!--<script src="js/pieChart.js"></script>-->
 				</div>
 				<div class="inv" id="line">
 					<div class="chartBox">
@@ -241,13 +152,60 @@
 						<canvas height="400" id="lineChart2" width="400"></canvas>
 					</div>
 					
-					<script src="js/lineChart.js"></script>
+					<!--<script src="js/lineGraph.js"></script>-->
 				</div>
 				<div class="inv" id="polar">
-					POLAR CHART GOES HERE
+					<div class="chartBox">
+						<canvas height="400" id="polarChart1" width="400"></canvas>
+					</div>
 				</div>
 				<div class="inv" id="scatter">
 					SCATTER PLOT GOES HERE
+				</div>
+				<script src="js/combinedGraphs.js"></script>
+				<div>
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">Product Name</th>
+								<th scope="col">Location</th>
+								<th scope="col">Price</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Kitkat</td>
+								<td>Vending machine 1</td>
+								<td>1 $</td>
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Starbucks coffee</td>
+								<td>Vending machine 2</td>
+								<td>2.5 $</td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>Cute cookie</td>
+								<td>Vending machine 1</td>
+								<td>2 $</td>
+							</tr>
+							<tr>
+								<th scope="row">4</th>
+								<td>Sandwich</td>
+								<td>Vending machine 3</td>
+								<td>2.3 $</td>
+							</tr>
+							<tr>
+								<th scope="row">5</th>
+								<td>Pizza</td>
+								<td>Vending machine 3</td>
+								<td>3 $</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 			<div class="col-sm-2 sidenav"></div>
