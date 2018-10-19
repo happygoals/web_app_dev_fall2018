@@ -14,7 +14,7 @@ function addChart(targetID, inputLabels, inputData, backgroundColorsIn) {
 		borderColors.push("rgba(" + backgroundColorsIn[i] + ", 1.0)");
 	}
 
-	var pieChart = new Chart(ctx, {
+	var radarChart = new Chart(ctx, {
 		type: "radar",
 		data: {
 			labels: inputLabels,
