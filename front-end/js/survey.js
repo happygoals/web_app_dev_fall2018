@@ -51,7 +51,7 @@ function isOneCheckedCheckbox(x) {
 function validate() {
 	// Checks all Question 1 inputs
 	if(isOneCheckedRadio(document.getElementById('question1')) == false){
-		alert("You must select an answer for question1!");
+		alert("You must select an answer for question 1!");
 		return false;
 	}
 	else {
@@ -64,7 +64,7 @@ function validate() {
 	}
 	// Checks all Question2 inputs
 	if(isOneCheckedRadio(document.getElementById('question2')) == false){
-		alert("You must select an answer for question2!");
+		alert("You must select an answer for question 2!");
 		return false;
 	}
 	else {
@@ -77,33 +77,31 @@ function validate() {
 	}
 	// Checks all Question3 inputs
 		if(isOneCheckedRadio(document.getElementById('question3')) == false){
-		alert("You must select an answer for question3!");
+		alert("You must select an answer for question 3!");
 		return false;
 	}
 	//Check all Question4 inputs
 	if(isOneCheckedCheckbox(document.getElementById('question4')) == false){
-		alert("You must select an answer for question4!");
+		alert("You must select an answer for question 4!");
 		return false;
 	}
 	//Check all Question5 inputs
 	if(isOneCheckedRadio(document.getElementById('question5')) == false){
-		alert("You must select an answer for question5!");
+		alert("You must select an answer for question 5!");
 		return false;
 	}
 	//Check all Question6 inputs
 	if(isOneCheckedRadio(document.getElementById('question6')) == false){
-		alert("You must select an answer for question6!");
+		alert("You must select an answer for question 6!");
 		return false;
 	}
 	//Check Name and Email inputs
 	if (document.forms.survey.name.value == '') {
-		alert("You must provide a user name!");
+		alert("You must provide your name!");
 		return false;
-	} else if (!document.forms.survey.email.value.match(/.+@.+\.edu$/)) {
-		alert("You must provide a .edu or .com email adddress!");
+	} else if (!document.forms.survey.email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+		alert("You must provide a your email adddress!");
 		return false;
 	}
 	return true;
 }
-
-//Testing Branch Merging
