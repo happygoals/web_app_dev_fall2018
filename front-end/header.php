@@ -52,7 +52,7 @@
 				</div>
 				<div class="modal-body">
 					<div class="tab-content" id="myTabContent" >
-						<div class="tab-pane fade active in" id="signin">
+						<div class="tab-pane active" id="signin">
 							<form class="form-horizontal">
 								<fieldset>
 									<!-- Sign In Form -->
@@ -65,7 +65,7 @@
 									</div><!-- Password input-->
 									<div class="group">
 										<input class="input" required="" type="password"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Password</label>
-									</div><em>minimum 6 characters</em>
+									</div><em>Minimum 6 characters</em>
 									<div class="forgot-link">
 										<a data-target="#forgot-password" data-toggle="modal" href="#forgot">I forgot my password</a>
 									</div><!-- Button -->
@@ -78,7 +78,7 @@
 								</fieldset>
 							</form>
 						</div>
-						<div class="tab-pane fade" id="signup">
+						<div class="tab-pane" id="signup">
 							<form class="form-horizontal">
 								<fieldset>
 									<!-- Sign Up Form -->
