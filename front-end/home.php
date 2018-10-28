@@ -19,7 +19,7 @@
 <?php
     include 'header.php';
     headerFunction("navbar-light", "background-color: rgba(251, 237, 254, 0.8)", "success", __FILE__); //for home page
-    //headerFunction("navbar-dark bg-dark", "", "warning"); //for everything else
+    //headerFunction("navbar-dark bg-dark", "", "warning", __FILE__); //for everything else
 ?>
 	<!-- Wrapper -->
 	<div id="wrapper">
