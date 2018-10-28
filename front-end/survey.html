@@ -10,19 +10,12 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/signin.css" rel="stylesheet">
 	<!-- scripts -->
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-	</script>
-	<script src="js/survey.js">
-	</script>
-	<script src="js/modal.js">
-	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/survey.js"></script>
+	<script src="js/modal.js"></script>
 	<!-- Popper JS -->
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
-	</script>
-	<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js">
-	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
 	<style>
 	            @import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700'); 
 	            @import url('https://fonts.googleapis.com/css?family=Raleway:200i,400,400i,500,600,700,800,900');
@@ -30,7 +23,8 @@
 </head>
 <body>
 	<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-		<a class="navbar-brand mr-1" href="home.html"><img alt="Logo" src="resource/logo.png" style="width:171px; height:47px;"></a>
+		<a class="navbar-brand mr-1" href="home.html">
+			<img alt="Logo" src="resource/logo.png" style="width:171px; height:47px;"></a>
 		<ul class="navbar-nav">
 			<li class="nav-item">
 				<a class="nav-link" href="home.html">Home</a>
@@ -41,7 +35,11 @@
 			<li class="nav-item">
 				<a class="nav-link" href="analytics.html">Analytics</a>
 			</li>
-		</ul><button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle"><i class="fas fa-bars"></i></button> <!-- Navbar Search -->
+		</ul>
+		<button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle">
+			<i class="fas fa-bars"></i>
+		</button> 
+		<!-- Navbar Search -->
 		<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
 			<div class="input-group">
 				<input aria-describedby="basic-addon2" aria-label="Search" class="form-control" placeholder="Search for..." type="text">
@@ -109,11 +107,17 @@
 									<!-- Sign Up Form -->
 									<!-- Text input-->
 									<div class="group">
-										<input class="input" required="" type="text"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">First Name</label>
+										<input class="input" required="" type="text">
+											<span class="highlight"></span>
+											<span class="bar"></span> 
+											<label class="label" for="date">First Name</label>
 									</div>
 									<!-- Text input-->
 									<div class="group">
-										<input class="input" required="" type="text"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Last Name</label>
+										<input class="input" required="" type="text">
+										<span class="highlight"></span>
+										<span class="bar"></span> 
+										<label class="label" for="date">Last Name</label>
 									</div>
 									<!-- Password input-->
 									<div class="group">
@@ -280,7 +284,7 @@
 					<label style="width:6%">Name:</label><input id="name" name="name" type="text"><br>
 					<label style="width:6%">Email:</label><input id="email" name="email" type="text"><br>
 					I agree to Snackfacts' terms and conditions: <input id="agreement" name="agreement" onclick="disable();" type="checkbox"><br><br>
-					<input disabled id="submit" type="submit" value="Submit"><br>
+					<input disabled id="submit" type="submit" value="Submit"><br><br>
 				</form>
 				<!--Name and Email Gather END-->
 			</div>
