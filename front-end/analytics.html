@@ -84,35 +84,11 @@
 		</form>
 	</nav>
 	<!-- Login Modal -->
-	<div aria-hidden="true" aria-labelledby="mySmallModalLabel" class="modal fade bs-modal-sm log-signin" id="myModal" role="dialog" tabindex="-1">
 	<div class="modal fade bs-modal-sm log-signin" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">
 				<div class="modal-body">
 					<div class="tab-content" id="myTabContent">
-						<form class="form-horizontal">
-							<fieldset>
-								<!-- Sign In Form -->
-								<div class="group">
-									<h4><b>Sign in</b></h4>
-									<h5>your vending machine!</h5>
-								</div>
-								<!-- Text input-->
-								<div class="group">
-									<input class="input" required="" type="text"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Email address</label>
-								</div>
-								<!-- Password input-->
-								<div class="group">
-									<input class="input" required="" type="password"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Password</label>
-								</div>
-								<div class="forgot-link">
-									<a data-target="#forgot-password" data-toggle="modal" href="#forgot">I forgot my password</a>
-								</div>
-								<!-- Button -->
-								<div class="control-group">
-									<label class="control-label" for="signin"></label>
-									<div class="controls">
-										<button class="btn btn-warning btn-block" id="signin" name="signin">Log In</button>
 					    	<form class="form-horizontal">
 								<fieldset>
 									<!-- Sign In Form -->
@@ -123,15 +99,13 @@
 									<!-- Text input-->
 									<div class="group">
 										<input class="input" required="" type="text"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Email address</label>
-									</div>
-									<!-- Password input-->
+									</div><!-- Password input-->
 									<div class="group">
 										<input class="input" required="" type="password"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Password</label>
 									</div>
 									<div class="forgot-link">
 										<a data-target="#forgot-password" data-toggle="modal" href="#forgot">I forgot my password</a>
-									</div>
-									<!-- Button -->
+									</div><!-- Button -->
 									<div class="control-group">
 										<label class="control-label" for="signin"></label>
 										<div class="controls">
@@ -143,9 +117,18 @@
 									</div>
 								</fieldset>
 							</form>
+							
 						</div>
+					
 					</div>
+					
 				</div>
+				
+				<!--<div class="modal-footer">
+                      <center>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </center>
+                      </div>-->
 			</div>
 		</div>
 	</div>
@@ -158,6 +141,9 @@
 							<form class="form-horizontal">
 								<fieldset>
 									<!-- Sign Up Form -->
+									<br>
+								        <h4><b>Register</b></h4>
+								        <h5>your vending machine!</h5>
 									<!-- Text input-->
 									<div class="group">
 										<input class="input" required="" type="text"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">First Name</label>
@@ -166,78 +152,41 @@
 									<div class="group">
 										<input class="input" required="" type="text"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Last Name</label>
 									</div>
-									<div class="controls2" style="margin-left: 142px;">
-										<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+									<!-- Password input-->
+									<div class="group">
+										<input class="input" required="" type="text"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Email</label>
 									</div>
-								</div>
-							</fieldset>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Login Modal -->
-	<div aria-hidden="true" aria-labelledby="mySmallModalLabel" class="modal fade bs-modal-sm log-signup" id="myModal2" role="dialog" tabindex="-1">
-		<div class="modal-dialog modal-sm">
-			<div class="modal-content">
-				<div class="modal-body">
-					<div class="tab-content" id="myTabContent">
-						<form class="form-horizontal">
-							<fieldset>
-								<!-- Sign Up Form -->
-								<br>
-								<h4><b>Register</b></h4>
-								<h5>your vending machine!</h5>
-								<!-- Text input-->
-								<div class="group">
-									<input class="input" required="" type="text"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">First Name</label>
-								</div>
-								<!-- Text input-->
-								<div class="group">
-									<input class="input" required="" type="text"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Last Name</label>
-								</div>
-								<!-- Password input-->
-								<div class="group">
-									<input class="input" required="" type="text"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Email</label>
-								</div>
-								<!-- Text input-->
-								<div class="group">
-									<input class="input" required="" type="password"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Password</label>
-								</div><em>1-8 Characters</em> 
-								<!-- Button -->
-								<div class="control-group">
-									<label class="control-label" for="confirmsignup"></label>
-									<div class="controls">
-										<button class="btn btn-warning btn-block" id="confirmsignup" name="confirmsignup">Sign Up</button>
-									</div>
-									<div class="controls2" style="margin-left: 142px;">
-										<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+									<!-- Text input-->
+									<div class="group">
+										<input class="input" required="" type="password"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Password</label>
+									</div><em>1-8 Characters</em>
 									<!-- Button -->
 									<div class="control-group">
 										<label class="control-label" for="confirmsignup"></label>
 										<div class="controls">
 											<button class="btn btn-warning btn-block" id="confirmsignup" name="confirmsignup">Sign Up</button>
 										</div>
+										<div class="controls2" style="margin-left: 142px;">
 										    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 										</div>
 									</div>
-								</div>
-							</fieldset>
-						</form>
+								</fieldset>
+							</form>
+						</div>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 	</div>
-	<!--modal2-->
+		<!--modal2-->
 	<div aria-hidden="true" aria-labelledby="mySmallModalLabel" class="modal fade bs-modal-sm" id="forgot-password" role="dialog" tabindex="1">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h6 class="modal-title" id="myModalLabel">Password will be sent here.</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+					
+					<h6 class="modal-title" id="myModalLabel">Password will be sent here. </h6>
 					<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-				</div>
 				</div>
 				<div class="modal-body">
 					<form class="form-horizontal">
