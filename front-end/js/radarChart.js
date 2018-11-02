@@ -19,7 +19,7 @@ function addChart(targetID, inputLabels, inputData, backgroundColorsIn) {
 		data: {
 			labels: inputLabels,
 			datasets: [{
-				label: '# of Votes',
+				label: 'Vending Machine 1',
 				data: inputData,
 				backgroundColor: backgroundColors,
 				borderColor: borderColors,
