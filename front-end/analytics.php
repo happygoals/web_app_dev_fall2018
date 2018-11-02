@@ -24,8 +24,8 @@
 					<option value="line">
 						Line chart
 					</option>
-					<option value="polar">
-						Polar area chart
+					<option value="radar">
+						Radar chart
 					</option>
 					<option value="scatter">
 						Scatter chart
@@ -104,18 +104,16 @@
 					
 					<script src="js/lineGraph.js"></script>
 				</div>
-				<div class="inv" id="polar">
-					<h2>Polar charts are disabled, severely broken</h2>
+				<div class="inv" id="radar">
 					<div class="chartBox">
-						<canvas height="400" id="polarChart1" width="400"></canvas>
+						<canvas height="400" id="radarChart1" width="400"></canvas>
 					</div>
-					<!--<script src="js/polarChart.js"></script>-->
+					<script src="js/radarChart.js"></script>
 				</div>
 				<div class="inv" id="scatter">
 					<div class="chartBox">
 						<canvas height="400" id="scatterPlot1" width="400"></canvas>
 					</div>
-					
 					<script src="js/scatterPlot.js"></script>
 				</div>
 				<div>

@@ -1,6 +1,6 @@
 var labels = ["Kitkat", "Starbucks coffee", "Cute cookie", "Sandwich", "Pizza"];
 var data = [12, 19, 3, 5, 2];
-var color = ['255, 99, 132', '54, 162, 235', '255, 206, 86', '75, 192, 192', '153, 102, 255'];
+var color = ['255, 99, 132'];
 
 addChart("radarChart1", labels, data, color);
 
