@@ -6,6 +6,7 @@
 		include 'head.php';
 		generateHead("js/survey.js");
 	?>
+	<script src="js/survey.js"></script>
 </head>
 <body>
 <?php
