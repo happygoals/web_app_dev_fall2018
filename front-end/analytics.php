@@ -90,18 +90,12 @@
 						<canvas height="400" id="pieChart1" width="400"></canvas>
 					</div>
 					<script src="js/pieChart.js"></script>
-					
 				</div>
 				
 				<div class="inv" id="line">
 					<div class="chartBox">
 						<canvas height="400" id="lineChart1" width="400"></canvas>
 					</div>
-					
-					<div class="chartBox">
-						<canvas height="400" id="lineChart2" width="400"></canvas>
-					</div>
-					
 					<script src="js/lineGraph.js"></script>
 				</div>
 				<div class="inv" id="radar">
@@ -118,7 +112,6 @@
 				</div>
 				<div>
 					<table class="table" style="-ms-overflow-style: -ms-autohiding-scrollbar; max-height: 200px;">
-					
 						<thead>
 							<tr>
 								<th scope="col">#</th>
