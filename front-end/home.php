@@ -8,8 +8,7 @@
 <body>
 <?php
     include 'navbar.php';
-    headerFunction("navbar-light", "background-color: rgba(251, 237, 254, 0.8)", "success", __FILE__); //for home page
-    //headerFunction("navbar-dark bg-dark", "", "warning", __FILE__); //for everything else
+    headerFunction("navbar-light", "background-color: rgba(251, 237, 254, 0.8)", __FILE__); //for home page
 ?>
 	<!-- Wrapper -->
 	<div id="wrapper">

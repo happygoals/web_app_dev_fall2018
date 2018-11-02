@@ -10,7 +10,6 @@
 <body>
 <?php
     include 'navbar.php';
-    //headerFunction("navbar-light", "background-color: rgba(251, 237, 254, 0.8)", "success", __FILE__); //for home page
     headerFunction("navbar-dark bg-dark", "", __FILE__); //for everything else
 ?>
 
