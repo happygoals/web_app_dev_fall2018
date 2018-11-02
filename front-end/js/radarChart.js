@@ -2,9 +2,9 @@ var labels = ["Kitkat", "Starbucks coffee", "Cute cookie", "Sandwich", "Pizza"];
 var data = [12, 19, 3, 5, 2];
 var color = '255, 99, 132';
 
-addChart("radarChart1", labels, data, color);
+addRadarChart("radarChart1", labels, data, color);
 
-function addChart(targetID, inputLabels, inputData, backgroundColorsIn) {
+function addRadarChart(targetID, inputLabels, inputData, backgroundColorsIn) {
 	var ctx = document.getElementById(targetID).getContext('2d');
 	var borderColors = "rgba(" + backgroundColorsIn + ", 1.0)";
 	var backgroundColors = "rgba(" + backgroundColorsIn + ", 0.2)";

@@ -5,7 +5,7 @@
 		$callingFile = $exploded[sizeof($exploded)-1];
 ?>
 	<nav class="navbar navbar-expand <?php echo $navbarStyle ?> static-top" <?php echo "style=\"".$navbarCustomStyle."\"" ?> >
-		<a class="navbar-brand mr-1" href="home.html"><img alt="Logo" src="resource/logo.png" style="width:171px; height:47px;"></a>
+		<a class="navbar-brand mr-1" href="home.php"><img alt="Logo" src="resource/logo.png" style="width:171px; height:47px;"></a>
 		<ul class="navbar-nav">
 <?php
 	foreach (array("Home", "Survey", "Analytics") as $link) { ?>
@@ -29,7 +29,6 @@
 				</div>
 			</li>
 		</ul>
-		</form>
 	</nav>
 	<!-- Login Modal -->
 	<div class="modal fade bs-modal-sm log-signin" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">

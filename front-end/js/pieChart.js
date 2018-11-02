@@ -2,9 +2,9 @@ var labels = ["Kitkat", "Starbucks coffee", "Cute cookie", "Sandwich", "Pizza"];
 var data = [12, 19, 3, 5, 2];
 var color = ['255, 99, 132', '54, 162, 235', '255, 206, 86', '75, 192, 192', '153, 102, 255'];
 
-addChart("pieChart1", labels, data, color);
+addPieChart("pieChart1", labels, data, color);
 
-function addChart(targetID, inputLabels, inputData, backgroundColorsIn) {
+function addPieChart(targetID, inputLabels, inputData, backgroundColorsIn) {
 	var ctx = document.getElementById(targetID).getContext('2d');
 	var borderColors = [];
 	var backgroundColors = [];

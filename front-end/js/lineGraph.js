@@ -2,9 +2,9 @@ var labels = ["Kitkat", "Starbucks coffee", "Cute cookie", "Sandwich", "Pizza"];
 var data = [12, 19, 3, 5, 2];
 var lineColor = '255, 99, 132';
 
-addChart("lineChart1", labels, data, lineColor);
+addLineGraph("lineChart1", labels, data, lineColor);
 
-function addChart(targetID, inputLabels, inputData, backgroundColorsIn) {
+function addLineGraph(targetID, inputLabels, inputData, backgroundColorsIn) {
 	var ctx = document.getElementById(targetID).getContext('2d');
 	var borderColors = "rgba(" + backgroundColorsIn + ", 1.0)";
 	var backgroundColors = "rgba(" + backgroundColorsIn + ", 0.2)";

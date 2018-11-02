@@ -8,7 +8,7 @@
 <body>
 <?php
     include 'navbar.php';
-    headerFunction("navbar-dark bg-dark", "", "warning", __FILE__); //for everything else
+    headerFunction("navbar-dark bg-dark", "", __FILE__); //for everything else
 ?>
 	<div class="container-fluid text-center">
 		<div class="row row-eq-height" style="padding-top: 70px">
@@ -62,15 +62,14 @@
 						<div class="chartBox">
 							<canvas height="400" id="barGraph1" width="400"></canvas>
 						</div>
-		<!--unfortunately, i think we have to duplicate this for each chart...-->
 			<div class="col-sm-4">
 				<div class="rightbox" style="background: #009588; color: white;  margin-left: 2px; margin-top: 7px; min-height: 210px; text-align: left; padding: 5px;  border-radius: 25px;">
 					<h5 style="text-align:center;">Top Sale List</h5>
-							<ol>
-								<li>Coke</li>
-								<li>Orange Juice</li>
-								<li>Potato chips</li>
-							</ol>
+					<ol>
+						<li>Coke</li>
+						<li>Orange Juice</li>
+						<li>Potato chips</li>
+					</ol>
 				</div>
 				
 				<div style="background: #01bcd4; color: white; min-height: 150px; text-align: left; padding: 5px; margin-top: 20px;  border-radius: 25px;">
