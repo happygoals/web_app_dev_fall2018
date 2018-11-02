@@ -1,47 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Snackfacts</title>
-	<link href="favicon address" rel="shortcut icon">
-	<link href="bootstrap-4.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/signin.css" rel="stylesheet">
-	<!-- scripts -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-	</script>
-	<!-- Popper JS -->
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
-	</script>
-	<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js">
-	</script>
-	<!--sign-in / login function-->
-	<script src="js/modal.js">
-	</script>
-</head>
-<body>
-	<!-- Nevigation bar menu -->
-	<nav class="navbar navbar-expand navbar-light static-top" style="background-color: rgba(251, 237, 254, 0.8);">
+<?php
+	function headerFunction($navbarStyle, $navbarCustomStyle, $searchButtonStyle, $callingFile) {
+		$callingFile = str_replace(".php", "", $callingFile);
+		$exploded = explode("/", $callingFile);
+		$callingFile = $exploded[sizeof($exploded)-1];
+?>
+	<nav class="navbar navbar-expand <?php echo $navbarStyle ?> static-top" <?php echo "style=\"".$navbarCustomStyle."\"" ?> >
 		<a class="navbar-brand mr-1" href="home.html"><img alt="Logo" src="resource/logo.png" style="width:171px; height:47px;"></a>
 		<ul class="navbar-nav">
-			<li class="nav-item active">
-				<a class="nav-link" href="home.html">Home</a>
+<?php
+	$links = array("Home", "Survey", "Analytics");
+	foreach ($links as $link) { ?>
+			<li class="nav-item<?php if ($callingFile == strtolower($link)) {echo " active";}?>">
+				<a class="nav-link" href="<?php echo strtolower($link).".php"; ?>"><?php echo $link ?></a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="survey.html">Surveys</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="analytics.html">Analytics</a>
-			</li>
-		</ul><button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle"><i class="fas fa-bars"></i></button> <!-- Navbar Search -->
+<?php } ?>
+		</ul>
+		<button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle"><i class="fas fa-bars"></i></button> <!-- Navbar Search -->
 		<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
 			<div class="input-group">
 				<input aria-describedby="basic-addon2" aria-label="Search" class="form-control" placeholder="Search for..." type="text">
 				<div class="input-group-append">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					<button class="btn btn-outline-<?php echo $searchButtonStyle?> my-2 my-sm-0" type="submit">Search</button>
 				</div>
 			</div>
 		</form>
@@ -51,12 +30,12 @@
 				<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="userDropdown" role="button"><i class="fas fa-user-circle fa-fw">Admin</i></a>
 				<div aria-labelledby="userDropdown" class="dropdown-menu dropdown-menu-right">
 					<a class="dropdown-item" href="#">Settings</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" data-target=".log-sign" data-toggle="modal" href="#signin">Login</a>
+					<div class="dropdown-divider"></div><a class="dropdown-item" data-target=".log-sign" data-toggle="modal" href="#signup">Login</a>
 				</div>
 			</li>
 		</ul>
 	</nav>
+	
 	<!-- Login Modal -->
 	<div aria-hidden="true" aria-labelledby="mySmallModalLabel" class="modal fade bs-modal-sm log-sign" id="myModal" role="dialog" tabindex="-1">
 		<div class="modal-dialog modal-sm">
@@ -73,7 +52,7 @@
 				</div>
 				<div class="modal-body">
 					<div class="tab-content" id="myTabContent" >
-						<div class="tab-pane fade active in" id="signin">
+						<div class="tab-pane active" id="signin">
 							<form class="form-horizontal">
 								<fieldset>
 									<!-- Sign In Form -->
@@ -86,7 +65,7 @@
 									</div><!-- Password input-->
 									<div class="group">
 										<input class="input" required="" type="password"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Password</label>
-									</div><em>minimum 6 characters</em>
+									</div><em>Minimum 6 characters</em>
 									<div class="forgot-link">
 										<a data-target="#forgot-password" data-toggle="modal" href="#forgot">I forgot my password</a>
 									</div><!-- Button -->
@@ -99,7 +78,7 @@
 								</fieldset>
 							</form>
 						</div>
-						<div class="tab-pane fade" id="signup">
+						<div class="tab-pane" id="signup">
 							<form class="form-horizontal">
 								<fieldset>
 									<!-- Sign Up Form -->
@@ -134,11 +113,6 @@
 						</div>
 					</div>
 				</div>
-				<!--<div class="modal-footer">
-                      <center>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </center>
-                      </div>-->
 			</div>
 		</div>
 	</div>
@@ -159,7 +133,7 @@
 							<div class="control-group">
 								<label class="control-label" for="forpassword"></label>
 								<div class="controls">
-									<button class="btn btn-primary btn-block" id="forpasswodr" name="forpassword">Send</button>
+									<button class="btn btn-primary btn-block" id="forpassword" name="forpassword">Send</button>
 								</div>
 							</div>
 						</fieldset>
@@ -168,49 +142,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- Wrapper -->
-	<div id="wrapper">
-		<!-- Header -->
-		<header id="header">
-			<div class="logo">
-				<span class="icon"></span>
-			</div>
-			<div class="content">
-				<div class="inner">
-					<h1 style="color:#FEB664">Vending machine</h1>
-					<h1>+</h1>
-					<h1 style="color:#EDC9FE">Data Analytics</h1><br>
-					<p>Make the ideal vending machine you want <a href="survey.html">Surveys</a></p>
-					<p>Maximize your profit from your vending machine <a href="analytics.html">Analytics</a></p>
-				</div>
-			</div>
-		</header>
-		<div class="container-fluid text-center">
-			<!-- 3 row layout -->
-			<div class="row row-eq-height" style="padding-top: 70px">
-				<div class="col-sm-2 sidenavr">
-					<h3>About</h3>
-				</div>
-				<div class="col-sm-8 text-left">
-					<h2>What we make</h2>
-					<p>Snackfacts is a vending machine marketing analytics tool.</p>
-				</div>
-				<div class="col-sm-2 sidenavr right"></div>
-			</div>
-			<div class="row row-eq-height" style="padding-top: 70px">
-				<div class="col-sm-2 sidenavr left"></div>
-				<div class="col-sm-8 intro text-left">
-					<h2>Who we are</h2>
-					<p>Developed for Purdue University Fort Wayne CS372 Fall 2018 by Haemin Ryu, Mack Crawford, Michael Wolgast, Min Namgung, and Nicholas Barnard</p>
-				</div>
-				<div class="col-sm-2 sidenavr righttext">
-					<h3>Member</h3>
-				</div>
-			</div>
-		</div>
-		<footer class="container-fluid text-center">
-			<p>© Snackfacts. All rights reserved.</p>
-		</footer>
-	</div>
-</body>
-</html>
+<?php
+	}
+?>
