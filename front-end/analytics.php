@@ -28,7 +28,7 @@
 </head>
 <body>
 <?php
-    include 'header.php';
+    include 'navbar.php';
     //headerFunction("navbar-light", "background-color: rgba(251, 237, 254, 0.8)", "success", __FILE__); //for home page
     headerFunction("navbar-dark bg-dark", "", "warning", __FILE__); //for everything else
 ?>
@@ -88,7 +88,6 @@
 			<div class="col-sm-4">
 				<div class="rightbox" style="background: #009588; color: white;  margin-left: 2px; margin-top: 7px; min-height: 210px; text-align: left; padding: 5px;  border-radius: 25px;">
 					<h5 style="text-align:center;">Top Sale List</h5>
-					
 							<ol>
 								<li>Coke</li>
 								<li>Orange Juice</li>

@@ -1,5 +1,5 @@
 <?php
-	function headerFunction($navbarStyle, $navbarCustomStyle, $searchButtonStyle, $callingFile) {
+	function headerFunction($navbarStyle, $navbarCustomStyle, $callingFile) {
 		$callingFile = str_replace(".php", "", $callingFile);
 		$exploded = explode("/", $callingFile);
 		$callingFile = $exploded[sizeof($exploded)-1];
@@ -8,22 +8,15 @@
 		<a class="navbar-brand mr-1" href="home.html"><img alt="Logo" src="resource/logo.png" style="width:171px; height:47px;"></a>
 		<ul class="navbar-nav">
 <?php
-	$links = array("Home", "Survey", "Analytics");
-	foreach ($links as $link) { ?>
+	foreach (array("Home", "Survey", "Analytics") as $link) { ?>
 			<li class="nav-item<?php if ($callingFile == strtolower($link)) {echo " active";}?>">
 				<a class="nav-link" href="<?php echo strtolower($link).".php"; ?>"><?php echo $link ?></a>
 			</li>
 <?php } ?>
 		</ul>
-		<button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle"><i class="fas fa-bars"></i></button> <!-- Navbar Search -->
-		<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-			<div class="input-group">
-				<input aria-describedby="basic-addon2" aria-label="Search" class="form-control" placeholder="Search for..." type="text">
-				<div class="input-group-append">
-					<button class="btn btn-outline-<?php echo $searchButtonStyle?> my-2 my-sm-0" type="submit">Search</button>
-				</div>
-			</div>
-		</form>
+		<div class="ml-auto mr-0 mr-md-3 my-2 my-md-0">
+			<!--hacky, someone else can deal with this-->
+		</div>
 		<!-- Navbar -->
 		<ul class="navbar-nav ml-auto ml-md-0">
 			<li class="nav-item dropdown no-arrow">

@@ -1,26 +1,17 @@
 <html lang="en">
+	
+	
 <head>
-	<meta charset="utf-8">
-	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Snackfacts</title>
-	<link href="favicon address" rel="shortcut icon">
-	<link href="bootstrap-4.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet"> 
-	<link href="css/signin.css" rel="stylesheet">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script><!-- Popper JS -->
-	<script src="js/survey.js"></script>
-	<script src="js/modal.js"></script>
-	<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
-	<script src="Chart.js/Chart.min.js"></script>
+	<?php
+		include 'head.php';
+		generateHead("js/survey.js");
+	?>
 </head>
 <body>
 <?php
-    include 'header.php';
+    include 'navbar.php';
     //headerFunction("navbar-light", "background-color: rgba(251, 237, 254, 0.8)", "success", __FILE__); //for home page
-    headerFunction("navbar-dark bg-dark", "", "warning", __FILE__); //for everything else
+    headerFunction("navbar-dark bg-dark", "", __FILE__); //for everything else
 ?>
 
 	<!-- Surveys Contents Start-->
