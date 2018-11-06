@@ -15,6 +15,7 @@ Verify that the data from users can be visualized on the analytics page.
 Verify that the vending machine operator can specify the number of respondents.
 
 **Optional
+
 TC-3    Administrators  and Users  (L/3)
 As a vending machine operator, I want to give "View" authority to the local user and give the "View and Edit" authority to the administrator.
 Verify that only admins can view the admin dashboard.
