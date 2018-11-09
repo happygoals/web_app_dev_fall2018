@@ -103,13 +103,13 @@
 					<ul style="list-style:none;">
 						<li><input id="op5.1" name="opt" type="radio">$0.75</label></li>
 						<li><input id="op5.2" name="opt" type="radio">$1.00</label></li>
-						<li><input id="op5.3" name="opt" type="radio">$1.25</label></li>
-						<li><input id="op5.4" name="opt" type="radio">$1.50</label></li>
+						<li><input id="op5.3" name="opt" type="radio">$1.50</label></li>
+						<li><input id="op5.4" name="opt" type="radio">$2.00</label></li>
 					</ul>
 				</form>
 				<!-- Question 5 END-->
 				<!-- Question 6 START-->
-				<form id="question6" name="question5">
+				<form id="question6" name="question6">
 					<h6>6) When purchasing a snack or beverage, what most influences your purchase?</h6>
 					<ul style="list-style:none;">
 						<li><input id="question6.1" name="question6.1" type="radio">Interest in a new snack or beverage</li>
@@ -120,6 +120,98 @@
 					</ul>
 				</form>
 				<!-- Question 6 END-->
+				<!-- Question 7 Start -->
+				<form id="question7" name="question7">
+					<h6>7) What products do you most want to remove from vending machines on campus?</h6>
+					<ul style="list-style:none;">
+						<li><input id="soda/pop" name="soda/pop" type="checkbox" value="sode/pop">Soda/Pop</li>
+						<li><input id="water" name="water" type="checkbox" value="water">Water</li>
+						<li><input id="coffee" name="coffee" type="checkbox" value="coffee">Coffee</li>
+						<li><input id="energy" name="energy" type="checkbox" value="energy">Energy Drink</li>
+						<li><input id="chips" name="chips" type="checkbox" value="chips">Chips</li>
+						<li><input id="candy" name="candy" type="checkbox" value="candy">Candy</li>
+						<li><input id="pretzels" name="pretzels" type="checkbox" value="pretzels">Pretzels</li>
+						<li><input id="gum" name="gum" type="checkbox" value="gum">Gum</li>
+						<li><input id="nothing" name="nothing" type="checkbox" value="nothing">Nothing</li>
+						<li><input id="other" name="other" onclick="expandCollapseBoxB('question7.1');" type="checkbox">Other Snack or Beverage</li>
+					</ul>
+				</form>
+				<form id="question7.1" name="question7.1" style="display: none">
+					<h6>Please specify:</h6>
+					<textarea cols="75" name="Why" rows="5"></textarea><br>
+				</form>
+				<!-- Question 7 End -->
+				<!-- Question 8 Start -->
+				<form id="question8" name="question8">
+					<h6>8) Where would you like a Vending Machine placed on Campus given these choices?</h6>
+					<select id="locations" name="locatons" onclick="updateCombo();">
+						<option value="">
+							Choose Option
+						</option>
+						<option value="Kettler Hall">
+							Kettler Hall
+						</option>
+						<option value="Neff Building">
+							Neff Building
+						</option>
+						<option value="ETCS Building">
+							ETCS Building
+						</option>
+						<option value="Science Building">
+							Science Building
+						</option>
+						<option value="Liberal Arts Building">
+							Liberal Arts Building
+						</option>
+						<option value="Library">
+							Library
+						</option>
+						<option value="Walb Union">
+							Walb Union
+						</option>
+						<option value="Visual Arts Building">
+							Visual Arts Building
+						</option>
+						<option value="Rhineheart Building">
+							Rhineheart Building
+						</option>
+						<option value="MCC Building">
+							MCC Building
+						</option>
+						<option value="MCB Building">
+							MCB Building
+						</option>
+					</select><br>
+				</form>
+				<form id="question8.1" name="question8.1" style="display: none">
+					<select id="vendtypes" name="vendtypes">
+						<option value="Snack Machine">
+							Snack Machine
+						</option>
+						<option value="Coffee Machine">
+							Coffee Machine
+						</option>
+						<option value="Beverage Machine">
+							Beverage Machine
+						</option>
+						<option value="Meal Machine">
+							Meal Machine
+						</option>
+					</select><br>
+				</form>
+				<!-- Question 8 End -->
+				<!-- Question 9 Start -->
+				
+				<!-- Question 9 End -->
+				<!-- Question 10 Start -->
+				
+				<!-- Question 10 End -->
+				<!-- Question 11 Start -->
+				
+				<!-- Question 11 End -->
+				<!-- Question 12 Start -->
+				
+				<!-- Question 12 End -->
 				<!--Name and Email Gather START-->
 				<p style="width:80%">To complete this survey we ask that you provide your name and email. The purpose of these provisions is to create 
 				a PDF version that can be sent to your email. The email will not be used to send advertisements or spam. Thanks for your cooperation!</p><br>

@@ -11,6 +11,11 @@ function expandCollapseBoxB(x) {
 	}
 }
 
+function updateCombo(){
+	alert("This method works currently");
+}
+
+
 function disable() {
 	/* Allows the submit button to be either disabled or enabled */
 	document.getElementById("submit").disabled = !document.getElementById("submit").disabled;
@@ -93,6 +98,11 @@ function validate() {
 	//Check all Question6 inputs
 	if(isOneCheckedRadio(document.getElementById('question6')) == false){
 		alert("You must select an answer for question 6!");
+		return false;
+	}
+	//Check all Question7 inputs
+	if(isOneCheckedCheckbox(document.getElementById('question7')) == false){
+		alert("You must select an answer for question 7!");
 		return false;
 	}
 	//Check Name and Email inputs
