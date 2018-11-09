@@ -46,13 +46,13 @@
 			</div>
 			<div class="col-sm-8 text-left">
 				<div class="row justify-content-around">
-					<span class="p-2 flex-fill" style="background-color:Orange; color:white; margin: 4px; 2px;">
+					<span class="p-2 flex-fill" style="background-color:Orange; color:white; margin: 4px; 2px; border-radius: 2px;" >
 						<img alt="img1test" class="img-valign" src="resource/qmark.png" style="width:50px; height:50px"> Total Surveys:257</span> 
-					<span class="p-2 flex-fill" style="background-color:SkyBlue; color:white; margin: 4px; 2px;">
+					<span class="p-2 flex-fill" style="background-color:SkyBlue; color:white; margin: 4px; 2px; border-radius: 2px;">
 						<img alt="img2test" class="img-valign" src="resource/user.png" style="width:50px; height:50px;" > New Visitors: 19</span> 
-					<span class="p-2 flex-fill" style="background-color:YellowGreen; color:white; margin: 4px; 1px;">
+					<span class="p-2 flex-fill" style="background-color:YellowGreen; color:white; margin: 4px; 1px; border-radius: 2px;">
 						<img alt="img3test" class="img-valign" src="resource/snack.png" style="width:50px; height:50px">Popular Snack</span> 
-						<span class="p-2 flex-fill" style="background-color:OrangeRed; color:white; margin: 4px; 2px;">
+					<span class="p-2 flex-fill" style="background-color:OrangeRed; color:white; margin: 4px; 2px; border-radius: 2px;">
 						<img alt="img2test" class="img-valign" src="resource/hot.png" style="width:50px; height:50px">Today's Hot Item </span>
 				</div>
 				
@@ -63,7 +63,7 @@
 							<canvas height="400" id="barGraph1" width="400"></canvas>
 						</div>
 			<div class="col-sm-4">
-				<div class="rightbox" style="background: #009588; color: white;  margin-left: 2px; margin-top: 7px; min-height: 210px; text-align: left; padding: 5px;  border-radius: 25px;">
+				<div class="rightbox" style="background: #009588; color: white;  margin-left: 2px; margin-top: 7px; min-height: 210px; text-align: left; padding: 5px;  border-radius: 5px;">
 					<h5 style="text-align:center;">Top Sale List</h5>
 					<ol>
 						<li>Coke</li>
@@ -72,7 +72,7 @@
 					</ol>
 				</div>
 				
-				<div style="background: #01bcd4; color: white; min-height: 150px; text-align: left; padding: 5px; margin-top: 20px;  border-radius: 25px;">
+				<div style="background: #01bcd4; color: white; min-height: 150px; text-align: left; padding: 5px; margin-top: 20px; border-radius: 5px;">
 					<h5 style="text-align:center;">New Entry Lank</h5>
 					<ul>
 						<li>Cute Cookie</li>

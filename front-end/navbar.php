@@ -16,7 +16,7 @@
 			</li>
 <?php } ?>
 		</ul>
-		<button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle"><i class="fas fa-bars"></i></button> <!-- Navbar Search -->
+ 
 		<div class="ml-auto mr-0 mr-md-3 my-2 my-md-0">
 			<!--hacky, someone else can deal with this-->
 		</div>
