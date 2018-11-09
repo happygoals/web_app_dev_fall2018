@@ -1,4 +1,6 @@
 <?php
+	session_start();
+
 	function headerFunction($navbarStyle, $navbarCustomStyle, $callingFile) {
 		$callingFile = str_replace(".php", "", $callingFile);
 		$exploded = explode("/", $callingFile);
@@ -18,19 +20,18 @@
 		<div class="ml-auto mr-0 mr-md-3 my-2 my-md-0">
 			<!--hacky, someone else can deal with this-->
 		</div>
-		<!-- Navbar -->
-		<ul class="navbar-nav ml-auto ml-md-0">
-			<li class="nav-item dropdown no-arrow">
-				<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="userDropdown" role="button"><i class="fas fa-user-circle fa-fw">Admin</i></a>
-				<div aria-labelledby="userDropdown" class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" data-target=".log-signin" data-toggle="modal" href="#signin">Sign in</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" data-target=".log-signup" data-toggle="modal" href="#signup">Sign up</a>
-				</div>
-			</li>
-		</ul>
-	</nav>
+		<!-- Account dropdown -->
+<?php
+	//different dropdown options if logged in or not
 	
+	if ($_SESSION["authenticated"] == true) { //logged in
+		include 'navbar/loggedInDropdown.php';
+	}
+	else if ($_SESSION["authenticated"] == false) { //logged out
+	    include 'navbar/loggedOutDropdown.php';
+	}
+?>
+	</nav>
 	
 <?php
 	//include modals for login, signup, forgot password
