@@ -110,13 +110,15 @@
 					<script src="js/scatterPlot.js"></script>
 				</div>
 				<div>
-					<table class="table" style="-ms-overflow-style: -ms-autohiding-scrollbar; max-height: 200px;">
+				<!-- Table --> 	
+					<table class="table" id="table" style="-ms-overflow-style: -ms-autohiding-scrollbar; max-height: 200px;">
 						<thead>
-							<tr>
+							<tr style="text-align:center;">
 								<th scope="col">#</th>
 								<th scope="col">Product Name</th>
 								<th scope="col">Location</th>
 								<th scope="col">Price</th>
+								<th scope="col">Action</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -125,30 +127,50 @@
 								<td>Kitkat</td>
 								<td>Vending machine 1</td>
 								<td>1 $</td>
+								<td style="text-align:center;">
+								<button type="button" class="btn btn-outline-primary" value='dddRow'><i class="fas fa-plus"></i>&nbsp;Add</button> 
+								<button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i>&nbsp;Delete</button> 
+								</td>
 							</tr>
 							<tr>
 								<th scope="row">2</th>
 								<td>Starbucks coffee</td>
 								<td>Vending machine 2</td>
 								<td>2.5 $</td>
+								<td style="text-align:center;">
+								<button type="button" class="btn btn-outline-primary"><i class="fas fa-plus"></i>&nbsp;Add</button> 
+								<button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i>&nbsp;Delete</button> 
+								</td>
 							</tr>
 							<tr>
 								<th scope="row">3</th>
 								<td>Cute cookie</td>
 								<td>Vending machine 1</td>
 								<td>2 $</td>
+								<td style="text-align:center;">
+								<button type="button" class="btn btn-outline-primary"><i class="fas fa-plus"></i>&nbsp;Add</button> 
+								<button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i>&nbsp;Delete</button>  
+								</td>
 							</tr>
 							<tr>
 								<th scope="row">4</th>
 								<td>Sandwich</td>
 								<td>Vending machine 3</td>
 								<td>2.3 $</td>
+								<td style="text-align:center;">
+								<button type="button" class="btn btn-outline-primary"><i class="fas fa-plus"></i>&nbsp;Add</button> 
+								<button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i>&nbsp;Delete</button>  
+								</td>
 							</tr>
 							<tr>
 								<th scope="row">5</th>
 								<td>Pizza</td>
 								<td>Vending machine 3</td>
 								<td>3 $</td>
+								<td style="text-align:center;">
+								<button type="button" class="btn btn-outline-primary"><i class="fas fa-plus"></i>&nbsp;Add</button> 
+								<button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i>&nbsp;Delete</button> 
+								</td>
 							</tr>
 						</tbody>
 					</table>
