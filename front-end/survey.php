@@ -209,7 +209,7 @@
 				<!-- Question 8 End -->
 				<!-- Question 9 Start -->
 				<form id="question9" name="question9">
-					<h6>8)  Campus given these choices?</h6>
+					<h6>9)  Campus given these choices?</h6>
 					<select id="locations9" name="locatons9" onchange="updateCombo('locations9');">
 						<option id="9.0.0" value="">
 							Choose Option
@@ -275,7 +275,16 @@
 				<br><br>
 				<!-- Question 9 End -->
 				<!-- Question 10 Start -->
-				
+				<form id="question10" name="question10">
+					<h6>10) What preffered payment methods would you like to use at a vending machine?</h6>
+					<ul style="list-style:none;">
+						<li><input id="credit" name="credit" type="checkbox" value="credit">Credit</li>
+						<li><input id="debit" name="debit" type="checkbox" value="debit">Debit</li>
+						<li><input id="cash" name="cash" type="checkbox" value="cash">Cash</li>
+						<li><input id="chip" name="chip" type="checkbox" value="chip">Chip</li>
+						<li><input id="other10" name="other10" type="checkbox" value="other10">Other Payment Type</li>
+					</ul>
+				</form>
 				<!-- Question 10 End -->
 				<!-- Question 11 Start -->
 				
