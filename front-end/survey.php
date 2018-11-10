@@ -103,10 +103,10 @@
 				<form id="question5" name="question5">
 					<h6>5) How much are you wiling to spend on a snack from the vending machine?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op5.1" name="opt" type="radio">$0.75</label></li>
-						<li><input id="op5.2" name="opt" type="radio">$1.00</label></li>
-						<li><input id="op5.3" name="opt" type="radio">$1.50</label></li>
-						<li><input id="op5.4" name="opt" type="radio">$2.00</label></li>
+						<li><input id="op5.1" name="opt" type="radio" value="0.75">$0.75</li>
+						<li><input id="op5.2" name="opt" type="radio" value="1.00">$1.00</li>
+						<li><input id="op5.3" name="opt" type="radio" value="1.50">$1.50</li>
+						<li><input id="op5.4" name="opt" type="radio" value="2.00">$2.00</li>
 					</ul>
 				</form>
 				<!-- Question 5 END-->
@@ -187,6 +187,8 @@
 				</form>
 				<br>
 				<form id="question8.1" name="question8.1" style="display: none">
+					What type of vending machine?
+					<br>
 					<select id="vendtypes" name="vendtypes">
 						<option id="8.1.0" value="">
 							Choose Option
@@ -209,7 +211,7 @@
 				<!-- Question 8 End -->
 				<!-- Question 9 Start -->
 				<form id="question9" name="question9">
-					<h6>9)  Campus given these choices?</h6>
+					<h6>9) Where would you like a vending machine removed from Campus given these choices?</h6>
 					<select id="locations9" name="locatons9" onchange="updateCombo('locations9');">
 						<option id="9.0.0" value="">
 							Choose Option
@@ -254,6 +256,8 @@
 				</form>
 				<br>
 				<form id="question9.1" name="question9.1" style="display: none">
+					What type of vending machine?
+					<br>
 					<select id="vendtypes" name="vendtypes">
 						<option id="9.1.0" value="">
 							Choose Option
@@ -287,11 +291,33 @@
 				</form>
 				<!-- Question 10 End -->
 				<!-- Question 11 Start -->
-				
+				<form id="question11" name="question11">
+					<h6>11) Which of the following would you consider yourself at your respective campus?</h6>
+					<ul style="list-style:none;">
+						<li><input id="op11.1" name="opt" type="radio" value="faculty">Faculty</li>
+						<li><input id="op11.2" name="opt" type="radio" value="staff">Staff</li>
+						<li><input id="op11.3" name="opt" type="radio" value="student">Student</li>
+						<li><input id="op11.4" name="opt" type="radio" value="visitor">Visitor</li>
+					</ul>
+				</form>
 				<!-- Question 11 End -->
 				<!-- Question 12 Start -->
-				
+				<form id="question12" name="question12">
+					<h6>12) Did you find that this survey was unbiased and gave you a chance to express your opinion fairly?</h6>
+					<label class="radio-inline"><input id="q12.1" name="opt" type="radio" onclick="collapseOnly('question12.1');" value="yes">Yes</label>
+					<label class="radio-inline"><input id="q12.2" name="opt" type="radio" onclick="expandOnly('question12.1');" value="no">No</label><br>
+				</form>
+				<form id="question12.1" name="question12.1" style="display: none">
+					<h6>Why not?</h6>
+					<textarea id="question12.1.0" cols="75" name="Why" rows="5"></textarea><br>
+				</form>
 				<!-- Question 12 End -->
+				<!-- Question 13 Start -->
+				<form id="question13" name="question13">
+					<h6>13) Is there anything else that you might want to share with us here at Snackfacts?</h6>
+					<textarea id="question13.0" cols="75" name="Why" rows="5"></textarea><br>
+				</form>
+				<!-- Question 13 End -->
 				<!--Name and Email Gather START-->
 				<p style="width:80%">To complete this survey we ask that you provide your name and email. The purpose of these provisions is to create 
 				a PDF version that can be sent to your email. The email will not be used to send advertisements or spam. Thanks for your cooperation!</p><br>

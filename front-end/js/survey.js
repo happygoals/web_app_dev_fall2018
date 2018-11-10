@@ -165,6 +165,16 @@ function validate() {
 		alert("You must select an answer for question 10!");
 		return false;
 	}
+	//Check all Question11 inputs
+	if(isOneCheckedRadio(document.getElementById('question11')) == false){
+		alert("You must select an answer for question 11!");
+		return false;
+	}
+	//Check all Question11 inputs
+	if(isOneCheckedRadio(document.getElementById('question12')) == false){
+		alert("You must select an answer for question 12!");
+		return false;
+	}
 	//Check Name and Email inputs
 	if (document.forms.survey.name.value == '') {
 		alert("You must provide your name!");
