@@ -15,23 +15,34 @@ function expandCollapseBoxB(x) {
 
 //Makes the given object visible to the user.
 function expandOnly(x){
-	
+	document.getElementById(x).style.display = "block";
 }
 
 //Makes the given object invisible to the user!
 function collapseOnly(x){
-	
+	document.getElementById(x).style.display = "none";
 }
 
 //Updates a question dependant upon the combobox given
 function updateCombo(x){
-	if(document.getElementById("locations8") == x ){
-		if(x.options[x.selectedIndex].value == ""){
-			collapseOnly(document.getElementById("8.1"));
+	if(document.getElementById("locations8") == document.getElementById(x)){
+		var option = document.getElementById(x).options[document.getElementById(x).selectedIndex];
+		if(option.value == ""){
+			collapseOnly("question8.1");
 			return;
 		}
 		else{
-			expandOnly(document.getElementById("8.1"));
+			expandOnly("question8.1");
+		}
+	}
+	else if(document.getElementById("locations9") == document.getElementById(x)){
+		var option = document.getElementById(x).options[document.getElementById(x).selectedIndex];
+		if(option.value == ""){
+			collapseOnly("question9.1");
+			return;
+		}
+		else{
+			expandOnly("question9.1");
 		}
 	}
 }

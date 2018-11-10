@@ -27,6 +27,7 @@
 				be used to generate analyzed date on this webpage. In doing so we hope that this data can help inform companies about what consumers like you,
 				want in the vending machines around your campus.</p>
 				<!--Question 1 START-->
+				<!-- 1) Do you purchase snacks on campus currently? --> <!-- placement is fine -->
 				<form id="question1" name="question1">
 					<h6>1) Do you purchase snacks on campus currently?</h6>
 					<label class="radio-inline"><input id="yes1" name="opt" onclick="expandCollapseBox('question1.2', 'question1.1');" type="radio">Yes</label> 
@@ -48,6 +49,7 @@
 				</form>
 				<!--Question 1 END-->
 				<!--Question 2 START-->
+				<!-- 1) Do you purchase beverages on campus currently? --> <!-- placement is fine -->
 				<form id="question2" name="question2">
 					<h6>2) Do you purchase beverages on campus currently?</h6>
 					<label class="radio-inline"><input id="yes2" name="opt" onclick="expandCollapseBox('question2.2', 'question2.1');" type="radio">Yes</label> 
@@ -144,7 +146,7 @@
 				<!-- Question 8 Start -->
 				<form id="question8" name="question8">
 					<h6>8) Where would you like a Vending Machine placed on Campus given these choices?</h6>
-					<select id="locations8" name="locatons8" onchange="updateCombo('this');">
+					<select id="locations8" name="locatons8" onchange="updateCombo('locations8');">
 						<option id="8.0.0" value="">
 							Choose Option
 						</option>
@@ -181,27 +183,96 @@
 						<option id="8.0.11" value="MCB Building">
 							MCB Building
 						</option>
-					</select><br>
+					</select>
 				</form>
+				<br>
 				<form id="question8.1" name="question8.1" style="display: none">
 					<select id="vendtypes" name="vendtypes">
-						<option value="Snack Machine">
+						<option id="8.1.0" value="">
+							Choose Option
+						</option>
+						<option id="8.1.1" value="Snack Machine">
 							Snack Machine
 						</option>
-						<option value="Coffee Machine">
+						<option id="8.1.2" value="Coffee Machine">
 							Coffee Machine
 						</option>
-						<option value="Beverage Machine">
+						<option id="8.1.3" value="Beverage Machine">
 							Beverage Machine
 						</option>
-						<option value="Meal Machine">
+						<option id="8.1.4" value="Meal Machine">
 							Meal Machine
 						</option>
-					</select><br>
+					</select>
 				</form>
+				<br><br>
 				<!-- Question 8 End -->
 				<!-- Question 9 Start -->
-				
+				<form id="question9" name="question9">
+					<h6>8)  Campus given these choices?</h6>
+					<select id="locations9" name="locatons9" onchange="updateCombo('locations9');">
+						<option id="9.0.0" value="">
+							Choose Option
+						</option>
+						<option id="9.0.1" value="Kettler Hall">
+							Kettler Hall
+						</option>
+						<option id="9.0.2" value="Neff Building">
+							Neff Building
+						</option>
+						<option id="9.0.3" value="ETCS Building">
+							ETCS Building
+						</option>
+						<option id="9.0.4" value="Science Building">
+							Science Building
+						</option>
+						<option id="9.0.5" value="Liberal Arts Building">
+							Liberal Arts Building
+						</option>
+						<option id="9.0.6" value="Library">
+							Library
+						</option>
+						<option id="9.0.7" value="Walb Union">
+							Walb Union
+						</option>
+						<option id="9.0.8" value="Visual Arts Building">
+							Visual Arts Building
+						</option>
+						<option id="9.0.9" value="Rhineheart Building">
+							Rhineheart Building
+						</option>
+						<option id="9.0.10" value="MCC Building">
+							MCC Building
+						</option>
+						<option id="9.0.11" value="MCB Building">
+							MCB Building
+						</option>
+						<option id="9.0.12" value="Don't Remove Vending Machines">
+							MCB Building
+						</option>
+					</select>
+				</form>
+				<br>
+				<form id="question9.1" name="question9.1" style="display: none">
+					<select id="vendtypes" name="vendtypes">
+						<option id="9.1.0" value="">
+							Choose Option
+						</option>
+						<option id="9.1.1" value="Snack Machine">
+							Snack Machine
+						</option>
+						<option id="9.1.2" value="Coffee Machine">
+							Coffee Machine
+						</option>
+						<option id="9.1.3" value="Beverage Machine">
+							Beverage Machine
+						</option>
+						<option id="9.1.4" value="Meal Machine">
+							Meal Machine
+						</option>
+					</select>
+				</form>
+				<br><br>
 				<!-- Question 9 End -->
 				<!-- Question 10 Start -->
 				
