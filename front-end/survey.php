@@ -144,41 +144,41 @@
 				<!-- Question 8 Start -->
 				<form id="question8" name="question8">
 					<h6>8) Where would you like a Vending Machine placed on Campus given these choices?</h6>
-					<select id="locations" name="locatons" onclick="updateCombo();">
-						<option value="">
+					<select id="locations8" name="locatons8" onchange="updateCombo('this');">
+						<option id="8.0.0" value="">
 							Choose Option
 						</option>
-						<option value="Kettler Hall">
+						<option id="8.0.1" value="Kettler Hall">
 							Kettler Hall
 						</option>
-						<option value="Neff Building">
+						<option id="8.0.2" value="Neff Building">
 							Neff Building
 						</option>
-						<option value="ETCS Building">
+						<option id="8.0.3" value="ETCS Building">
 							ETCS Building
 						</option>
-						<option value="Science Building">
+						<option id="8.0.4" value="Science Building">
 							Science Building
 						</option>
-						<option value="Liberal Arts Building">
+						<option id="8.0.5" value="Liberal Arts Building">
 							Liberal Arts Building
 						</option>
-						<option value="Library">
+						<option id="8.0.6" value="Library">
 							Library
 						</option>
-						<option value="Walb Union">
+						<option id="8.0.7" value="Walb Union">
 							Walb Union
 						</option>
-						<option value="Visual Arts Building">
+						<option id="8.0.8" value="Visual Arts Building">
 							Visual Arts Building
 						</option>
-						<option value="Rhineheart Building">
+						<option id="8.0.9" value="Rhineheart Building">
 							Rhineheart Building
 						</option>
-						<option value="MCC Building">
+						<option id="8.0.10" value="MCC Building">
 							MCC Building
 						</option>
-						<option value="MCB Building">
+						<option id="8.0.11" value="MCB Building">
 							MCB Building
 						</option>
 					</select><br>

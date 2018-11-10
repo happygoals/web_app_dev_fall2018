@@ -1,8 +1,10 @@
+//Makes Element x viewable to the user and removes the y onject from vision
 function expandCollapseBox(x, y) {
 	document.getElementById(x).style.display = "block";
 	document.getElementById(y).style.display = "none";
 }
 
+//Check the current visability of the x element, if visible makes it invisible, and if invisible makes visible
 function expandCollapseBoxB(x) {
 	if (document.getElementById(x).style.display == "none") {
 		document.getElementById(x).style.display = "block";
@@ -11,48 +13,60 @@ function expandCollapseBoxB(x) {
 	}
 }
 
-function updateCombo(){
-	alert("This method works currently");
+//Makes the given object visible to the user.
+function expandOnly(x){
+	
 }
 
+//Makes the given object invisible to the user!
+function collapseOnly(x){
+	
+}
 
+//Updates a question dependant upon the combobox given
+function updateCombo(x){
+	if(document.getElementById("locations8") == x ){
+		if(x.options[x.selectedIndex].value == ""){
+			collapseOnly(document.getElementById("8.1"));
+			return;
+		}
+		else{
+			expandOnly(document.getElementById("8.1"));
+		}
+	}
+}
+
+//Disables the submit button if the checkbox is not checked, and reenables it if one is checked
 function disable() {
 	/* Allows the submit button to be either disabled or enabled */
 	document.getElementById("submit").disabled = !document.getElementById("submit").disabled;
 }
 
+//Checks that at least one Radio button is checked out of a given radio button group
 function isOneCheckedRadio(x) {
-  // All <input> tags...
   var form = x;
   var chx = x.getElementsByTagName('input');
   for (var i=0; i<chx.length; i++) {
-    // If you have more than one radio group, also check the name attribute
-    // for the one you want as in && chx[i].name == 'choose'
-    // Return true from the function on first match of a checked item
     if (chx[i].type == 'radio' && chx[i].checked) {
       return true;
     } 
   }
-  // End of the loop, return false
   return false;
 }
 
+//Checks that at least one Radio button is checked out of a given check box group
 function isOneCheckedCheckbox(x) {
-  // All <input> tags...
   var form = x;
   var chx = x.getElementsByTagName('input');
   for (var i=0; i<chx.length; i++) {
-    // If you have more than one radio group, also check the name attribute
-    // for the one you want as in && chx[i].name == 'choose'
-    // Return true from the function on first match of a checked item
     if (chx[i].type == 'checkbox' && chx[i].checked) {
       return true;
     } 
   }
-  // End of the loop, return false
   return false;
 }
 
+//Checks that the form has an answer to all questions, and if so allows the submission process to continue!
 function validate() {
 	// Checks all Question 1 inputs
 	if(isOneCheckedRadio(document.getElementById('question1')) == false){
