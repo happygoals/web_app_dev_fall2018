@@ -213,6 +213,7 @@
 				
 				<!-- Question 12 End -->
 				<!--Name and Email Gather START-->
+				
 				<p style="width:80%">To complete this survey we ask that you provide your name and email. The purpose of these provisions is to create 
 				a PDF version that can be sent to your email. The email will not be used to send advertisements or spam. Thanks for your cooperation!</p><br>
 				<form action="" id="survey" method="get" name="survey" onsubmit="return validate();">
