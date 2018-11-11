@@ -46,69 +46,194 @@
 			</div>
 			<div class="col-sm-8 text-left">
 				<div class="row justify-content-around">
-					<span class="p-2 flex-fill" style="background-color:Orange; color:white; margin: 4px; 2px;">
-						<img alt="img1test" class="img-valign" src="resource/qmark.png" style="width:50px; height:50px"> Total Surveys:257</span> 
-					<span class="p-2 flex-fill" style="background-color:SkyBlue; color:white; margin: 4px; 2px;">
-						<img alt="img2test" class="img-valign" src="resource/user.png" style="width:50px; height:50px;" > New Visitors: 19</span> 
-					<span class="p-2 flex-fill" style="background-color:YellowGreen; color:white; margin: 4px; 1px;">
-						<img alt="img3test" class="img-valign" src="resource/snack.png" style="width:50px; height:50px">Popular Snack</span> 
-						<span class="p-2 flex-fill" style="background-color:OrangeRed; color:white; margin: 4px; 2px;">
-						<img alt="img2test" class="img-valign" src="resource/hot.png" style="width:50px; height:50px">Today's Hot Item </span>
+			
+						<div class="card text-white bg-warning mb-5" style="max-width: 18rem; margin:0px 0px 0px 25px;">
+						  <div class="card-header" style="background-color:Orange;"><h6>&nbsp;&nbsp;&nbsp;&nbsp;Total Surveys&nbsp;&nbsp;&nbsp; &nbsp;</h6></div>
+						  <div class="card-body" style="background-color:Orange;" >
+						    	<h3 style="color:white;  text-align:center;"><i class="far fa-clipboard" style="color:white;"></i> 257</h3>
+						  </div>
+						</div>
+						<div class="card text-white bg-light mb-5" style="max-width: 18rem;  ">
+						  <div class="card-header" style="background-color:Salmon;" ><h6></i>&nbsp;&nbsp;&nbsp;&nbsp;New Visitors &nbsp;&nbsp;&nbsp;&nbsp;</h6></div>
+						  <div class="card-body" style="background-color:Salmon;" >
+						  		<h3 style="color:white;  text-align:center;"><i class="far fa-user" style="color:white;"></i> 19</h3>
+						  </div>
+						</div>
+						<div class="card text-white bg-light mb-5" style="max-width: 20rem; ">
+						  <div class="card-header" style="background-color:YellowGreen;" >
+						  	<h6>&nbsp;&nbsp;&nbsp;&nbsp;Popular Snack&nbsp;&nbsp;&nbsp;&nbsp;</h6>
+						  </div>
+						  <div class="card-body" style="background-color:YellowGreen;text-align:center;" >
+						  		<h3 style="color:white;  text-align:center;"><i class="fas fa-cookie-bite" style="color:white;"></i> KitKat</h3>
+
+						    <h4 class="card-title" style="background-color:YellowGreen; text-align:center; "></h4>
+						  </div>
+						</div>
+						<div class="card text-white bg-light mb-5 " style="max-width: 18rem; margin: 0px 25px 0px 0px;">
+						  <div class="card-header" style="background-color:OrangeRed;"><h6>&nbsp;Today's Hot Item&nbsp;</h6></div>
+						  <div class="card-body" style="background-color:OrangeRed;  text-align:center;">
+								<h3 style="color:white;  text-align:center;"><i class="fab fa-hotjar" style="color:white;"></i> Coke</h3>
+						  </div>
+						</div>
 				</div>
 				
 				<div class="vis" id="bar"> 
 		<!--vis does nothing here, just differentiates it from invisible for code readability -->
 					<div class="row justify-content-around">
 						<div class="chartBox">
-							<canvas height="400" id="barGraph1" width="400"></canvas>
+							<canvas width="500" height="500" id="barGraph1"></canvas>
 						</div>
-			<div class="col-sm-4">
-				<div class="rightbox" style="background: #009588; color: white;  margin-left: 2px; margin-top: 7px; min-height: 210px; text-align: left; padding: 5px;  border-radius: 25px;">
-					<h5 style="text-align:center;">Top Sale List</h5>
-					<ol>
-						<li>Coke</li>
-						<li>Orange Juice</li>
-						<li>Potato chips</li>
-					</ol>
-				</div>
-				
-				<div style="background: #01bcd4; color: white; min-height: 150px; text-align: left; padding: 5px; margin-top: 20px;  border-radius: 25px;">
-					<h5 style="text-align:center;">New Entry Lank</h5>
-					<ul>
-						<li>Cute Cookie</li>
-						<li>Buritto</li>
-						<li>Banana</li>
-					</ul>
-				</div>
-			</div>
+						<div class="col-sm-4">
+							<div class="card bg-info text-white text-center p-3">
+			    					<blockquote class="blockquote mb-0">
+			      						<h5 style="text-align:center;">Top Sale List</h5>
+											<ol style="text-align:left;">
+												<li>Coke</li>
+												<li>Orange Juice</li>
+												<li>Potato chips</li>
+											</ol>
+								    </blockquote>
+							  </div>
+							  	<div class="card bg-Secondary text-white text-center p-3" style="margin-top: 20px; margin-bottom: 20px;">
+			    					<blockquote class="blockquote mb-0">
+										<h5 style="text-align:center;">New Entry Lank</h5>
+											<ul style="text-align:left;">
+												<li>Cute Cookie</li>
+												<li>Buritto</li>
+												<li>Banana</li>
+											</ul>
+								    </blockquote>
+							  </div>
+						</div>
 				</div>
 					<script src="js/barGraph.js"></script>
 				</div>
-				<div class="inv" id="pie">
-					<div class="chartBox">
-						<canvas height="400" id="pieChart1" width="400"></canvas>
-					</div>
+			
+							<div class="vis" id="pie">
+						<div class="row justify-content-around">
+						<div class="chartBox">
+								<canvas height="500" id="pieChart1" width="500"></canvas>
+						</div>
+					<div class="col-sm-4">
+							<div class="card bg-info text-white text-center p-3">
+			    					<blockquote class="blockquote mb-0">
+			      						<h5 style="text-align:center;">Top Sale List</h5>
+											<ol style="text-align:left;">
+												<li>Coke</li>
+												<li>Orange Juice</li>
+												<li>Potato chips</li>
+											</ol>
+								    </blockquote>
+							 </div>
+							 <div class="card bg-Secondary text-white text-center p-3" style="margin-top: 20px; margin-bottom: 20px;">
+			    					<blockquote class="blockquote mb-0">
+										<h5 style="text-align:center;">New Entry Lank</h5>
+											<ul style="text-align:left;">
+												<li>Cute Cookie</li>
+												<li>Buritto</li>
+												<li>Banana</li>
+											</ul>
+								    </blockquote>
+							  </div>
+						</div>
+				</div>
 					<script src="js/pieChart.js"></script>
 				</div>
 				
-				<div class="inv" id="line">
-					<div class="chartBox">
-						<canvas height="400" id="lineChart1" width="400"></canvas>
-					</div>
+				<div class="vis" id="line">
+						<div class="row justify-content-around">
+						<div class="chartBox">
+							<canvas height="500" id="lineChart1" width="500"></canvas>
+						</div>
+					<div class="col-sm-4">
+							<div class="card bg-info text-white text-center p-3">
+			    					<blockquote class="blockquote mb-0">
+			      						<h5 style="text-align:center;">Top Sale List</h5>
+											<ol style="text-align:left;">
+												<li>Coke</li>
+												<li>Orange Juice</li>
+												<li>Potato chips</li>
+											</ol>
+								    </blockquote>
+							 </div>
+							 <div class="card bg-Secondary text-white text-center p-3" style="margin-top: 20px; margin-bottom: 20px;">
+			    					<blockquote class="blockquote mb-0">
+										<h5 style="text-align:center;">New Entry Lank</h5>
+											<ul style="text-align:left;">
+												<li>Cute Cookie</li>
+												<li>Buritto</li>
+												<li>Banana</li>
+											</ul>
+								    </blockquote>
+							  </div>
+						</div>
+				</div>
 					<script src="js/lineGraph.js"></script>
 				</div>
-				<div class="inv" id="radar">
-					<div class="chartBox">
-						<canvas height="400" id="radarChart1" width="400"></canvas>
-					</div>
+				
+				<!-- rader --> 
+				<div class="vis" id="radar">
+						<div class="row justify-content-around">
+						<div class="chartBox">
+													<canvas height="500" id="radarChart1" width="500"></canvas>
+						</div>
+					<div class="col-sm-4">
+							<div class="card bg-info text-white text-center p-3">
+			    					<blockquote class="blockquote mb-0">
+			      						<h5 style="text-align:center;">Top Sale List</h5>
+											<ol style="text-align:left;">
+												<li>Coke</li>
+												<li>Orange Juice</li>
+												<li>Potato chips</li>
+											</ol>
+								    </blockquote>
+							 </div>
+							 <div class="card bg-Secondary text-white text-center p-3" style="margin-top: 20px; margin-bottom: 20px;">
+			    					<blockquote class="blockquote mb-0">
+										<h5 style="text-align:center;">New Entry Lank</h5>
+											<ul style="text-align:left;">
+												<li>Cute Cookie</li>
+												<li>Buritto</li>
+												<li>Banana</li>
+											</ul>
+								    </blockquote>
+							  </div>
+						</div>
+				</div>
 					<script src="js/radarChart.js"></script>
 				</div>
-				<div class="inv" id="scatter">
-					<div class="chartBox">
-						<canvas height="400" id="scatterPlot1" width="400"></canvas>
-					</div>
+				<!-- Scatter-->
+				<div class="vis" id="scatter">
+						<div class="row justify-content-around">
+						<div class="chartBox">
+							<canvas height="500" id="scatterPlot1" width="500"></canvas>
+						</div>
+					<div class="col-sm-4">
+							<div class="card bg-info text-white text-center p-3">
+			    					<blockquote class="blockquote mb-0">
+			      						<h5 style="text-align:center;">Top Sale List</h5>
+											<ol style="text-align:left;">
+												<li>Coke</li>
+												<li>Orange Juice</li>
+												<li>Potato chips</li>
+											</ol>
+								    </blockquote>
+							 </div>
+							 <div class="card bg-Secondary text-white text-center p-3" style="margin-top: 20px; margin-bottom: 20px;">
+			    					<blockquote class="blockquote mb-0">
+										<h5 style="text-align:center;">New Entry Lank</h5>
+											<ul style="text-align:left;">
+												<li>Cute Cookie</li>
+												<li>Buritto</li>
+												<li>Banana</li>
+											</ul>
+								    </blockquote>
+							  </div>
+						</div>
+				</div>
 					<script src="js/scatterPlot.js"></script>
 				</div>
+				
 				<div>
 				<!-- Table --> 	
 					<table class="table" id="table" style="-ms-overflow-style: -ms-autohiding-scrollbar; max-height: 200px;">
