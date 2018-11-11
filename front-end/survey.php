@@ -27,6 +27,7 @@
 				be used to generate analyzed date on this webpage. In doing so we hope that this data can help inform companies about what consumers like you,
 				want in the vending machines around your campus.</p>
 				<!--Question 1 START-->
+				<!-- 1) Do you purchase snacks on campus currently? --> <!-- placement is fine -->
 				<form id="question1" name="question1">
 					<h6>1) Do you purchase snacks on campus currently?</h6>
 					<label class="radio-inline"><input id="yes1" name="opt" onclick="expandCollapseBox('question1.2', 'question1.1');" type="radio">Yes</label> 
@@ -48,6 +49,7 @@
 				</form>
 				<!--Question 1 END-->
 				<!--Question 2 START-->
+				<!-- 1) Do you purchase beverages on campus currently? --> <!-- placement is fine -->
 				<form id="question2" name="question2">
 					<h6>2) Do you purchase beverages on campus currently?</h6>
 					<label class="radio-inline"><input id="yes2" name="opt" onclick="expandCollapseBox('question2.2', 'question2.1');" type="radio">Yes</label> 
@@ -101,10 +103,10 @@
 				<form id="question5" name="question5">
 					<h6>5) How much are you wiling to spend on a snack from the vending machine?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op5.1" name="opt" type="radio">$0.75</label></li>
-						<li><input id="op5.2" name="opt" type="radio">$1.00</label></li>
-						<li><input id="op5.3" name="opt" type="radio">$1.50</label></li>
-						<li><input id="op5.4" name="opt" type="radio">$2.00</label></li>
+						<li><input id="op5.1" name="opt" type="radio" value="0.75">$0.75</li>
+						<li><input id="op5.2" name="opt" type="radio" value="1.00">$1.00</li>
+						<li><input id="op5.3" name="opt" type="radio" value="1.50">$1.50</li>
+						<li><input id="op5.4" name="opt" type="radio" value="2.00">$2.00</li>
 					</ul>
 				</form>
 				<!-- Question 5 END-->
@@ -144,74 +146,178 @@
 				<!-- Question 8 Start -->
 				<form id="question8" name="question8">
 					<h6>8) Where would you like a Vending Machine placed on Campus given these choices?</h6>
-					<select id="locations" name="locatons" onclick="updateCombo();">
-						<option value="">
+					<select id="locations8" name="locatons8" onchange="updateCombo('locations8');">
+						<option id="8.0.0" value="">
 							Choose Option
 						</option>
-						<option value="Kettler Hall">
+						<option id="8.0.1" value="Kettler Hall">
 							Kettler Hall
 						</option>
-						<option value="Neff Building">
+						<option id="8.0.2" value="Neff Building">
 							Neff Building
 						</option>
-						<option value="ETCS Building">
+						<option id="8.0.3" value="ETCS Building">
 							ETCS Building
 						</option>
-						<option value="Science Building">
+						<option id="8.0.4" value="Science Building">
 							Science Building
 						</option>
-						<option value="Liberal Arts Building">
+						<option id="8.0.5" value="Liberal Arts Building">
 							Liberal Arts Building
 						</option>
-						<option value="Library">
+						<option id="8.0.6" value="Library">
 							Library
 						</option>
-						<option value="Walb Union">
+						<option id="8.0.7" value="Walb Union">
 							Walb Union
 						</option>
-						<option value="Visual Arts Building">
+						<option id="8.0.8" value="Visual Arts Building">
 							Visual Arts Building
 						</option>
-						<option value="Rhineheart Building">
+						<option id="8.0.9" value="Rhineheart Building">
 							Rhineheart Building
 						</option>
-						<option value="MCC Building">
+						<option id="8.0.10" value="MCC Building">
 							MCC Building
 						</option>
-						<option value="MCB Building">
+						<option id="8.0.11" value="MCB Building">
 							MCB Building
 						</option>
-					</select><br>
+					</select>
 				</form>
+				<br>
 				<form id="question8.1" name="question8.1" style="display: none">
+					What type of vending machine?
+					<br>
 					<select id="vendtypes" name="vendtypes">
-						<option value="Snack Machine">
+						<option id="8.1.0" value="">
+							Choose Option
+						</option>
+						<option id="8.1.1" value="Snack Machine">
 							Snack Machine
 						</option>
-						<option value="Coffee Machine">
+						<option id="8.1.2" value="Coffee Machine">
 							Coffee Machine
 						</option>
-						<option value="Beverage Machine">
+						<option id="8.1.3" value="Beverage Machine">
 							Beverage Machine
 						</option>
-						<option value="Meal Machine">
+						<option id="8.1.4" value="Meal Machine">
 							Meal Machine
 						</option>
-					</select><br>
+					</select>
 				</form>
+				<br><br>
 				<!-- Question 8 End -->
 				<!-- Question 9 Start -->
-				
+				<form id="question9" name="question9">
+					<h6>9) Where would you like a vending machine removed from Campus given these choices?</h6>
+					<select id="locations9" name="locatons9" onchange="updateCombo('locations9');">
+						<option id="9.0.0" value="">
+							Choose Option
+						</option>
+						<option id="9.0.1" value="Kettler Hall">
+							Kettler Hall
+						</option>
+						<option id="9.0.2" value="Neff Building">
+							Neff Building
+						</option>
+						<option id="9.0.3" value="ETCS Building">
+							ETCS Building
+						</option>
+						<option id="9.0.4" value="Science Building">
+							Science Building
+						</option>
+						<option id="9.0.5" value="Liberal Arts Building">
+							Liberal Arts Building
+						</option>
+						<option id="9.0.6" value="Library">
+							Library
+						</option>
+						<option id="9.0.7" value="Walb Union">
+							Walb Union
+						</option>
+						<option id="9.0.8" value="Visual Arts Building">
+							Visual Arts Building
+						</option>
+						<option id="9.0.9" value="Rhineheart Building">
+							Rhineheart Building
+						</option>
+						<option id="9.0.10" value="MCC Building">
+							MCC Building
+						</option>
+						<option id="9.0.11" value="MCB Building">
+							MCB Building
+						</option>
+						<option id="9.0.12" value="Don't Remove Vending Machines">
+							MCB Building
+						</option>
+					</select>
+				</form>
+				<br>
+				<form id="question9.1" name="question9.1" style="display: none">
+					What type of vending machine?
+					<br>
+					<select id="vendtypes" name="vendtypes">
+						<option id="9.1.0" value="">
+							Choose Option
+						</option>
+						<option id="9.1.1" value="Snack Machine">
+							Snack Machine
+						</option>
+						<option id="9.1.2" value="Coffee Machine">
+							Coffee Machine
+						</option>
+						<option id="9.1.3" value="Beverage Machine">
+							Beverage Machine
+						</option>
+						<option id="9.1.4" value="Meal Machine">
+							Meal Machine
+						</option>
+					</select>
+				</form>
+				<br><br>
 				<!-- Question 9 End -->
 				<!-- Question 10 Start -->
-				
+				<form id="question10" name="question10">
+					<h6>10) What preffered payment methods would you like to use at a vending machine?</h6>
+					<ul style="list-style:none;">
+						<li><input id="credit" name="credit" type="checkbox" value="credit">Credit</li>
+						<li><input id="debit" name="debit" type="checkbox" value="debit">Debit</li>
+						<li><input id="cash" name="cash" type="checkbox" value="cash">Cash</li>
+						<li><input id="chip" name="chip" type="checkbox" value="chip">Chip</li>
+						<li><input id="other10" name="other10" type="checkbox" value="other10">Other Payment Type</li>
+					</ul>
+				</form>
 				<!-- Question 10 End -->
 				<!-- Question 11 Start -->
-				
+				<form id="question11" name="question11">
+					<h6>11) Which of the following would you consider yourself at your respective campus?</h6>
+					<ul style="list-style:none;">
+						<li><input id="op11.1" name="opt" type="radio" value="faculty">Faculty</li>
+						<li><input id="op11.2" name="opt" type="radio" value="staff">Staff</li>
+						<li><input id="op11.3" name="opt" type="radio" value="student">Student</li>
+						<li><input id="op11.4" name="opt" type="radio" value="visitor">Visitor</li>
+					</ul>
+				</form>
 				<!-- Question 11 End -->
 				<!-- Question 12 Start -->
-				
+				<form id="question12" name="question12">
+					<h6>12) Did you find that this survey was unbiased and gave you a chance to express your opinion fairly?</h6>
+					<label class="radio-inline"><input id="q12.1" name="opt" type="radio" onclick="collapseOnly('question12.1');" value="yes">Yes</label>
+					<label class="radio-inline"><input id="q12.2" name="opt" type="radio" onclick="expandOnly('question12.1');" value="no">No</label><br>
+				</form>
+				<form id="question12.1" name="question12.1" style="display: none">
+					<h6>Why not?</h6>
+					<textarea id="question12.1.0" cols="75" name="Why" rows="5"></textarea><br>
+				</form>
 				<!-- Question 12 End -->
+				<!-- Question 13 Start -->
+				<form id="question13" name="question13">
+					<h6>13) Is there anything else that you might want to share with us here at Snackfacts?</h6>
+					<textarea id="question13.0" cols="75" name="Why" rows="5"></textarea><br>
+				</form>
+				<!-- Question 13 End -->
 				<!--Name and Email Gather START-->
 				<p style="width:80%">To complete this survey we ask that you provide your name and email. The purpose of these provisions is to create 
 				a PDF version that can be sent to your email. The email will not be used to send advertisements or spam. Thanks for your cooperation!</p><br>
