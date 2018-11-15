@@ -25,24 +25,24 @@ function collapseOnly(x){
 
 //Updates a question dependant upon the combobox given
 function updateCombo(x){
-	if(document.getElementById("locations8") == document.getElementById(x)){
+	if(document.getElementById("locations14") == document.getElementById(x)){
 		var option = document.getElementById(x).options[document.getElementById(x).selectedIndex];
 		if(option.value == ""){
-			collapseOnly("question8.1");
+			collapseOnly("question14.1");
 			return;
 		}
 		else{
-			expandOnly("question8.1");
+			expandOnly("question14.1");
 		}
 	}
-	else if(document.getElementById("locations9") == document.getElementById(x)){
+	else if(document.getElementById("locations15") == document.getElementById(x)){
 		var option = document.getElementById(x).options[document.getElementById(x).selectedIndex];
 		if(option.value == ""){
-			collapseOnly("question9.1");
+			collapseOnly("question15.1");
 			return;
 		}
 		else{
-			expandOnly("question9.1");
+			expandOnly("question15.1");
 		}
 	}
 }
@@ -85,94 +85,116 @@ function isOneCheckedCombo(question){
 	return true;
 }
 
-//Checks that the form has an answer to all questions, and if so allows the submission process to continue!
+// Checks that the form has an answer to all questions, and if so allows the submission process to continue!
+// It is important to note that text areas are not part of this validation testing, as we do not expect users
+// to give us additional feedback in these cases, as it may be viewed as extra work to do.
 function validate() {
-	// Checks all Question 1 inputs
+	// Checks that Question 1 was completed
 	if(isOneCheckedRadio(document.getElementById('question1')) == false){
 		alert("You must select an answer for question 1!");
 		return false;
 	}
-	else {
-		if(document.getElementById('yes1').checked == true){
-			if(isOneCheckedRadio(document.getElementById('question1.2')) == false){
-				alert("You must select an answer for question 1's sub-question!");
-				return false;
-			}
-		}
-	}
-	// Checks all Question2 inputs
+	// Checks that Question 2 was completed
 	if(isOneCheckedRadio(document.getElementById('question2')) == false){
 		alert("You must select an answer for question 2!");
 		return false;
 	}
+	// Checks that Question 3 was completed
+	if(isOneCheckedRadio(document.getElementById('question3')) == false){
+		alert("You must select an answer for question 3!");
+		return false;
+	}
 	else {
-		if(document.getElementById('yes2').checked == true){
-			if(isOneCheckedRadio(document.getElementById('question2.2')) == false){
-				alert("You must select an answer for question 2's sub-question!");
+		if(document.getElementById('op3.0.0').checked == true){
+			if(isOneCheckedRadio(document.getElementById('question3.2')) == false){
+				alert("You must select an answer for question 3.2!");
 				return false;
 			}
 		}
 	}
-	// Checks all Question3 inputs
-		if(isOneCheckedRadio(document.getElementById('question3')) == false){
-		alert("You must select an answer for question 3!");
-		return false;
-	}
-	//Check all Question4 inputs
-	if(isOneCheckedCheckbox(document.getElementById('question4')) == false){
+	// Checks that Question 4 was completed
+	if(isOneCheckedRadio(document.getElementById('question4')) == false){
 		alert("You must select an answer for question 4!");
 		return false;
 	}
-	//Check all Question5 inputs
-	if(isOneCheckedRadio(document.getElementById('question5')) == false){
+	else {
+		if(document.getElementById('op4.0.0').checked == true){
+			if(isOneCheckedRadio(document.getElementById('question4.2')) == false){
+				alert("You must select an answer for question 4.2!");
+				return false;
+			}
+		}
+	}
+	// Checks that Question 5 was completed
+	if(isOneCheckedCheckbox(document.getElementById('question5')) == false){
 		alert("You must select an answer for question 5!");
 		return false;
 	}
-	//Check all Question6 inputs
+	// Checks that Question 6 was completed
 	if(isOneCheckedRadio(document.getElementById('question6')) == false){
 		alert("You must select an answer for question 6!");
 		return false;
 	}
-	//Check all Question7 inputs
-	if(isOneCheckedCheckbox(document.getElementById('question7')) == false){
+	// Checks that Question 7 was completed
+	if(isOneCheckedRadio(document.getElementById('question7')) == false){
 		alert("You must select an answer for question 7!");
 		return false;
 	}
-	//Check all Question8 inputs
-	if(isOneCheckedCombo(document.getElementById('question8')) == false){
+	// Checks that Question 8 was completed
+	if(isOneCheckedRadio(document.getElementById('question8')) == false){
 		alert("You must select an answer for question 8!");
 		return false;
 	}
-	else {
-		if(isOneCheckedCombo(document.getElementById('question8.1')) == false){
-			alert("You must select an answer for question 8.1!");
-			return false;
-		}
-	}
-	//Check all Question9 inputs
-	if(isOneCheckedCombo(document.getElementById('question9')) == false){
+	// Checks that Question 9 was completed
+	if(isOneCheckedRadio(document.getElementById('question9')) == false){
 		alert("You must select an answer for question 9!");
 		return false;
 	}
-	else {
-		if(isOneCheckedCombo(document.getElementById('question9.1')) == false){
-			alert("You must select an answer for question 9.1!");
-			return false;
-		}
-	}
-	//Check all Question10 inputs
+	// Checks that Question 10 was completed
 	if(isOneCheckedCheckbox(document.getElementById('question10')) == false){
 		alert("You must select an answer for question 10!");
 		return false;
 	}
-	//Check all Question11 inputs
-	if(isOneCheckedRadio(document.getElementById('question11')) == false){
+	// Checks that Questions 11 was completed
+	if(isOneCheckedCheckbox(document.getElementById('question11')) == false){
 		alert("You must select an answer for question 11!");
 		return false;
 	}
-	//Check all Question11 inputs
-	if(isOneCheckedRadio(document.getElementById('question12')) == false){
+	// Checks that Question 12 was completed
+	if(isOneCheckedCheckbox(document.getElementById('question12')) == false){
 		alert("You must select an answer for question 12!");
+		return false;
+	}
+	// Checks that Question 13 was completed
+	if(isOneCheckedCheckbox(document.getElementById('question13')) == false){
+		alert("You must select an answer for question 13!");
+		return false;
+	}
+	// Checks that Question 14 was completed
+	if(isOneCheckedCombo(document.getElementById('question14')) == false){
+		alert("You must select an answer for question 14!");
+		return false;
+	}
+	else{
+		if(isOneCheckedCombo(document.getElementById('question14.1')) == false){
+			alert("You must select an answer for question 14.1!");
+			return false;
+		}
+	}
+	// Checks that Question 15 was completed
+	if(isOneCheckedCombo(document.getElementById('question15')) == false){
+		alert("You must select an answer for question 15!");
+		return false;
+	}
+	else{
+		if(isOneCheckedCombo(document.getElementById('question15.1')) == false){
+			alert("You must select an answer for question 15.1!");
+			return false;
+		}
+	}
+	// Checks that Question 16 was completed
+	if(isOneCheckedRadio(document.getElementById('question16')) == false){
+		alert("You must select an answer for question 16!");
 		return false;
 	}
 	//Check Name and Email inputs
