@@ -85,6 +85,16 @@ function isOneCheckedCombo(question){
 	return true;
 }
 
+// Validates Email types
+function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+  {
+    return (true)
+  }
+ return (false)
+}
+
 // Checks that the form has an answer to all questions, and if so allows the submission process to continue!
 // It is important to note that text areas are not part of this validation testing, as we do not expect users
 // to give us additional feedback in these cases, as it may be viewed as extra work to do.
@@ -197,13 +207,19 @@ function validate() {
 		alert("You must select an answer for question 16!");
 		return false;
 	}
-	//Check Name and Email inputs
+	// Checks that the Name Field was completed
 	if (document.forms.survey.name.value == '') {
 		alert("You must provide your name!");
 		return false;
-	} else if (!document.forms.survey.email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
-		alert("You must provide a your email adddress!");
+	}
+	// Checks that the Email Field was completed
+	if (!document.forms.survey.email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+		alert("You must provide an email adddress!");
 		return false;
 	}
-	return true;
+	// Checks that the Email is a valid Email
+	if (ValidateEmail(document.forms.survey.email.value) == false) {
+		alert("The email address you provided is Invalid!");
+		return false;
+	}
 }
