@@ -34,10 +34,15 @@
             header("Location: http://$host$path/home.php");
             exit;
         }
+        else {
+            //$error_msg = "<div class='login-modal'>Username or password is incorrect</div>";
+            $script = "<script> $(document).ready(function(){ $('#loginModal').modal('show'); }); </script>";
+            $invalidLogin = true;
+        }
     }
 ?>
 
-<div class="modal fade bs-modal-sm log-signin" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+<div class="modal fade bs-modal-sm log-signin" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-body">
@@ -73,9 +78,20 @@
 								</div>
 							</div>
 						</fieldset>
+						<?php
+						if (isset($invalidLogin)) {
+						    echo "<span style=\"color: red\">Invalid login!</span>";
+						}
+						?>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<?php
+if (isset($invalidLogin)) {
+    echo "<script> $(document).ready(function(){ $('#loginModal').modal('show'); }); </script>";
+}
+?>
