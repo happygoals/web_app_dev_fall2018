@@ -2,7 +2,7 @@
     //enable sessions
     session_start();
 
-    include 'connection.php';
+    require_once ('connection.php');
 	
 	//if username and password were submitted, check them
 	if (isset($_POST["user"]) && isset($_POST["pass"])) {

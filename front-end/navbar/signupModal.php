@@ -2,7 +2,7 @@
 	//enable sessions
     session_start();
 
-    include 'connection.php';
+    require_once ('connection.php');
     
     //check if all fields were submitted
     if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password'])) {
