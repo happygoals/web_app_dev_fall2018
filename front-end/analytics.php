@@ -3,7 +3,9 @@
 	<?php
 		include 'head.php';
 		generateHead();
+		generateHead("js/analytics.js");
 	?>
+	<script src="js/analytics.js"></script>
 </head>
 <body>
 <?php
@@ -14,20 +16,21 @@
 		<div class="row row-eq-height" style="padding-top: 70px">
 			<div class="col-sm-2 sidenavl">
 				<h3>Analytics</h3>
-				<p style="color:rgba(255, 255, 255, 0.4); text-align:left; font-style:italic">Keep a competitive vending machine by truly understanding the voice of your customers.</p><select class="form-control" id="option">
-					<option value="bar">
+				<p style="color:rgba(255, 255, 255, 0.4); text-align:left; font-style:italic">Keep a competitive vending machine by truly understanding the voice of your customers.</p>
+				<select class="form-control" id="option" >
+					<option value="bar" onclick="analyticsChange('bar');">
 						Bar chart
 					</option>
-					<option value="pie">
+					<option value="pie" onclick="analyticsChange('pie');">
 						Pie chart
 					</option>
-					<option value="line">
+					<option value="line" onclick="analyticsChange('line');">
 						Line chart
 					</option>
-					<option value="radar">
+					<option value="radar" onclick="analyticsChange('rader');">
 						Radar chart
 					</option>
-					<option value="scatter">
+					<option value="scatter" onclick="analyticsChange('scatter');">
 						Scatter chart
 					</option>
 				</select> 
@@ -76,165 +79,59 @@
 						  </div>
 						</div>
 				</div>
-				
-				<div class="vis" id="bar"> 
-		<!--vis does nothing here, just differentiates it from invisible for code readability -->
+				<!-- Bar -->
+				<div class="vis" id="bar" style="display:block;"> 
+				<!--vis does nothing here, just differentiates it from invisible for code readability -->
 					<div class="row justify-content-around">
 						<div class="chartBox">
 							<canvas width="500" height="500" id="barGraph1"></canvas>
 						</div>
-						<div class="col-sm-4">
-							<div class="card bg-info text-white text-center p-3">
-			    					<blockquote class="blockquote mb-0">
-			      						<h5 style="text-align:center;">Top Sale List</h5>
-											<ol style="text-align:left;">
-												<li>Coke</li>
-												<li>Orange Juice</li>
-												<li>Potato chips</li>
-											</ol>
-								    </blockquote>
-							  </div>
-							  	<div class="card bg-Secondary text-white text-center p-3" style="margin-top: 20px; margin-bottom: 20px;">
-			    					<blockquote class="blockquote mb-0">
-										<h5 style="text-align:center;">New Entry Lank</h5>
-											<ul style="text-align:left;">
-												<li>Cute Cookie</li>
-												<li>Buritto</li>
-												<li>Banana</li>
-											</ul>
-								    </blockquote>
-							  </div>
-						</div>
+						<?php require 'listbox.php';?>
 				</div>
 					<script src="js/barGraph.js"></script>
 				</div>
-			
-							<div class="vis" id="pie">
-						<div class="row justify-content-around">
+				<!-- Pie -->			
+				<div class="vis" id="pie" style="display:none;">
+					<div class="row justify-content-around">
 						<div class="chartBox">
 								<canvas height="500" id="pieChart1" width="500"></canvas>
 						</div>
-					<div class="col-sm-4">
-							<div class="card bg-info text-white text-center p-3">
-			    					<blockquote class="blockquote mb-0">
-			      						<h5 style="text-align:center;">Top Sale List</h5>
-											<ol style="text-align:left;">
-												<li>Coke</li>
-												<li>Orange Juice</li>
-												<li>Potato chips</li>
-											</ol>
-								    </blockquote>
-							 </div>
-							 <div class="card bg-Secondary text-white text-center p-3" style="margin-top: 20px; margin-bottom: 20px;">
-			    					<blockquote class="blockquote mb-0">
-										<h5 style="text-align:center;">New Entry Lank</h5>
-											<ul style="text-align:left;">
-												<li>Cute Cookie</li>
-												<li>Buritto</li>
-												<li>Banana</li>
-											</ul>
-								    </blockquote>
-							  </div>
-						</div>
+					<?php require 'listbox.php';?>
 				</div>
 					<script src="js/pieChart.js"></script>
 				</div>
-				
-				<div class="vis" id="line">
+				<!-- Line -->				
+				<div class="vis" id="line" style="display:none;">
 						<div class="row justify-content-around">
 						<div class="chartBox">
 							<canvas height="500" id="lineChart1" width="500"></canvas>
 						</div>
-					<div class="col-sm-4">
-							<div class="card bg-info text-white text-center p-3">
-			    					<blockquote class="blockquote mb-0">
-			      						<h5 style="text-align:center;">Top Sale List</h5>
-											<ol style="text-align:left;">
-												<li>Coke</li>
-												<li>Orange Juice</li>
-												<li>Potato chips</li>
-											</ol>
-								    </blockquote>
-							 </div>
-							 <div class="card bg-Secondary text-white text-center p-3" style="margin-top: 20px; margin-bottom: 20px;">
-			    					<blockquote class="blockquote mb-0">
-										<h5 style="text-align:center;">New Entry Lank</h5>
-											<ul style="text-align:left;">
-												<li>Cute Cookie</li>
-												<li>Buritto</li>
-												<li>Banana</li>
-											</ul>
-								    </blockquote>
-							  </div>
-						</div>
+					<?php require 'listbox.php';?>
 				</div>
 					<script src="js/lineGraph.js"></script>
 				</div>
 				
-				<!-- rader --> 
-				<div class="vis" id="radar">
+				<!-- Rader --> 
+				<div class="vis" id="radar" style="display:none;">
 						<div class="row justify-content-around">
 						<div class="chartBox">
-													<canvas height="500" id="radarChart1" width="500"></canvas>
+							<canvas height="500" id="radarChart1" width="500"></canvas>
 						</div>
-					<div class="col-sm-4">
-							<div class="card bg-info text-white text-center p-3">
-			    					<blockquote class="blockquote mb-0">
-			      						<h5 style="text-align:center;">Top Sale List</h5>
-											<ol style="text-align:left;">
-												<li>Coke</li>
-												<li>Orange Juice</li>
-												<li>Potato chips</li>
-											</ol>
-								    </blockquote>
-							 </div>
-							 <div class="card bg-Secondary text-white text-center p-3" style="margin-top: 20px; margin-bottom: 20px;">
-			    					<blockquote class="blockquote mb-0">
-										<h5 style="text-align:center;">New Entry Lank</h5>
-											<ul style="text-align:left;">
-												<li>Cute Cookie</li>
-												<li>Buritto</li>
-												<li>Banana</li>
-											</ul>
-								    </blockquote>
-							  </div>
-						</div>
+					<?php require 'listbox.php';?>
 				</div>
 					<script src="js/radarChart.js"></script>
 				</div>
 				<!-- Scatter-->
-				<div class="vis" id="scatter">
+				<div class="vis" id="scatter" style="display:none;">
 						<div class="row justify-content-around">
 						<div class="chartBox">
 							<canvas height="500" id="scatterPlot1" width="500"></canvas>
 						</div>
-					<div class="col-sm-4">
-							<div class="card bg-info text-white text-center p-3">
-			    					<blockquote class="blockquote mb-0">
-			      						<h5 style="text-align:center;">Top Sale List</h5>
-											<ol style="text-align:left;">
-												<li>Coke</li>
-												<li>Orange Juice</li>
-												<li>Potato chips</li>
-											</ol>
-								    </blockquote>
-							 </div>
-							 <div class="card bg-Secondary text-white text-center p-3" style="margin-top: 20px; margin-bottom: 20px;">
-			    					<blockquote class="blockquote mb-0">
-										<h5 style="text-align:center;">New Entry Lank</h5>
-											<ul style="text-align:left;">
-												<li>Cute Cookie</li>
-												<li>Buritto</li>
-												<li>Banana</li>
-											</ul>
-								    </blockquote>
-							  </div>
-						</div>
+					<?php require 'listbox.php';?>
 				</div>
 					<script src="js/scatterPlot.js"></script>
 				</div>
-				
-				<div>
+			<div>
 				<!-- Table --> 	
 					<table class="table" id="table" style="-ms-overflow-style: -ms-autohiding-scrollbar; max-height: 200px;">
 						<thead>
