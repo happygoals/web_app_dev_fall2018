@@ -2,10 +2,12 @@
 	//enable sessions
     session_start();
 
-    define("USER", "Snackfacts");
-    define("PASS", "VWuntwB2CAwHK4Vv");
+    include 'connection.php';
     
-    
+    //check if all fields were submitted
+    if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password'])) {
+    	//enter them into the database
+    }
 ?>
 
 <div class="modal fade bs-modal-sm log-signup" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
