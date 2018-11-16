@@ -14,7 +14,7 @@
 						<div class="control-group">
 							<label class="control-label" for="forpassword"></label>
 							<div class="controls">
-								<button class="btn btn-primary btn-block" id="forpasswodr" name="forpassword">Send</button>
+								<button class="btn btn-primary btn-block" id="forpassword" name="forpassword">Send</button>
 							</div>
 						</div>
 					</fieldset>
