@@ -1,6 +1,6 @@
 <?php
-define("USER", "test");
-define("PASS", "test");
+define("USER", "Snackfacts");
+define("PASS", "VWuntwB2CAwHK4Vv");
 
 //connect to database
 try {
