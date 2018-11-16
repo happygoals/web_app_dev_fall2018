@@ -1,8 +1,18 @@
+<?php
+	//enable sessions
+    session_start();
+
+    define("USER", "Snackfacts");
+    define("PASS", "VWuntwB2CAwHK4Vv");
+    
+    
+?>
+
 <div class="modal fade bs-modal-sm log-signup" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-body">
-				<form class="form-horizontal">
+				<form class="form-horizontal" action="<?= $_SERVER["PHP_SELF"] ?>" method="post">
 					<fieldset>
 						<div class="group">
 							<h4><b>Sign up</b></h4>

@@ -12,9 +12,9 @@
 							<input class="input" required="" type="text"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Email address</label>
 						</div>
 						<div class="control-group">
-							<label class="control-label" for="forpassword"></label>
+							<label class="control-label" for="forgotPassword"></label>
 							<div class="controls">
-								<button class="btn btn-primary btn-block" id="forpassword" name="forpassword">Send</button>
+								<button class="btn btn-primary btn-block" id="forgotPassword" name="forgotPassword">Send</button>
 							</div>
 						</div>
 					</fieldset>
