@@ -2,33 +2,47 @@
     //enable sessions
     session_start();
 
-    //should get these from a database later. Same username and password as the in-class demos for now
-    define("USER", "cs372");
-    define("PASS", "pfw");
+    define("USER", "Snackfacts");
+    define("PASS", "VWuntwB2CAwHK4Vv");
     
+    // connect to database
+    try {
+      $connection = new PDO("mysql:host=localhost;dbname=Snackfacts", USER, PASS);
+    }
+    catch (PDOException $e) {
+      echo 'Cannot connect to database';
+      exit;
+    }
+    
+    // if username and password were submitted, check them
     if (isset($_POST["user"]) && isset($_POST["pass"])) {
-        //if username and password are valid, log user in
-        if ($_POST["user"] == USER && $_POST["pass"] == PASS) {
+        // prepare SQL
+        $result = $connection->prepare("SELECT 1 FROM Person WHERE user= ? AND pass=PASSWORD(?)");
+        
+        // execute query
+        $result->execute(array($_POST["user"], $_POST["pass"])) or die(mysqli_error());        
+
+        // check whether we found a row
+        if ($result->rowCount() == 1) {
             // remember that user's logged in
             $_SESSION["authenticated"] = true;
 
-            // save username in cookie for a week
-            setcookie("user", $_POST["user"], time() + 7 * 24 * 60 * 60);
-
-            //save password in cookie for a week if requested
-            if ($_POST["remember"]) {
-                setcookie("pass", $_POST["pass"], time() + 7 * 24 * 60 * 60);
-            }
-
-            $host = $_SERVER['HTTP_HOST'];
+            // redirect user to home page, using absolute path, per
+            // http://us2.php.net/manual/en/function.header.php
+            $host = $_SERVER["HTTP_HOST"];
             $path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
             header("Location: http://$host$path/home.php");
             exit;
         }
+        else {
+            //$error_msg = "<div class='login-modal'>Username or password is incorrect</div>";
+            $script = "<script> $(document).ready(function(){ $('#loginModal').modal('show'); }); </script>";
+            $invalidLogin = true;
+        }
     }
 ?>
 
-<div class="modal fade bs-modal-sm log-signin" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+<div class="modal fade bs-modal-sm log-signin" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-body">
@@ -64,9 +78,20 @@
 								</div>
 							</div>
 						</fieldset>
+						<?php
+						if (isset($invalidLogin)) {
+						    echo "<span style=\"color: red\">Invalid login!</span>";
+						}
+						?>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<?php
+if (isset($invalidLogin)) {
+    echo "<script> $(document).ready(function(){ $('#loginModal').modal('show'); }); </script>";
+}
+?>
