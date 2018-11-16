@@ -25,7 +25,17 @@ function collapseOnly(x){
 
 //Updates a question dependant upon the combobox given
 function updateCombo(x){
-	if(document.getElementById("locations14") == document.getElementById(x)){
+	if(document.getElementById("locations13") == document.getElementById(x)){
+		var option = document.getElementById(x).options[document.getElementById(x).selectedIndex];
+		if(option.value == ""){
+			collapseOnly("question13.1");
+			return;
+		}
+		else{
+			expandOnly("question13.1");
+		}
+	}
+	else if(document.getElementById("locations14") == document.getElementById(x)){
 		var option = document.getElementById(x).options[document.getElementById(x).selectedIndex];
 		if(option.value == ""){
 			collapseOnly("question14.1");
@@ -33,16 +43,6 @@ function updateCombo(x){
 		}
 		else{
 			expandOnly("question14.1");
-		}
-	}
-	else if(document.getElementById("locations15") == document.getElementById(x)){
-		var option = document.getElementById(x).options[document.getElementById(x).selectedIndex];
-		if(option.value == ""){
-			collapseOnly("question15.1");
-			return;
-		}
-		else{
-			expandOnly("question15.1");
 		}
 	}
 }
@@ -136,7 +136,7 @@ function validate() {
 		}
 	}
 	// Checks that Question 5 was completed
-	if(isOneCheckedCheckbox(document.getElementById('question5')) == false){
+	if(isOneCheckedRadio(document.getElementById('question5')) == false){
 		alert("You must select an answer for question 5!");
 		return false;
 	}
@@ -156,29 +156,35 @@ function validate() {
 		return false;
 	}
 	// Checks that Question 9 was completed
-	if(isOneCheckedRadio(document.getElementById('question9')) == false){
+	if(isOneCheckedCheckbox(document.getElementById('question9')) == false){
 		alert("You must select an answer for question 9!");
 		return false;
 	}
-	// Checks that Question 10 was completed
+	// Checks that Questions 10 was completed
 	if(isOneCheckedCheckbox(document.getElementById('question10')) == false){
 		alert("You must select an answer for question 10!");
 		return false;
 	}
-	// Checks that Questions 11 was completed
-	if(isOneCheckedCheckbox(document.getElementById('question11')) == false){
+	// Checks that Question 11 was completed
+	if(isOneCheckedRadio(document.getElementById('question11')) == false){
 		alert("You must select an answer for question 11!");
 		return false;
 	}
 	// Checks that Question 12 was completed
-	if(isOneCheckedCheckbox(document.getElementById('question12')) == false){
+	if(isOneCheckedRadio(document.getElementById('question12')) == false){
 		alert("You must select an answer for question 12!");
 		return false;
 	}
 	// Checks that Question 13 was completed
-	if(isOneCheckedCheckbox(document.getElementById('question13')) == false){
+	if(isOneCheckedCombo(document.getElementById('question13')) == false){
 		alert("You must select an answer for question 13!");
 		return false;
+	}
+	else{
+		if(isOneCheckedCombo(document.getElementById('question13.1')) == false){
+			alert("You must select an answer for question 13.1!");
+			return false;
+		}
 	}
 	// Checks that Question 14 was completed
 	if(isOneCheckedCombo(document.getElementById('question14')) == false){
@@ -192,19 +198,8 @@ function validate() {
 		}
 	}
 	// Checks that Question 15 was completed
-	if(isOneCheckedCombo(document.getElementById('question15')) == false){
+	if(isOneCheckedRadio(document.getElementById('question15')) == false){
 		alert("You must select an answer for question 15!");
-		return false;
-	}
-	else{
-		if(isOneCheckedCombo(document.getElementById('question15.1')) == false){
-			alert("You must select an answer for question 15.1!");
-			return false;
-		}
-	}
-	// Checks that Question 16 was completed
-	if(isOneCheckedRadio(document.getElementById('question16')) == false){
-		alert("You must select an answer for question 16!");
 		return false;
 	}
 	// Checks that the Name Field was completed
