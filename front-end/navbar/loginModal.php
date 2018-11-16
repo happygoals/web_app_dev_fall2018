@@ -7,39 +7,37 @@
     
     // connect to database
     try {
-      $connection = new PDO("mysql:host=localhost;dbname=Snackfacts", USER, PASS);
-    }
-    catch (PDOException $e) {
-      echo 'Cannot connect to database';
-      exit;
-    }
-    
-    // if username and password were submitted, check them
-    if (isset($_POST["user"]) && isset($_POST["pass"])) {
-        // prepare SQL
-        $result = $connection->prepare("SELECT 1 FROM Person WHERE user= ? AND pass=PASSWORD(?)");
+    	$connection = new PDO("mysql:host=localhost;dbname=Snackfacts", USER, PASS);
+      
+    	// if username and password were submitted, check them
+	    if (isset($_POST["user"]) && isset($_POST["pass"])) {
+			// prepare SQL
+			$result = $connection->prepare("SELECT 1 FROM Person WHERE user= ? AND pass=PASSWORD(?)");
         
-        // execute query
-        $result->execute(array($_POST["user"], $_POST["pass"])) or die(mysqli_error());        
+			// execute query
+			$result->execute(array($_POST["user"], $_POST["pass"])) or die(mysqli_error());        
 
-        // check whether we found a row
-        if ($result->rowCount() == 1) {
-            // remember that user's logged in
-            $_SESSION["authenticated"] = true;
+			// check whether we found a row
+			if ($result->rowCount() == 1) {
+				// remember that user's logged in
+				$_SESSION["authenticated"] = true;
 
-            // redirect user to home page, using absolute path, per
-            // http://us2.php.net/manual/en/function.header.php
-            $host = $_SERVER["HTTP_HOST"];
-            $path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
-            header("Location: http://$host$path/home.php");
-            exit;
-        }
-        else {
-            //$error_msg = "<div class='login-modal'>Username or password is incorrect</div>";
-            $script = "<script> $(document).ready(function(){ $('#loginModal').modal('show'); }); </script>";
-            $invalidLogin = true;
-        }
-    }
+				// redirect user to home page, using absolute path, per
+				// http://us2.php.net/manual/en/function.header.php
+				$host = $_SERVER["HTTP_HOST"];
+				$path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
+				header("Location: http://$host$path/home.php");
+				exit;
+			}
+			else {
+				$script = "<script> $(document).ready(function(){ $('#loginModal').modal('show'); }); </script>";
+				$invalidLogin = true;
+			}
+		}
+	}
+	catch (PDOException $e) {
+		echo 'Cannot connect to database';
+	}
 ?>
 
 <div class="modal fade bs-modal-sm log-signin" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
