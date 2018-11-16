@@ -7,6 +7,16 @@
     //check if all fields were submitted
     if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password'])) {
     	//enter them into the database
+    	
+    	//prepare sql
+    	$stmt = $connection->prepare("insert into Person (id, user, email, firstName, lastName, pass) values (2, 'test', 'test', 'test', 'test', 'test')");
+    	
+    	$stmt->execute();
+    	
+    	//$result = $connection->prepare("INSERT INTO test (id, text) values (3, 'test')");
+
+		//execute query
+		//$result->execute() or die(mysqli_error()); 
     }
 ?>
 
