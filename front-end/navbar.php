@@ -48,6 +48,7 @@
 <?php
 	//include modals for login, signup, forgot password
 	include 'navbar/loginModalDBDriven.php';
+	//include 'navbar/loginModal.php';
 	include 'navbar/signupModal.php';
 	include 'navbar/forgotPasswordModal.php';
 	
