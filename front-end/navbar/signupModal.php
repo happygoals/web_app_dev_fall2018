@@ -10,20 +10,24 @@
 							</div>
 							<div class="group">
 								<!--first name-->
-								<input class="input" required="" type="text" name="firstName"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">First Name</label>
+								<input class="input" required="" type="text" id="firstName" name="firstName"><span class="highlight"></span><span class="bar"></span> <label class="label" for="firstName">First Name</label>
 							</div>
 							<div class="group">
 								<!--last name-->
-								<input class="input" required="" type="text" name="lastName"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Last Name</label>
+								<input class="input" required="" type="text" id="lastName" name="lastName"><span class="highlight"></span><span class="bar"></span> <label class="label" for="lastName">Last Name</label>
 							</div>
 							<div class="group">
 								<!--email-->
-								<input class="input" required="" type="text" name="email"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Email</label>
+								<input class="input" required="" type="text" id="email" name="email"><span class="highlight"></span><span class="bar"></span> <label class="label" for="email">Email</label>
+							</div>
+							<div class="group">
+								<!--username-->
+								<input class="input" required="" type="text" id="username" name="username"><span class="highlight"></span><span class="bar"></span> <label class="label" for="username">Username</label>
 							</div>
 							<div class="group">
 								<!--password-->
-								<input class="input" required="" type="password"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Password</label>
-							</div><em>1-8 Characters</em>
+								<input class="input" required="" type="password" id="password" name="password"><span class="highlight"></span><span class="bar"></span> <label class="label" for="password">Password</label>
+							</div><em>Minimum 8 Characters</em>
 							<div class="control-group">
 								<label class="control-label" for="confirmsignup"></label>
 								<div class="controls">
