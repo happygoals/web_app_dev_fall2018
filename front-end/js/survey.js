@@ -95,6 +95,32 @@ function ValidateEmail(mail)
  return (false)
 }
 
+// Checks to see if a user only selected three options from a checkbox
+function KeepCount() {
+
+	var NewCount = 0
+	
+	if (document.joe.dog.checked)
+	{NewCount = NewCount + 1}
+	
+	if (document.joe.cat.checked)
+	{NewCount = NewCount + 1}
+	
+	if (document.joe.pig.checked)
+	{NewCount = NewCount + 1}
+	
+	if (document.joe.ferret.checked)
+	{NewCount = NewCount + 1}
+	
+	if (document.joe.hampster.checked)
+	{NewCount = NewCount + 1}
+	
+	if (NewCount == 3)
+	{
+	alert('Pick Just Two Please')
+	document.joe; return false;
+}
+
 // Checks that the form has an answer to all questions, and if so allows the submission process to continue!
 // It is important to note that text areas are not part of this validation testing, as we do not expect users
 // to give us additional feedback in these cases, as it may be viewed as extra work to do.
