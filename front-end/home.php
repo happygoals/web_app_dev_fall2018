@@ -10,9 +10,7 @@
     include 'navbar.php';
     headerFunction("navbar-light", "background-color: rgba(251, 237, 254, 0.8)", __FILE__); //for home page
 ?>
-	<!-- Wrapper -->
 	<div id="wrapper">
-		<!-- Header -->
 		<header id="header">
 			<div class="logo">
 				<span class="icon"></span>
@@ -22,8 +20,8 @@
 					<h1 style="color:#FEB664">Vending machine</h1>
 					<h1>+</h1>
 					<h1 style="color:#EDC9FE">Data Analytics</h1><br>
-					<p>Make the ideal vending machine you want <a href="survey.html">Surveys</a></p>
-					<p>Maximize your profit from your vending machine <a href="analytics.html">Analytics</a></p>
+					<p>Make the ideal vending machine you want <a href="survey.php">Surveys</a></p>
+					<p>Maximize your profit from your vending machine <a href="analytics.php">Analytics</a></p>
 				</div>
 			</div>
 		</header>
