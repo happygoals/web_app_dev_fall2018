@@ -18,6 +18,15 @@
     	$stmt = $connection->prepare("insert into Person (user, email, firstName, lastName, pass) values ('$username', '$email', '$firstName', '$lastName', PASSWORD('$password'))");
     	
     	$stmt->execute();
+    	
+    	//automatically log the new user in
+		$_SESSION["authenticated"] = true;
+
+		//redirect
+		$host = $_SERVER["HTTP_HOST"];
+		$path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
+		header("Location: http://$host$path/home.php");
+		exit;
     }
 ?>
 
