@@ -78,46 +78,36 @@
 						<!-- Bar -->
 						<div class="vis" id="bar"> 
 							<!--vis does nothing here, just differentiates it from invisible for code readability -->
-							<div class="">
-								<div class="chartBox">
-									<canvas width="500" height="500" id="barGraph1"></canvas>
-								</div>
+							<div class="chartBox">
+								<canvas width="500" height="500" id="barGraph1"></canvas>
 							</div>
 							<script src="js/barGraph.js"></script>
 						</div>
 						<!-- Pie -->			
 						<div class="inv" id="pie">
-							<div class="">
-								<div class="chartBox">
-									<canvas width="500" height="500" id="pieChart1"></canvas>
-								</div>
+							<div class="chartBox">
+								<canvas width="500" height="500" id="pieChart1"></canvas>
 							</div>
 							<script src="js/pieChart.js"></script>
 						</div>
 						<!-- Line -->				
 						<div class="inv" id="line">
-							<div class="">
-								<div class="chartBox">
-									<canvas height="500" id="lineChart1" width="500"></canvas>
-								</div>
+							<div class="chartBox">
+								<canvas height="500" id="lineChart1" width="500"></canvas>
 							</div>
 							<script src="js/lineGraph.js"></script>
 						</div>
 						<!-- Radar --> 
 						<div class="inv" id="radar">
-							<div class="">
-								<div class="chartBox">
-									<canvas height="500" id="radarChart1" width="500"></canvas>
-								</div>
+							<div class="chartBox">
+								<canvas height="500" id="radarChart1" width="500"></canvas>
 							</div>
 							<script src="js/radarChart.js"></script>
 						</div>
 						<!-- Scatter-->
 						<div class="inv" id="scatter">
-							<div class="">
-								<div class="chartBox">
-									<canvas height="500" id="scatterPlot1" width="500"></canvas>
-								</div>
+							<div class="chartBox">
+								<canvas height="500" id="scatterPlot1" width="500"></canvas>
 							</div>
 							<script src="js/scatterPlot.js"></script>
 						</div>
@@ -154,60 +144,19 @@
 										<th scope="col">Product Name</th>
 										<th scope="col">Location</th>
 										<th scope="col">Price</th>
-								<th scope="col">Action</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">1</th>
-								<td>Kitkat</td>
-								<td>Vending machine 1</td>
-								<td>$1.00</td>
-								<td style="text-align:center;">
-								<button type="button" class="btn btn-outline-primary" value='dddRow'><i class="fas fa-plus"></i>&nbsp;Add</button> 
-								<button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i>&nbsp;Delete</button> 
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>Starbucks coffee</td>
-								<td>Vending machine 2</td>
-								<td>$2.50</td>
-								<td style="text-align:center;">
-								<button type="button" class="btn btn-outline-primary"><i class="fas fa-plus"></i>&nbsp;Add</button> 
-								<button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i>&nbsp;Delete</button> 
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td>Cute cookie</td>
-								<td>Vending machine 1</td>
-								<td>$2.00</td>
-								<td style="text-align:center;">
-								<button type="button" class="btn btn-outline-primary"><i class="fas fa-plus"></i>&nbsp;Add</button> 
-								<button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i>&nbsp;Delete</button>  
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">4</th>
-								<td>Sandwich</td>
-								<td>Vending machine 3</td>
-								<td>$2.30</td>
-								<td style="text-align:center;">
-								<button type="button" class="btn btn-outline-primary"><i class="fas fa-plus"></i>&nbsp;Add</button> 
-								<button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i>&nbsp;Delete</button>  
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">5</th>
-								<td>Pizza</td>
-								<td>Vending machine 3</td>
-								<td>$3.00</td>
-								<td style="text-align:center;">
-								<button type="button" class="btn btn-outline-primary"><i class="fas fa-plus"></i>&nbsp;Add</button> 
-								<button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i>&nbsp;Delete</button> 
-								</td>
-							</tr>
+										<th scope="col">Action</th>
+									</tr>
+								</thead>
+								<tbody>
+							<?php
+								require 'productRow.php';
+								
+								productRow(1, "Kitkat", 1, 1.00);
+								productRow(2, "Starbucks coffee", 2, 2.50);
+								productRow(3, "Cute cookie", 1, 2.00);
+								productRow(4, "Sandwich", 3, 2.30);
+								productRow(5, "Pizza", 3, 3.00);
+							?>
 						</tbody>
 					</table>
 				</div>
