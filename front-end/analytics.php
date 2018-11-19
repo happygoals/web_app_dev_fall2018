@@ -2,7 +2,6 @@
 <head>
 	<?php
 		include 'head.php';
-		generateHead();
 		generateHead("js/analytics.js");
 	?>
 	<script src="js/analytics.js"></script>
