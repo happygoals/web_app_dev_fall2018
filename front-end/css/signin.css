@@ -146,7 +146,7 @@ body {
 	}
 }
 .modal-body {
-	background-image: url('/front-end/resource/red-vending-desat.png');
+	background-image: url('/front-end/resource/red-vending-trans.png');
 	background-size: cover;
 	background-color: transparent;
 	z-index: 1;

@@ -60,9 +60,13 @@
 							<input class="input" required="" type="password" id="password" name="password"><span class="highlight"></span><span class="bar"></span> <label class="label" for="password">Password</label>
 						</div><em>Minimum 8 Characters</em>
 						<div class="control-group">
-							<label class="control-label" for="confirmSignup"></label>
-							<div class="controls">
-								<button class="btn btn-warning btn-block" id="confirmSignup" name="confirmSignup">Sign Up</button>
+							<div class="row">
+								<div class="col-lg-6">
+									<button class="btn btn-warning btn-block" id="confirmSignup" name="confirmSignup">Sign Up</button>
+								</div>
+								<div class="col-lg-6">
+									<button type="button" class="btn btn-block" data-dismiss="modal">Cancel</button>
+								</div>
 							</div>
 						</div>
 					</fieldset>

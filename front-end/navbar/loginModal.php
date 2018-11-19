@@ -6,16 +6,19 @@
 	
 	//if username and password were submitted, check them
 	if (isset($_POST["user"]) && isset($_POST["pass"])) {
-		//prepare SQL
-		$result = $connection->prepare("SELECT 1 FROM Person WHERE user= ? AND pass=PASSWORD(?)");
+		//prepare SQL. User can enter either their username or email, check for both
+		$result = $connection->prepare("SELECT * FROM Person WHERE (user= ? OR email = ?) AND pass=PASSWORD(?)");
 
 		//execute query
-		$result->execute(array($_POST["user"], $_POST["pass"])) or die(mysqli_error());        
+		$result->execute(array($_POST["user"], $_POST["user"], $_POST["pass"])) or die(mysqli_error());        
 
 		//check whether we found a row
 		if ($result->rowCount() == 1) {
 			//remember that the user is logged in
 			$_SESSION["authenticated"] = true;
+			
+			//set session username. For now, this will display either username or email, whichever they entered. Will fix later
+			$_SESSION["username"] = $_POST["user"];
 
 			//redirect
 			$host = $_SERVER["HTTP_HOST"];
@@ -48,7 +51,7 @@
 						</div>
 						<div class="group">
 							<!--username-->
-							<input class="input" required="" type="text" name="user"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Email address</label>
+							<input class="input" required="" type="text" name="user"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Username or email</label>
 						</div>
 						<div class="group">
 							<!--password-->
@@ -65,9 +68,13 @@
 							<a data-target="#forgot-password" data-toggle="modal" href="#forgot">I forgot my password</a>
 						</div>
 						<div class="control-group">
-							<label class="control-label" for="signin"></label>
-							<div class="controls">
-								<button class="btn btn-warning btn-block" id="signin" name="signin">Log In</button>
+							<div class="row">
+								<div class="col-lg-6">
+									<button class="btn btn-warning btn-block" id="signin" name="signin">Log In</button>
+								</div>
+								<div class="col-lg-6">
+									<button type="button" class="btn btn-block" data-dismiss="modal">Cancel</button>
+								</div>
 							</div>
 						</div>
 					</fieldset>
