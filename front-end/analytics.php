@@ -76,44 +76,44 @@
 							</div>
 						</div>
 						<!-- Bar -->
-						<div class="vis" id="bar"> 
+						<div class="vis" id="bar" style="margin: 0px 350px;"> 
 							<!--vis does nothing here, just differentiates it from invisible for code readability -->
 							<div class="chartBox">
-								<canvas width="500" height="500" id="barGraph1"></canvas>
+								<canvas width="300" height="400" id="barGraph1"></canvas>
 							</div>
 							<script src="js/barGraph.js"></script>
 						</div>
 						<!-- Pie -->			
-						<div class="inv" id="pie">
+						<div class="inv" id="pie" style="margin: 0px 350px;">
 							<div class="chartBox">
-								<canvas width="500" height="500" id="pieChart1"></canvas>
+								<canvas width="300" height="400" id="pieChart1"></canvas>
 							</div>
 							<script src="js/pieChart.js"></script>
 						</div>
 						<!-- Line -->				
-						<div class="inv" id="line">
+						<div class="inv" id="line" style="margin: 0px 350px;">
 							<div class="chartBox">
-								<canvas height="500" id="lineChart1" width="500"></canvas>
+								<canvas width="300" height="400" id="lineChart1" ></canvas>
 							</div>
 							<script src="js/lineGraph.js"></script>
 						</div>
 						<!-- Radar --> 
-						<div class="inv" id="radar">
+						<div class="inv" id="radar" style="margin: 0px 350px;">
 							<div class="chartBox">
-								<canvas height="500" id="radarChart1" width="500"></canvas>
+								<canvas width="400" height="500" id="radarChart1"></canvas>
 							</div>
 							<script src="js/radarChart.js"></script>
 						</div>
 						<!-- Scatter-->
-						<div class="inv" id="scatter">
+						<div class="inv" id="scatter" style="margin: 0px 350px;">
 							<div class="chartBox">
-								<canvas height="500" id="scatterPlot1" width="500"></canvas>
+								<canvas width="300" height="400" id="scatterPlot1" ></canvas>
 							</div>
 							<script src="js/scatterPlot.js"></script>
 						</div>
 						<!--list boxes-->
 						<div class="row">
-							<div class="card bg-info text-white text-center p-3" style="margin: 20px;">
+							<div class="card bg-info text-white text-center p-4" style="margin: 20px 500px 20px 100px;">
 			    				<blockquote class="blockquote mb-0">
 			      					<h5 style="text-align:center;">Top Sale List</h5>
 									<ol style="text-align:left;">
@@ -123,7 +123,7 @@
 									</ol>
 								</blockquote>
 							</div>
-							<div class="card bg-Secondary text-white text-center p-3" style="margin: 20px;">
+						<div class="card bg-Secondary text-white text-center p-4" style="margin: 20px 100px 20px 123px;">
 			    				<blockquote class="blockquote mb-0">
 									<h5 style="text-align:center;">New Entry Lank</h5>
 									<ul style="text-align:left;">
@@ -134,9 +134,8 @@
 							  	</blockquote>
 							</div>
 						</div>
-						
+						<!-- Table --> 	
 						<div>
-							<!-- Table --> 	
 							<table class="table" id="table" style="-ms-overflow-style: -ms-autohiding-scrollbar; max-height: 200px;">
 								<thead>
 									<tr style="text-align:center;">
