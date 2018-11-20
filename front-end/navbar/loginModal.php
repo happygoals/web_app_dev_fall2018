@@ -7,18 +7,17 @@
 	//if username and password were submitted, check them
 	if (isset($_POST["loginUser"]) && isset($_POST["loginPass"])) {
 		//prepare SQL. User can enter either their username or email, check for both
-		$result = $connection->prepare("SELECT * FROM Person WHERE (user= ? OR email = ?) AND pass=PASSWORD(?)");
-
-		//execute query
-		$result->execute(array($_POST["loginUser"], $_POST["loginUser"], $_POST["loginPass"])) or die(mysqli_error());        
+		$stmt = $connection->prepare("SELECT * FROM Person WHERE (user='".$_POST['loginUser']."' OR email = '".$_POST['loginUser']."') AND pass=PASSWORD('".$_POST['loginPass']."')");
+		$stmt->execute(array($_POST["loginUser"], $_POST["loginUser"], $_POST["loginPass"])) or die(mysqli_error());        
 
 		//check whether we found a row
-		if ($result->rowCount() == 1) {
+		if ($stmt->rowCount() == 1) {
 			//remember that the user is logged in
 			$_SESSION["authenticated"] = true;
 			
-			//set session username. For now, this will display either username or email, whichever they entered. Will fix later
-			$_SESSION["username"] = $_POST["loginUser"];
+			//set session username. Note that the user could have entered either their username OR their email into the login form, so we get the actual username from the database
+			$result = $stmt->fetch(PDO::FETCH_ASSOC);
+			$_SESSION["username"] = $result["user"];
 
 			//redirect
 			$host = $_SERVER["HTTP_HOST"];
