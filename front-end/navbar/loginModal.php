@@ -5,12 +5,12 @@
     require_once ('connection.php');
 	
 	//if username and password were submitted, check them
-	if (isset($_POST["user"]) && isset($_POST["pass"])) {
+	if (isset($_POST["loginUser"]) && isset($_POST["loginPass"])) {
 		//prepare SQL. User can enter either their username or email, check for both
 		$result = $connection->prepare("SELECT * FROM Person WHERE (user= ? OR email = ?) AND pass=PASSWORD(?)");
 
 		//execute query
-		$result->execute(array($_POST["user"], $_POST["user"], $_POST["pass"])) or die(mysqli_error());        
+		$result->execute(array($_POST["loginUser"], $_POST["loginUser"], $_POST["loginPass"])) or die(mysqli_error());        
 
 		//check whether we found a row
 		if ($result->rowCount() == 1) {
@@ -18,7 +18,7 @@
 			$_SESSION["authenticated"] = true;
 			
 			//set session username. For now, this will display either username or email, whichever they entered. Will fix later
-			$_SESSION["username"] = $_POST["user"];
+			$_SESSION["username"] = $_POST["loginUser"];
 
 			//redirect
 			$host = $_SERVER["HTTP_HOST"];
@@ -27,7 +27,7 @@
 			exit;
 		}
 		else {
-			$invalidLogin = true;
+			$loginError = true;
 		}
 	}
 ?>
@@ -39,7 +39,7 @@
 				<?php
 				if ($connectionFailed === true) { ?>
 					<h4><b>Error</b></h4>
-					Login database not found. Please try again later
+					Account database not found. Please try again later
 				<?php
 				}
 				else { ?>
@@ -51,11 +51,11 @@
 						</div>
 						<div class="group">
 							<!--username-->
-							<input class="input" required="" type="text" name="user"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Username or email</label>
+							<input class="input" required="" type="text" id="loginUser" name="loginUser"><span class="highlight"></span><span class="bar"></span> <label class="label" for="loginUser">Username or email</label>
 						</div>
 						<div class="group">
 							<!--password-->
-							<input class="input" required="" type="password" name="pass"><span class="highlight"></span><span class="bar"></span> <label class="label" for="date">Password</label>
+							<input class="input" required="" type="password" id="loginPass" name="loginPass"><span class="highlight"></span><span class="bar"></span> <label class="label" for="loginPass">Password</label>
 						</div>
 						<div class="group">
 							<!--remember login-->
@@ -79,7 +79,7 @@
 						</div>
 					</fieldset>
 					<?php
-					if (isset($invalidLogin)) {
+					if (isset($loginError)) {
 					    echo "<span style=\"color: red\">Invalid login!</span>";
 					}
 					?>
@@ -91,7 +91,7 @@
 </div>
 
 <?php
-if (isset($invalidLogin)) {
+if (isset($loginError)) {
     echo "<script> $(document).ready(function(){ $('#loginModal').modal('show'); }); </script>";
 }
 ?>

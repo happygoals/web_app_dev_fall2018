@@ -5,10 +5,10 @@
     require_once ('connection.php');
     
     //check if all fields were submitted and if the signup was previously deemed valid
-    if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password'])) {
+    if (isset($_POST['signupFirstName']) && isset($_POST['signupLastName']) && isset($_POST['signupEmail']) && isset($_POST['signupUsername']) && isset($_POST['signupPass'])) {
     	//ake sure there isn't an account already registered with this username or email
 		$result = $connection->prepare("SELECT * FROM Person WHERE (user= ? OR email = ?)");
-		$result->execute(array($_POST["username"], $_POST["email"])) or die(mysqli_error());        
+		$result->execute(array($_POST["signupUsername"], $_POST["signupEmail"])) or die(mysqli_error());        
 
 		//check whether we found a row
 		if ($result->rowCount() == 1) {
@@ -16,13 +16,13 @@
 		}
 		else {
 			//enter them into the database
-	    	$result = $connection->prepare("insert into Person (user, email, firstName, lastName, pass) values ('".$_POST['username']."', '".$_POST['email']."', '".$_POST['firstName']."', '".$_POST['lastName']."', PASSWORD('".$_POST['password']."'))");
+	    	$result = $connection->prepare("insert into Person (user, email, firstName, lastName, pass) values ('".$_POST['signupUsername']."', '".$_POST['signupEmail']."', '".$_POST['signupFirstName']."', '".$_POST['signupLastName']."', PASSWORD('".$_POST['signupPass']."'))");
     	
     		$result->execute();
     	
     		//automatically log the new user in
 			$_SESSION["authenticated"] = true;
-			$_SESSION["username"] = $_POST["username"];
+			$_SESSION["username"] = $_POST["signupUsername"];
 
 			//redirect
 			$host = $_SERVER["HTTP_HOST"];
@@ -37,6 +37,13 @@
 	<div class="modal-dialog modal-sm">
 		<div class="modal-content">
 			<div class="modal-body">
+				<?php
+				if ($connectionFailed === true) { ?>
+					<h4><b>Error</b></h4>
+					Account database not found. Please try again later
+				<?php
+				}
+				else { ?>
 				<form class="form-horizontal" action="<?= $_SERVER["PHP_SELF"] ?>" method="post">
 					<fieldset>
 						<div class="group">
@@ -44,23 +51,23 @@
 						</div>
 						<div class="group">
 							<!--first name-->
-							<input class="input" required="" type="text" id="firstName" name="firstName"><span class="highlight"></span><span class="bar"></span> <label class="label" for="firstName">First Name</label>
+							<input class="input" required="" type="text" id="signupFirstName" name="signupFirstName"><span class="highlight"></span><span class="bar"></span> <label class="label" for="signupFirstName">First Name</label>
 						</div>
 						<div class="group">
 							<!--last name-->
-							<input class="input" required="" type="text" id="lastName" name="lastName"><span class="highlight"></span><span class="bar"></span> <label class="label" for="lastName">Last Name</label>
+							<input class="input" required="" type="text" id="signupLastName" name="signupLastName"><span class="highlight"></span><span class="bar"></span> <label class="label" for="signupLastName">Last Name</label>
 						</div>
 						<div class="group">
 							<!--email-->
-							<input class="input" required="" type="text" id="email" name="email"><span class="highlight"></span><span class="bar"></span> <label class="label" for="email">Email</label>
+							<input class="input" required="" type="text" id="signupEmail" name="signupEmail"><span class="highlight"></span><span class="bar"></span> <label class="label" for="signupEmail">Email</label>
 						</div>
 						<div class="group">
 							<!--username-->
-							<input class="input" required="" type="text" id="username" name="username"><span class="highlight"></span><span class="bar"></span> <label class="label" for="username">Username</label>
+							<input class="input" required="" type="text" id="signupUsername" name="signupUsername"><span class="highlight"></span><span class="bar"></span> <label class="label" for="signupUsername">Username</label>
 						</div>
 						<div class="group">
 							<!--password-->
-							<input class="input" required="" type="password" id="password" name="password"><span class="highlight"></span><span class="bar"></span> <label class="label" for="password">Password</label>
+							<input class="input" required="" type="password" id="signupPass" name="signupPass"><span class="highlight"></span><span class="bar"></span> <label class="label" for="signupPass">Password</label>
 						</div><em>Minimum 8 Characters</em>
 						<div class="control-group">
 							<div class="row">
@@ -73,7 +80,13 @@
 							</div>
 						</div>
 					</fieldset>
+					<?php
+					if (isset($signupError)) {
+					    echo "<span style=\"color: red\">An account with this username or email already exists!</span>";
+					}
+					?>
 				</form>
+				<?php } ?>
 			</div>
 		</div>
 	</div>
