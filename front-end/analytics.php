@@ -1,20 +1,5 @@
 <?php
 session_start();
-
-require_once ('connection.php');
-
-//determine if user has admin privs or not
-$adminPriv = false;
-if (isset($_SESSION["username"])) {
-    //user is logged in, check if they're an admin
-    $result = $connection->prepare("SELECT * FROM Person WHERE (user = ?) and (isAdmin = 1)");
-    $result->execute(array($_SESSION["username"])) or die(mysqli_error());
-    if ($result->rowCount() == 1) {
-        //user is an admin
-        $adminPriv = true;
-    }
-}
-
 ?>
 
 <html lang="en">
@@ -28,6 +13,20 @@ if (isset($_SESSION["username"])) {
 <?php
     include 'navbar.php';
     headerFunction("navbar-dark bg-dark", "", __FILE__); //for everything else
+
+    //determine if user has admin privs or not
+    $adminPriv = false;
+    if (isset($_SESSION["username"])) {
+        //user is logged in, check if they're an admin
+        require ('connection.php');
+        $result = $connection->prepare("SELECT * FROM Person WHERE (user = ?) and (isAdmin = 1)");
+        $result->execute(array($_SESSION["username"])) or die(mysqli_error());
+        echo "failed";
+        if ($result->rowCount() == 1) {
+            //user is an admin
+            $adminPriv = true;
+        }
+    }
 ?>
 	<div class="container-fluid text-center">
 		<div class="row row-eq-height" style="padding-top: 70px">

@@ -2,7 +2,7 @@
 	//enable sessions
     session_start();
 
-    require_once ('connection.php');
+    require ('connection.php');
     
     //check if all fields were submitted and if the signup was previously deemed valid
     if (isset($_POST['signupFirstName']) && isset($_POST['signupLastName']) && isset($_POST['signupEmail']) && isset($_POST['signupUsername']) && isset($_POST['signupPass'])) {
