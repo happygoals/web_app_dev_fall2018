@@ -4,8 +4,23 @@
 
     require_once ('connection.php');
     
+    //validate submitted username is not already taken
+    $validSignup = true;
+	if (isset($_POST["username"])) {
+		//prepare SQL. User can enter either their username or email, check for both
+		$result = $connection->prepare("SELECT * FROM Person WHERE (user= ? OR email = ?)");
+
+		//execute query
+		$result->execute(array($_POST["username"], $_POST["username"])) or die(mysqli_error());        
+
+		//check whether we found a row
+		if ($result->rowCount() == 1) {
+			$validSignup = false;
+		}
+	}
+    
     //check if all fields were submitted
-    if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password'])) {
+    if (($validSignup == true) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password'])) {
     	//this needs cleaned up later
     	
     	$username = $_POST['username'];
@@ -75,3 +90,9 @@
 		</div>
 	</div>
 </div>
+
+<?php
+if ($validSignup == false) {
+    echo "<script> $(document).ready(function(){ $('#signupModal').modal('show'); }); </script>";
+}
+?>
