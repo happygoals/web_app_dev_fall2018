@@ -1,3 +1,22 @@
+<?php
+session_start();
+
+require_once ('connection.php');
+
+//determine if user has admin privs or not
+$adminPriv = false;
+if (isset($_SESSION["username"])) {
+    //user is logged in, check if they're an admin
+    $result = $connection->prepare("SELECT * FROM Person WHERE (user = ?) and (isAdmin = 1)");
+    $result->execute(array($_SESSION["username"])) or die(mysqli_error());
+    if ($result->rowCount() == 1) {
+        //user is an admin
+        $adminPriv = true;
+    }
+}
+
+?>
+
 <html lang="en">
 <head>
 	<?php
@@ -150,11 +169,11 @@
 							<?php
 								require 'productRow.php';
 								
-								productRow(1, "Kitkat", 1, 1.00);
-								productRow(2, "Starbucks coffee", 2, 2.50);
-								productRow(3, "Cute cookie", 1, 2.00);
-								productRow(4, "Sandwich", 3, 2.30);
-								productRow(5, "Pizza", 3, 3.00);
+								productRow(1, "Kitkat", 1, 1.00, $adminPriv);
+								productRow(2, "Starbucks coffee", 2, 2.50, $adminPriv);
+								productRow(3, "Cute cookie", 1, 2.00, $adminPriv);
+								productRow(4, "Sandwich", 3, 2.30, $adminPriv);
+								productRow(5, "Pizza", 3, 3.00, $adminPriv);
 							?>
 						</tbody>
 					</table>
