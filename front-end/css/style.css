@@ -178,13 +178,11 @@ input::-moz-focus-inner {
 	background-color: #FFFFFF;
 	padding-top: 30px;
 	min-height: 225px;
-	/* need to figure out how to do this responsively. Need JS for it, not natively supported in CSS itself */
 }
 .col-sm-8 .intro {
 	background-color: #FFFFFF;
 	padding-top: 30px;
 	min-height: 225px;
-	/* need to figure out how to do this responsively. Need JS for it, not natively supported in CSS itself */
 }
 .nav-link {
 	color: white;

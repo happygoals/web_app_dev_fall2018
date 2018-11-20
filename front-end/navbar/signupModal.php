@@ -6,7 +6,7 @@
     
     //check if all fields were submitted and if the signup was previously deemed valid
     if (isset($_POST['signupFirstName']) && isset($_POST['signupLastName']) && isset($_POST['signupEmail']) && isset($_POST['signupUsername']) && isset($_POST['signupPass'])) {
-    	//ake sure there isn't an account already registered with this username or email
+    	//make sure there isn't an account already registered with this username or email
 		$result = $connection->prepare("SELECT * FROM Person WHERE (user= ? OR email = ?)");
 		$result->execute(array($_POST["signupUsername"], $_POST["signupEmail"])) or die(mysqli_error());        
 
@@ -19,7 +19,7 @@
 	    	$result = $connection->prepare("insert into Person (user, email, firstName, lastName, pass) values ('".$_POST['signupUsername']."', '".$_POST['signupEmail']."', '".$_POST['signupFirstName']."', '".$_POST['signupLastName']."', PASSWORD('".$_POST['signupPass']."'))");
     	
     		$result->execute();
-    	
+
     		//automatically log the new user in
 			$_SESSION["authenticated"] = true;
 			$_SESSION["username"] = $_POST["signupUsername"];
