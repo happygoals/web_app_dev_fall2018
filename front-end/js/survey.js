@@ -97,28 +97,32 @@ function ValidateEmail(mail)
 
 // Checks to see if a user only selected three options from a checkbox
 function KeepCount() {
-
 	var NewCount = 0
 	
-	if (document.joe.dog.checked)
-	{NewCount = NewCount + 1}
+	if (document.joe.dog.checked) {
+		NewCount = NewCount + 1
+	}
 	
-	if (document.joe.cat.checked)
-	{NewCount = NewCount + 1}
+	if (document.joe.cat.checked) {
+		NewCount = NewCount + 1
+	}
 	
-	if (document.joe.pig.checked)
-	{NewCount = NewCount + 1}
+	if (document.joe.pig.checked) {
+		NewCount = NewCount + 1
+	}
 	
-	if (document.joe.ferret.checked)
-	{NewCount = NewCount + 1}
+	if (document.joe.ferret.checked) {
+		NewCount = NewCount + 1
+	}
 	
-	if (document.joe.hampster.checked)
-	{NewCount = NewCount + 1}
+	if (document.joe.hampster.checked) {
+		NewCount = NewCount + 1
+	}
 	
-	if (NewCount == 3)
-	{
-	alert('Pick Just Two Please')
-	document.joe; return false;
+	if (NewCount == 3) {
+		alert('Pick Just Two Please')
+		document.joe; return false;
+	}
 }
 
 // Checks that the form has an answer to all questions, and if so allows the submission process to continue!
