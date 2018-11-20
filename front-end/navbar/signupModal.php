@@ -4,44 +4,32 @@
 
     require_once ('connection.php');
     
-    //validate submitted username is not already taken
-    $validSignup = true;
-	if (isset($_POST["username"])) {
-		//prepare SQL. User can enter either their username or email, check for both
+    //check if all fields were submitted and if the signup was previously deemed valid
+    if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password'])) {
+    	//ake sure there isn't an account already registered with this username or email
 		$result = $connection->prepare("SELECT * FROM Person WHERE (user= ? OR email = ?)");
-
-		//execute query
-		$result->execute(array($_POST["username"], $_POST["username"])) or die(mysqli_error());        
+		$result->execute(array($_POST["username"], $_POST["email"])) or die(mysqli_error());        
 
 		//check whether we found a row
 		if ($result->rowCount() == 1) {
-			$validSignup = false;
+			$signupError = true;
 		}
-	}
-    
-    //check if all fields were submitted
-    if (($validSignup == true) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password'])) {
-    	//this needs cleaned up later
+		else {
+			//enter them into the database
+	    	$result = $connection->prepare("insert into Person (user, email, firstName, lastName, pass) values ('".$_POST['username']."', '".$_POST['email']."', '".$_POST['firstName']."', '".$_POST['lastName']."', PASSWORD('".$_POST['password']."'))");
     	
-    	$username = $_POST['username'];
-    	$email = $_POST['email'];
-    	$firstName = $_POST['firstName'];
-    	$lastName = $_POST['lastName'];
-    	$password = $_POST['password'];
+    		$result->execute();
     	
-    	//enter them into the database
-    	$stmt = $connection->prepare("insert into Person (user, email, firstName, lastName, pass) values ('$username', '$email', '$firstName', '$lastName', PASSWORD('$password'))");
-    	
-    	$stmt->execute();
-    	
-    	//automatically log the new user in
-		$_SESSION["authenticated"] = true;
+    		//automatically log the new user in
+			$_SESSION["authenticated"] = true;
+			$_SESSION["username"] = $_POST["username"];
 
-		//redirect
-		$host = $_SERVER["HTTP_HOST"];
-		$path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
-		header("Location: http://$host$path/home.php");
-		exit;
+			//redirect
+			$host = $_SERVER["HTTP_HOST"];
+			$path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
+			header("Location: http://$host$path/home.php");
+			exit;
+		}
     }
 ?>
 
@@ -92,7 +80,7 @@
 </div>
 
 <?php
-if ($validSignup == false) {
+if (isset($signupError)) {
     echo "<script> $(document).ready(function(){ $('#signupModal').modal('show'); }); </script>";
 }
 ?>
