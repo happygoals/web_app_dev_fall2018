@@ -321,13 +321,16 @@ input[type="checkbox"] {
 	background: -moz-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
 	background: -webkit-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
 }
-/* Set black background color, white text and some padding */
-
 footer {
 	background-color: #555;
 	color: white;
 	padding: 15px;
 }
+
+.card {
+	margin: 20;
+}
+
 /* On small screens, set height to 'auto' for sidenav and grid */
 
 @media screen and (max-width: 767px) {
