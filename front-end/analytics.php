@@ -109,11 +109,13 @@ session_start();
 					<script src="js/scatterPlot.js"></script>
 				</div>
 				<!--list boxes-->
-				<div class="row">
+				<div class="row justify-content-around">
 					<?php
 						listbox("#17a2b8", "Top Sale List", array("Coke", "Orange Juice", "Potato Chips"));
+					?>
+					<p>                                     </p>
+					<?php
 						listbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Burrito", "Banana"));
-						
 					?>
 				</div>
 				
