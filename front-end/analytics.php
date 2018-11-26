@@ -112,14 +112,16 @@ session_start();
 				<div class="row">
 					<?php
 						listbox("#17a2b8", "Top Sale List", array("Coke", "Orange Juice", "Potato Chips"));
-						listbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
+						listbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Burrito", "Banana"));
+						
 					?>
 				</div>
+				
 				<!-- Table --> 	
 				<div>
 					<table class="table" id="table" style="-ms-overflow-style: -ms-autohiding-scrollbar; max-height: 200px;">
 						<thead>
-							<tr style="text-align:center;">
+							<tr style="text-align:left;">
 								<th scope="col">#</th>
 								<th scope="col">Product Name</th>
 								<th scope="col">Location</th>
