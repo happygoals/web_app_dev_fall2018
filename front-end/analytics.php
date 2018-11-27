@@ -69,46 +69,46 @@ session_start();
 						simpleBox("Orange", "far fa-clipboard", "Total Surveys", "257");
 						simpleBox("Salmon", "far fa-user", "New Visitors", "19");
 						simpleBox("YellowGreen", "fas fa-cookie-bite", "Popular Snack", "KitKat");
-						simpleBox("OrangeRed", "fab fa-hotjar", "Today's Hot Item", "Coke")
+						simpleBox("OrangeRed", "fab fa-hotjar", "Today's Hot Item", "Coke");
 					?>
 				</div>
 				<!-- Bar -->
-				<div class="vis" id="bar" style="margin: 0px 350px;"> 
+				<div class="vis" id="bar" style="margin: 0px auto;"> 
 					<div class="chartBox">
-						<canvas width="300" height="400" id="barGraph1"></canvas>
+						<canvas width="300px" height="300px" id="barGraph1"></canvas>
 					</div>
 					<script src="js/barGraph.js"></script>
 				</div>
 				<!-- Pie -->			
-				<div class="inv" id="pie" style="margin: 0px 350px;">
+				<div class="inv" id="pie" style="margin: 0px auto;">
 					<div class="chartBox">
-						<canvas width="300" height="400" id="pieChart1"></canvas>
+						<canvas width="300px" height="300px" id="pieChart1"></canvas>
 					</div>
 					<script src="js/pieChart.js"></script>
 				</div>
 				<!-- Line -->				
-				<div class="inv" id="line" style="margin: 0px 350px;">
+				<div class="inv" id="line" style="margin: 0px auto;">
 					<div class="chartBox">
-						<canvas width="300" height="400" id="lineChart1" ></canvas>
+						<canvas width="300px" height="300px" id="lineChart1" ></canvas>
 					</div>
 					<script src="js/lineGraph.js"></script>
 				</div>
 				<!-- Radar --> 
-				<div class="inv" id="radar" style="margin: 0px 350px;">
+				<div class="inv" id="radar" style="margin: 0px auto;">
 					<div class="chartBox">
-						<canvas width="400" height="500" id="radarChart1"></canvas>
+						<canvas width="300px" height="300px" id="radarChart1"></canvas>
 					</div>
 					<script src="js/radarChart.js"></script>
 				</div>
 				<!-- Scatter-->
-				<div class="inv" id="scatter" style="margin: 0px 350px;">
+				<div class="inv" id="scatter" style="margin: 0px auto;">
 					<div class="chartBox">
-						<canvas width="300" height="400" id="scatterPlot1" ></canvas>
+						<canvas width="300px" height="300px" id="scatterPlot1" ></canvas>
 					</div>
 					<script src="js/scatterPlot.js"></script>
 				</div>
 				<!--list boxes-->
-				<div class="row">
+				<div class="lanklistBox">
 					<?php
 						listbox("#17a2b8", "Top Sale List", array("Coke", "Orange Juice", "Potato Chips"));
 						listbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));

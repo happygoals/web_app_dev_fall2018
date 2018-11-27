@@ -1,8 +1,10 @@
 <?php
 function listbox($background, $title, $list) { ?>
-	<div class="card text-white text-center p-4" style="background-color: <?php echo $background ?>">
-		<blockquote class="blockquote mb-0">
-			<h5><?php echo $title ?></h5>
+	<div class="card text-white text-center mb-5" style="background-color: <?php echo $background ?>">
+		<div class="card-header" style="background-color:<?php echo $background ?>;">
+						<h5><?php echo $title ?></h5>
+		</div>
+		<div class="card-body" style="background-color:<?php echo $background ?>;">
 			<ol style="text-align:left;">
 				<?php
 					//generate list from array
@@ -11,7 +13,7 @@ function listbox($background, $title, $list) { ?>
 					}
 				?>
 			</ol>
-		</blockquote>
+		</div>
 	</div>
 <?php }
 ?>
@@ -35,7 +37,7 @@ function productRow($rowNum, $name, $vmNum, $price, $adminPriv) { ?>
 		<td><?php echo $name;?></td>
 		<td>Vending machine <?php echo $vmNum;?></td>
 		<td><?php echo money_format('$%i', $price);?></td>
-		<td style="text-align:center;">
+		<td style="text-align: center;">
 			<?php if ($adminPriv == true) { ?>
 		    	<button type="button" class="btn btn-outline-primary" value='dddRow'><i class="fas fa-plus"></i>&nbsp;Add</button> 
 			    <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i>&nbsp;Delete</button>

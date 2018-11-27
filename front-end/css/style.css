@@ -267,9 +267,16 @@ input[type="checkbox"] {
 	display: flex;
 }
 .chartBox {
-	max-width: 500px;
-	max-height: 500px;
+	max-width: 450px;
+	max-height: 450px;
+	margin: 0px auto;
 }
+
+.lanklistBox {
+	max-width: 400px;
+	max-height: 200px;
+}
+
 .inv {
 	display: none;
 }
@@ -321,6 +328,7 @@ input[type="checkbox"] {
 	background: -moz-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
 	background: -webkit-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
 }
+
 footer {
 	background-color: #555;
 	color: white;
@@ -328,7 +336,7 @@ footer {
 }
 
 .card {
-	margin: 20;
+	margin: 0px 18px;
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
