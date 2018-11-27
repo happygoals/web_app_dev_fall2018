@@ -14,7 +14,6 @@ session_start();
     include 'navbar.php';
     include "common.php";
     headerFunction("navbar-dark bg-dark", "", __FILE__);
-
     //determine if user has admin privs or not
     $adminPriv = false;
     if (isset($_SESSION["username"])) {
@@ -65,7 +64,7 @@ session_start();
 				</script>
 			</div>
 			<div class="col-sm-8 text-left">
-				<div class="row justify-content-around">
+				<div class="row">
 					<?php
 						simpleBox("Orange", "far fa-clipboard", "Total Surveys", "257");
 						simpleBox("Salmon", "far fa-user", "New Visitors", "19");
@@ -109,21 +108,17 @@ session_start();
 					<script src="js/scatterPlot.js"></script>
 				</div>
 				<!--list boxes-->
-				<div class="row justify-content-around">
+				<div class="row">
 					<?php
 						listbox("#17a2b8", "Top Sale List", array("Coke", "Orange Juice", "Potato Chips"));
-					?>
-					<p>                                     </p>
-					<?php
-						listbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Burrito", "Banana"));
+						listbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
 					?>
 				</div>
-				
 				<!-- Table --> 	
 				<div>
 					<table class="table" id="table" style="-ms-overflow-style: -ms-autohiding-scrollbar; max-height: 200px;">
 						<thead>
-							<tr style="text-align:left;">
+							<tr style="text-align:center;">
 								<th scope="col">#</th>
 								<th scope="col">Product Name</th>
 								<th scope="col">Location</th>
