@@ -108,7 +108,7 @@ session_start();
 					<script src="js/scatterPlot.js"></script>
 				</div>
 				<!--list boxes-->
-				<div class="lanklistBox">
+				<div class="row">
 					<?php
 						listbox("#17a2b8", "Top Sale List", array("Coke", "Orange Juice", "Potato Chips"));
 						listbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));

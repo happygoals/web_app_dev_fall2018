@@ -1,8 +1,8 @@
 <?php
 function listbox($background, $title, $list) { ?>
-	<div class="card text-white text-center mb-5" style="background-color: <?php echo $background ?>">
+	<div class="card text-white text-center bg-light mb-5" style=" width: 380px; height: 150px; background-color: <?php echo $background ?>; margin: 5px auto;">
 		<div class="card-header" style="background-color:<?php echo $background ?>;">
-						<h5><?php echo $title ?></h5>
+			<h5><?php echo $title ?></h5>
 		</div>
 		<div class="card-body" style="background-color:<?php echo $background ?>;">
 			<ol style="text-align:left;">
@@ -15,8 +15,7 @@ function listbox($background, $title, $list) { ?>
 			</ol>
 		</div>
 	</div>
-<?php }
-?>
+<?php } ?>
 
 <?php
 function simpleBox($background, $icon, $title, $value) { ?>

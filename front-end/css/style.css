@@ -269,12 +269,7 @@ input[type="checkbox"] {
 .chartBox {
 	max-width: 450px;
 	max-height: 450px;
-	margin: 0px auto;
-}
-
-.lanklistBox {
-	max-width: 400px;
-	max-height: 200px;
+	margin: 15px auto;
 }
 
 .inv {
