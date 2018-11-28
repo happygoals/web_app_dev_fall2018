@@ -32,6 +32,7 @@
 	?>
 				<a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="userDropdown" role="button"><i class="fas fa-user-circle fa-fw"></i><?php echo $username ?></a>
 				<div aria-labelledby="userDropdown" class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="account.php">Account</a>
 					<a class="dropdown-item" href="logout.php">Sign out</a>
 				</div>
 	<?php }
