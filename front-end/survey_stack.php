@@ -12,6 +12,33 @@
         $question3 = $_POST['opt3'];
         $question3_1 = $_POST['why']; 
         $question3_2 = $_POST['op3.2.0'];
+        $question4 = $_POST['opt4'];
+        $question4_1 = $_POST['why2']; 
+        $question4_2 = $_POST['op4.2.0'];
+        $question5 = $_POST['opt5'];
+        $question6 = $_POST['opt6'];
+        $question7 = $_POST['opt7'];
+        $question8 = $_POST['opt8'];
+        $question9 = $_POST['op9.0.0'];
+        $question9_1 = $_POST['Why3'];
+        $question10 = $_POST['op10.0.0'];
+        $question10_1 = $_POST['Why4'];
+        $question11 = $_POST['op11'];
+        $question11_1 = $_POST['Why5'];
+        $question12 = $_POST['op12'];
+        $question12_1 = $_POST['Why6'];
+        
+        //dropdown list - need to update
+        $question13 = $_POST[''];  
+        $question13_1 = $_POST[''];
+        $question14 = $_POST[''];  
+        $question14_1 = $_POST[''];
+        
+        
+        
+        $question15 = $_POST['opt15'];  
+        $question15_1 = $_POST['Why7'];
+        $question16 = $_POST['Why8'];
         
         $input_name = $_POST['name']; 
         $email = $_POST['email']; 
