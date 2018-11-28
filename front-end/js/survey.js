@@ -104,11 +104,12 @@ function threeSelected(question) {
 		if (objects[i].type == 'checkbox' && objects[i].checked) {
 			count++;
 		} 
-		if(count > 3){
-			// return if there are more than 3 options selected
-			return false;
+		if(count == 3){
+			// return if there are 3 options selected
+			return true;
 		}
 	}
+	return false
 }
 
 // Checks that the form has an answer to all questions, and if so allows the submission process to continue!
@@ -177,7 +178,7 @@ function validate() {
 			return false;
 	}
 	else if(threeSelected(document.getElementById('question9')) == false){
-		alert("You must select 1 to 3 options for question 9!");
+		alert("You must select 3 options for question 9!");
 		return false;
 	}
 	// Checks that Questions 10 was completed
@@ -186,7 +187,7 @@ function validate() {
 		return false;
 	}
 	else if(threeSelected(document.getElementById('question10')) == false){
-		alert("You must select 1 to 3 options for question 10!");
+		alert("You must select 3 options for question 10!");
 		return false;
 	}
 	// Checks that Question 11 was completed
