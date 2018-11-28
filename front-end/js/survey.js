@@ -64,11 +64,11 @@ function isOneCheckedRadio(question) {
   return false;
 }
 
-//Checks that at least one Radio button is checked out of a given check box group
+//Checks that at least one Check box is checked out of a given check box group
 function isOneCheckedCheckbox(question) {
-  var chx = question.getElementsByTagName('input');
-  for (var i=0; i<chx.length; i++) {
-    if (chx[i].type == 'checkbox' && chx[i].checked) {
+  var objects = question.getElementsByTagName('input');
+  for (var i=0; i<objects.length; i++) {
+    if (objects[i].type == 'checkbox' && objects[i].checked) {
       return true;
     } 
   }
@@ -77,8 +77,8 @@ function isOneCheckedCheckbox(question) {
 
 //Checks that in a selected that a choice has been made, and that it is still not "Choose One"
 function isOneCheckedCombo(question){
-	var object = question.getElementsByTagName('select');
-	var option = object[0].options[object[0].selectedIndex];
+	var objects = question.getElementsByTagName('select');
+	var option = objects[0].options[objects[0].selectedIndex];
 	if(option.value == ""){
 			return false;
 	}
@@ -96,32 +96,18 @@ function ValidateEmail(mail)
 }
 
 // Checks to see if a user only selected three options from a checkbox
-function KeepCount() {
-	var NewCount = 0
+function threeSelected(question) {
+	var count = 0
+	var objects = question.getElementsByTagName('input');
 	
-	if (document.joe.dog.checked) {
-		NewCount = NewCount + 1
-	}
-	
-	if (document.joe.cat.checked) {
-		NewCount = NewCount + 1
-	}
-	
-	if (document.joe.pig.checked) {
-		NewCount = NewCount + 1
-	}
-	
-	if (document.joe.ferret.checked) {
-		NewCount = NewCount + 1
-	}
-	
-	if (document.joe.hampster.checked) {
-		NewCount = NewCount + 1
-	}
-	
-	if (NewCount == 3) {
-		alert('Pick Just Two Please')
-		document.joe; return false;
+	for (var i=0; i<objects.length; i++) {
+		if (objects[i].type == 'checkbox' && objects[i].checked) {
+			count++;
+		} 
+		if(count > 3){
+			// return if there are more than 3 options selected
+			return false;
+		}
 	}
 }
 
@@ -187,12 +173,20 @@ function validate() {
 	}
 	// Checks that Question 9 was completed
 	if(isOneCheckedCheckbox(document.getElementById('question9')) == false){
-		alert("You must select an answer for question 9!");
+			alert("You must select an answer for question 9!");
+			return false;
+	}
+	else if(threeSelected(document.getElementById('question9')) == false){
+		alert("You must select 1 to 3 options for question 9!");
 		return false;
 	}
 	// Checks that Questions 10 was completed
 	if(isOneCheckedCheckbox(document.getElementById('question10')) == false){
 		alert("You must select an answer for question 10!");
+		return false;
+	}
+	else if(threeSelected(document.getElementById('question10')) == false){
+		alert("You must select 1 to 3 options for question 10!");
 		return false;
 	}
 	// Checks that Question 11 was completed
