@@ -14,6 +14,9 @@
 		if ($result->rowCount() == 1) {
 			$signupError = true;
 		}
+		else if (filter_var($_POST["signupEmail"], FILTER_VALIDATE_EMAIL) == false) {
+			$emailError = true;
+		}
 		else {
 			//enter them into the database
 	    	$result = $connection->prepare("insert into Person (user, email, firstName, lastName, pass) values ('".$_POST['signupUsername']."', '".$_POST['signupEmail']."', '".$_POST['signupFirstName']."', '".$_POST['signupLastName']."', PASSWORD('".$_POST['signupPass']."'))");
@@ -84,6 +87,9 @@
 					if (isset($signupError)) {
 					    echo "<span style=\"color: red\">An account with this username or email already exists!</span>";
 					}
+					else if (isset($emailError)) {
+						echo "<span style=\"color: red\">This email address is not valid!</span>";
+					}
 					?>
 				</form>
 				<?php } ?>
@@ -93,7 +99,7 @@
 </div>
 
 <?php
-if (isset($signupError)) {
+if (isset($signupError) || isset($emailError)) {
     echo "<script> $(document).ready(function(){ $('#signupModal').modal('show'); }); </script>";
 }
 ?>
