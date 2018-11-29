@@ -116,7 +116,12 @@ session_start();
 				</div>
 				<!-- Table --> 	
 				<div>
-					<button type="button" class="btn btn-outline-primary" onclick="addRow()"><i class="fas fa-plus"></i>&nbsp;Add item</button>
+					<?php
+					if ($adminPriv == true) {
+						//add item button is only available to admins
+						echo '<button type="button" class="btn btn-outline-primary" onclick="addRow()"><i class="fas fa-plus"></i>&nbsp;Add item</button>';
+					}
+					?>
 					
 					<table class="table" id="table" style="-ms-overflow-style: -ms-autohiding-scrollbar; max-height: 200px;">
 						<thead>
@@ -138,32 +143,6 @@ session_start();
 					?>
 						</tbody>
 					</table>
-					<script>
-						function addRow() {
-							var tableRef = document.getElementById('table').getElementsByTagName('tbody')[0];
-
-							// Insert a row in the table at the last row
-							var newRow = tableRef.insertRow(tableRef.rows.length);
-
-							var newRowHTML = '<th scope="row">' + tableRef.rows.length + '</th>\
-		<td><input type="text" name="productName' + tableRef.rows.length + '"></td>\
-		<td>Vending machine x</td>\
-		<td>price</td>\
-		<td style="text-align: center;">\
-			<button type="button" class="btn btn-outline-primary" onclick="saveRow(' + tableRef.rows.length + ')"><i class="fas fa-trash"></i>&nbsp;Save</button>\
-		</td>';
-							
-							newRow.innerHTML = newRowHTML;
-						}
-						
-						function deleteRow(index) {
-							alert("Delete row " + index);
-						}
-						
-						function saveRow(index) {
-							alert("Save row " + index);
-						}
-					</script>
 				</div>
 			</div>
 			<div class="col-sm-2 sidenav">

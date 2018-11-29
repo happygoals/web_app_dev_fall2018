@@ -38,7 +38,7 @@ function productRow($rowNum, $name, $vmNum, $price, $adminPriv) { ?>
 		<td><?php echo money_format('$%i', $price);?></td>
 		<td style="text-align: center;">
 			<?php if ($adminPriv == true) { ?>
-			    <button type="button" class="btn btn-outline-danger" onclick="deleteRow(<?php echo $rowNum ?>)"><i class="fas fa-trash"></i>&nbsp;Delete</button>
+			    <button type="button" class="btn btn-outline-danger" onclick="deleteRow(this)"><i class="fas fa-trash"></i>&nbsp;Delete</button>
 			<?php } ?>
 		</td>
 	</tr>
