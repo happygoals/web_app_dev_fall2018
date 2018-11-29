@@ -232,11 +232,13 @@ function validate() {
 		alert("You must provide your name!");
 		return false;
 	}
+	
 	// Checks that the Email Field was completed
 	if (!document.forms.survey.email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
 		alert("You must provide an email adddress!");
 		return false;
 	}
+	
 	// Checks that the Email is a valid Email
 	if (ValidateEmail(document.forms.survey.email.value) == false) {
 		alert("The email address you provided is Invalid!");
