@@ -1,0 +1,26 @@
+[1mdiff --cc front-end/js/survey.js[m
+[1mindex da19d1a,56e8b3e..0000000[m
+[1m--- a/front-end/js/survey.js[m
+[1m+++ b/front-end/js/survey.js[m
+[36m@@@ -232,15 -224,10 +224,20 @@@[m [mfunction validate() [m
+  		alert("You must provide your name!");[m
+  		return false;[m
+  	}[m
+[32m++<<<<<<< HEAD[m
+[32m +	[m
+[32m +	// Checks that the Email Field was completed[m
+[32m +	if (!document.forms.survey.email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {[m
+[32m +		alert("You must provide an email adddress!");[m
+[32m +		return false;[m
+[32m +	}[m
+[32m +	[m
+[32m++=======[m
+[32m++>>>>>>> 9b514aeff5bfc20d2c24778ff46a566e42d9eefb[m
+  	// Checks that the Email is a valid Email[m
+[31m- 	if (ValidateEmail(document.forms.survey.email.value) == false) {[m
+[32m+ 	if (!ValidateEmail(document.getElementById('email').value)) {[m
+[32m+ 		alert((document.getElementById('email').value));[m
+[32m+ 		alert(ValidateEmail(document.getElementById('email').value));[m
+  		alert("The email address you provided is Invalid!");[m
+  		return false;[m
+  	}[m
