@@ -38,8 +38,7 @@ function productRow($rowNum, $name, $vmNum, $price, $adminPriv) { ?>
 		<td><?php echo money_format('$%i', $price);?></td>
 		<td style="text-align: center;">
 			<?php if ($adminPriv == true) { ?>
-		    	<button type="button" class="btn btn-outline-primary" value='dddRow'><i class="fas fa-plus"></i>&nbsp;Add</button> 
-			    <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i>&nbsp;Delete</button>
+			    <button type="button" class="btn btn-outline-danger" onclick="deleteRow(<?php echo $rowNum ?>)"><i class="fas fa-trash"></i>&nbsp;Delete</button>
 			<?php } ?>
 		</td>
 	</tr>
