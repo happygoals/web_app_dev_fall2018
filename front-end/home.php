@@ -11,6 +11,7 @@
     headerFunction("navbar-light", "background-color: rgba(251, 237, 254, 0.8)", __FILE__); //for home page
 ?>
 	<div id="wrapper">
+		<br><br><br>
 		<header id="header">
 			<div class="logo">
 				<span class="icon"></span>

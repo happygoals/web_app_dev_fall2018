@@ -12,7 +12,7 @@
 <?php
 	foreach (array("Home", "Survey", "Analytics") as $link) { ?>
 			<li class="nav-item<?php if ($callingFile == strtolower($link)) {echo " active";}?>">
-				<a class="nav-link" href="<?php echo strtolower($link).".php"; ?>"><?php echo $link ?></a>
+				<a class="nav-link" style="margin:0px auto" href="<?php echo strtolower($link).".php"; ?>"><?php echo $link ?></a>
 			</li>
 <?php } ?>
 		</ul>
