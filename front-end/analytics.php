@@ -26,12 +26,14 @@ $stmt2->execute() or die(mysqli_error());
 $numNewUsers = $stmt2->fetch()[0];
 
 //get most popular snack
-$stmt = $connection->prepare("SELECT name FROM Product");
-$stmt->execute() or die(mysqli_error());
-$mostPopular = $stmt->fetch()[0];
+$stmt3 = $connection->prepare("SELECT name FROM Product");
+$stmt3->execute() or die(mysqli_error());
+$mostPopular = $stmt3->fetch()[0];
 
 //get Top Sale List 
-
+$stmt4 = $connection->prepare("SELECT question9 FROM `survey1` WHERE DATE(Date) = CURDATE() and question9 IS NOT NULL;");
+$stmt4->execute() or die(mysqli_error());
+$TodaySale = $stmt4->fetch();
 ?>
 
 <html lang="en">
@@ -129,7 +131,7 @@ $mostPopular = $stmt->fetch()[0];
 				<!--list boxes-->
 				<div class="row">
 					<?php
-						listbox("#17a2b8", "Top Sale List", array("Coke", "Orange Juice", "Potato Chips"));
+						listbox("#17a2b8", "Today's Sale List", $TodaySale);
 						listbox("#6c757d", "New Entry Rank", array("Cute Cookie", "Buritto", "Banana"));
 					?>
 				</div>
