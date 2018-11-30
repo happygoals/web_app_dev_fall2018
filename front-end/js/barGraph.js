@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$.ajax({
-		url: "front-end/chartdata.php",
+			
+		url: "../chartdata.php",
 		method: "GET",
 		success: function(data) {
 			console.log(data);
