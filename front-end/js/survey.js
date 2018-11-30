@@ -48,7 +48,7 @@ function updateCombo(x){
 }
 
 //Disables the submit button if the checkbox is not checked, and reenables it if one is checked
-function disable() {
+function toggle() {
 	/* Allows the submit button to be either disabled or enabled */
 	document.getElementById("submit").disabled = !document.getElementById("submit").disabled;
 }
@@ -58,17 +58,6 @@ function isOneCheckedRadio(question) {
   var chx = question.getElementsByTagName('input');
   for (var i=0; i<chx.length; i++) {
     if (chx[i].type == 'radio' && chx[i].checked) {
-      return true;
-    } 
-  }
-  return false;
-}
-
-//Checks that at least one Check box is checked out of a given check box group
-function isOneCheckedCheckbox(question) {
-  var objects = question.getElementsByTagName('input');
-  for (var i=0; i<objects.length; i++) {
-    if (objects[i].type == 'checkbox' && objects[i].checked) {
       return true;
     } 
   }
@@ -93,23 +82,6 @@ function ValidateEmail(mail)
     return (true)
   }
  return (false)
-}
-
-// Checks to see if a user only selected three options from a checkbox
-function threeSelected(question) {
-	var count = 0
-	var objects = question.getElementsByTagName('input');
-	
-	for (var i=0; i<objects.length; i++) {
-		if (objects[i].type == 'checkbox' && objects[i].checked) {
-			count++;
-		} 
-		if(count == 3){
-			// return if there are 3 options selected
-			return true;
-		}
-	}
-	return false
 }
 
 // Checks that the form has an answer to all questions, and if so allows the submission process to continue!
@@ -220,24 +192,13 @@ function validate() {
 		return false;
 	}
 	// Checks that the Name Field was completed
-	if (document.forms.survey.name.value == '') {
+	if (document.getElementById('name').value == '') {
 		alert("You must provide your name!");
 		return false;
 	}
-<<<<<<< HEAD
-	
-	// Checks that the Email Field was completed
-	if (!document.forms.survey.email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
-		alert("You must provide an email adddress!");
-		return false;
-	}
-	
-=======
->>>>>>> 9b514aeff5bfc20d2c24778ff46a566e42d9eefb
+
 	// Checks that the Email is a valid Email
 	if (!ValidateEmail(document.getElementById('email').value)) {
-		alert((document.getElementById('email').value));
-		alert(ValidateEmail(document.getElementById('email').value));
 		alert("The email address you provided is Invalid!");
 		return false;
 	}
