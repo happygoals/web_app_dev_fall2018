@@ -21,10 +21,11 @@ $stmt->execute() or die(mysqli_error());
 $numSurveys = $stmt->fetch()[0];
 
 //get new visitors based on the date
+/*
 $stmt2 = $connection->prepare("SELECT count(*) FROM `survey1` WHERE DATE(Date) = CURDATE()");
 $stmt2->execute() or die(mysqli_error());
 $numNewUsers = $stmt2->fetch()[0];
-
+*/
 //get most popular snack
 $stmt = $connection->prepare("SELECT name FROM Product");
 $stmt->execute() or die(mysqli_error());
@@ -127,8 +128,8 @@ $mostPopular = $stmt->fetch()[0];
 				<!--list boxes-->
 				<div class="row">
 					<?php
-						listbox("#17a2b8", "Top Sale List", array("Coke", "Orange Juice", "Potato Chips"));
-						listbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
+						olistbox("#17a2b8", "Top Sale List", array("Coke", "Orange Juice", "Potato Chips"));
+						ulistbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
 					?>
 				</div>
 				<!-- Table -->
@@ -177,8 +178,5 @@ $mostPopular = $stmt->fetch()[0];
 		</div>
 	</div>
 	<?php include "footer.php" ?>
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/Chart.min.js"></script>
-		<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
