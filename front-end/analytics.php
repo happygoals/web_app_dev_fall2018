@@ -18,8 +18,12 @@ if (isset($_SESSION["username"])) {
 //get survey data for later use
 $stmt = $connection->prepare("SELECT COUNT(*) FROM survey1");
 $stmt->execute() or die(mysqli_error());
-
 $numSurveys = $stmt->fetch()[0];
+
+//get new visitors based on the date
+$stmt2 = $connection->prepare("SELECT count(*) FROM `survey1` WHERE DATE(Date) = CURDATE()");
+$stmt2->execute() or die(mysqli_error());
+$numNewUsers = $stmt2->fetch()[0];
 ?>
 
 <html lang="en">
@@ -74,7 +78,7 @@ $numSurveys = $stmt->fetch()[0];
 				<div class="row" style="margin: 5px auto;" >
 					<?php
 						simpleBox("Orange", "far fa-clipboard", "Total Surveys", "$numSurveys");
-						simpleBox("Salmon", "far fa-user", "New Visitors", "19");
+						simpleBox("Salmon", "far fa-user", "New Visitors", "$numNewUsers");
 						simpleBox("YellowGreen", "fas fa-cookie-bite", "Popular Snack", "KitKat");
 						simpleBox("OrangeRed", "fab fa-hotjar", "Today's Hot Item", "Coke");
 					?>
