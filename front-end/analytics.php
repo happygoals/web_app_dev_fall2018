@@ -134,7 +134,10 @@ $TodaySale = $stmt4->fetch();
 					<?php
 						olistbox("#17a2b8", "Top Sale List", array("Coke", "Orange Juice", "Potato Chips"));
 						ulistbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8b62d869e30457a8a7781da25b7f0f067eb10172
 					?>
 				</div>
 				<!-- Table -->
