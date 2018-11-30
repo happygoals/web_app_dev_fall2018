@@ -2,6 +2,24 @@
 session_start();
 
 require ('connection.php');
+
+//determine if user has admin privs or not
+$adminPriv = false;
+if (isset($_SESSION["username"])) {
+	//user is logged in, check if they're an admin
+	$result = $connection->prepare("SELECT * FROM Person WHERE (user = ?) and (isAdmin = 1)");
+	$result->execute(array($_SESSION["username"])) or die(mysqli_error());
+	if ($result->rowCount() == 1) {
+		//user is an admin
+		$adminPriv = true;
+	}
+}
+
+//get survey data for later use
+$stmt = $connection->prepare("SELECT COUNT(*) FROM survey1");
+$stmt->execute() or die(mysqli_error());
+
+$numSurveys = $stmt->fetch()[0];
 ?>
 
 <html lang="en">
@@ -16,17 +34,6 @@ require ('connection.php');
     include 'navbar.php';
     include "common.php";
     headerFunction("navbar-dark bg-dark", "", __FILE__);
-    //determine if user has admin privs or not
-    $adminPriv = false;
-    if (isset($_SESSION["username"])) {
-        //user is logged in, check if they're an admin
-        $result = $connection->prepare("SELECT * FROM Person WHERE (user = ?) and (isAdmin = 1)");
-        $result->execute(array($_SESSION["username"])) or die(mysqli_error());
-        if ($result->rowCount() == 1) {
-            //user is an admin
-            $adminPriv = true;
-        }
-    }
 ?>
 	<div class="container-fluid text-center">
 		<div class="row row-eq-height" style="padding-top: 70px">
@@ -66,7 +73,7 @@ require ('connection.php');
 			<div class="col-sm-8 text-left">
 				<div class="row" style="margin: 5px auto;" >
 					<?php
-						simpleBox("Orange", "far fa-clipboard", "Total Surveys", "257");
+						simpleBox("Orange", "far fa-clipboard", "Total Surveys", "$numSurveys");
 						simpleBox("Salmon", "far fa-user", "New Visitors", "19");
 						simpleBox("YellowGreen", "fas fa-cookie-bite", "Popular Snack", "KitKat");
 						simpleBox("OrangeRed", "fab fa-hotjar", "Today's Hot Item", "Coke");
@@ -137,7 +144,7 @@ require ('connection.php');
 					<?php
 						//get product data from db
 						$stmt = $connection->prepare("SELECT * FROM Product ORDER BY wouldPurchase DESC");
-						$stmt->execute(array($_SESSION["username"])) or die(mysqli_error());
+						$stmt->execute() or die(mysqli_error());
 						
 						//insert each into the table
 						$i = 1;
