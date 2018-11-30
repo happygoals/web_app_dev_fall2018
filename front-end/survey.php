@@ -137,14 +137,14 @@
 				<div id="question9" name="question9">
 					<h6>9) What food product do you most commonly purchase from vending machines on campus?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op9.0.0" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="Energy Bar">Energy Bar</li>
-						<li><input id="op9.0.1" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="Chips">Chips</li>
-						<li><input id="op9.0.2" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="Candy">Candy</li>
-						<li><input id="op9.0.3" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="Cutecookie">Cute Cookie</li>
-						<li><input id="op9.0.4" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="Pretzels">Pretzels</li>
-						<li><input id="op9.0.5" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="Gum">Gum</li>
-						<li><input id="op9.0.6" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="Nothing">Nothing</li>
-						<li><input id="op9.0.7" name="op9.0.0" onclick="expandOnly('question9.1');" type="radio" value="Other">Other Snack</li>
+						<li><input id="op9.0.0" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Energy Bar">Energy Bar</li>
+						<li><input id="op9.0.1" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Chips">Chips</li>
+						<li><input id="op9.0.2" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Candy">Candy</li>
+						<li><input id="op9.0.3" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Cutecookie">Cute Cookie</li>
+						<li><input id="op9.0.4" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Pretzels">Pretzels</li>
+						<li><input id="op9.0.5" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Gum">Gum</li>
+						<li><input id="op9.0.6" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Nothing">Nothing</li>
+						<li><input id="op9.0.7" name="op9" onclick="expandOnly('question9.1');" type="radio" value="Other">Other Snack</li>
 					</ul>
 				</div>
 				<div id="question9.1" name="question9.1" style="display: none">
@@ -156,14 +156,14 @@
 				<div id="question10" name="question10">
 					<h6>10) What beverage product do you most commonly purchase from vending machines on campus?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op10.0.0" name="op10.0.0" onclick="collapseOnly('question10.1');" type="radio" value="energydrink">Energy Drink</li>
-						<li><input id="op10.0.1" name="op10.0.0" onclick="collapseOnly('question10.1');" type="radio" value="coffee">Coffee</li>
-						<li><input id="op10.0.2" name="op10.0.0" onclick="collapseOnly('question10.1');" type="radio" value="pepsi">Pepsi</li>
-						<li><input id="op10.0.3" name="op10.0.0" onclick="collapseOnly('question10.1');" type="radio" value="mountaindew">Mountain Dew</li>
-						<li><input id="op10.0.4" name="op10.0.0" onclick="collapseOnly('question10.1');" type="radio" value="drpepper">Dr. Pepper</li>
-						<li><input id="op10.0.5" name="op10.0.0" onclick="collapseOnly('question10.1');" type="radio" value="water">Water</li>
-						<li><input id="op10.0.6" name="op10.0.0" onclick="collapseOnly('question10.1');" type="radio" value="nothing">Nothing</li>
-						<li><input id="op10.0.7" name="op10.0.0" onclick="expandOnly('question10.1');" type="radio" value="">Other Beverage</li>
+						<li><input id="op10.0.0" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="energydrink">Energy Drink</li>
+						<li><input id="op10.0.1" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="coffee">Coffee</li>
+						<li><input id="op10.0.2" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="pepsi">Pepsi</li>
+						<li><input id="op10.0.3" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="mountaindew">Mountain Dew</li>
+						<li><input id="op10.0.4" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="drpepper">Dr. Pepper</li>
+						<li><input id="op10.0.5" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="water">Water</li>
+						<li><input id="op10.0.6" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="nothing">Nothing</li>
+						<li><input id="op10.0.7" name="op10" onclick="expandCollapseBoxB('question10.1');" type="radio" value="">Other Beverage</li>
 					</ul>
 				</div>
 				<div id="question10.1" name="question10.1" style="display: none">
@@ -175,13 +175,13 @@
 				<div id="question11" name="question11">
 					<h6>11) What food product do you most want removed from vending machines on campus?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op11.0.0" name="op11" type="radio" value="energybar">Energy Bar</li>
-						<li><input id="op11.0.1" name="op11" type="radio" value="chips">Chips</li>
-						<li><input id="op11.0.2" name="op11" type="radio" value="candy">Candy</li>
-						<li><input id="op11.0.3" name="op11" type="radio" value="cutecookie">Cute Cookie</li>
-						<li><input id="op11.0.4" name="op11" type="radio" value="pretzels">Pretzels</li>
-						<li><input id="op11.0.5" name="op11" type="radio" value="gum">Gum</li>
-						<li><input id="op11.0.6" name="op11" type="radio" value="nothing">Nothing</li>
+						<li><input id="op11.0.0" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="energybar">Energy Bar</li>
+						<li><input id="op11.0.1" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="chips">Chips</li>
+						<li><input id="op11.0.2" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="candy">Candy</li>
+						<li><input id="op11.0.3" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="cutecookie">Cute Cookie</li>
+						<li><input id="op11.0.4" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="pretzels">Pretzels</li>
+						<li><input id="op11.0.5" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="gum">Gum</li>
+						<li><input id="op11.0.6" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="nothing">Nothing</li>
 						<li><input id="op11.0.7" name="op11" onclick="expandCollapseBoxB('question11.1');" type="radio" value="Other">Other Snack</li>
 					</ul>
 				</div>
