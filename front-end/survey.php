@@ -144,7 +144,7 @@
 						<li><input id="op9.0.4" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="pretzels">Pretzels</li>
 						<li><input id="op9.0.5" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="gum">Gum</li>
 						<li><input id="op9.0.6" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="nothing">Nothing</li>
-						<li><input id="op9.0.7" name="op9.0.0" onclick="expandOnly('question9.1');" type="radio" value="other">Other Snack</li>
+						<li><input id="op9.0.7" name="op9.0.0" onclick="expandOnly('question9.1');" type="radio">Other Snack</li>
 					</ul>
 				</div>
 				<div id="question9.1" name="question9.1" style="display: none">
