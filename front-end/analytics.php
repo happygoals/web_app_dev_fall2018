@@ -16,6 +16,17 @@ if (isset($_SESSION["username"])) {
 $stmt = $connection->prepare("SELECT COUNT(*) FROM survey1");
 $stmt->execute() or die(mysqli_error());
 $numSurveys = $stmt->fetch()[0];
+
+//get new visitors based on the date
+$stmt2 = $connection->prepare("SELECT count(*) FROM `survey1` WHERE DATE(Date) = CURDATE()");
+$stmt2->execute() or die(mysqli_error());
+$numNewUsers = $stmt2->fetch()[0];
+
+//get most popular snack
+$stmt = $connection->prepare("SELECT name FROM Product");
+$stmt->execute() or die(mysqli_error());
+
+$mostPopular = $stmt->fetch()[0];
 ?>
 
 <html lang="en">
@@ -70,8 +81,8 @@ $numSurveys = $stmt->fetch()[0];
 				<div class="row" style="margin: 5px auto;" >
 					<?php
 						simpleBox("Orange", "far fa-clipboard", "Total Surveys", "$numSurveys");
-						simpleBox("Salmon", "far fa-user", "New Visitors", "19");
-						simpleBox("YellowGreen", "fas fa-cookie-bite", "Popular Snack", "KitKat");
+						simpleBox("Salmon", "far fa-user", "New Visitors", "$numNewUsers");
+						simpleBox("YellowGreen", "fas fa-cookie-bite", "Popular Snack", "$mostPopular");
 						simpleBox("OrangeRed", "fab fa-hotjar", "Today's Hot Item", "Coke");
 					?>
 				</div>
@@ -117,7 +128,7 @@ $numSurveys = $stmt->fetch()[0];
 						listbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
 					?>
 				</div>
-				<!-- Table --> 	
+				<!-- Table -->
 				<div>
 					<?php
 					if ($adminPriv == true) {
@@ -133,7 +144,12 @@ $numSurveys = $stmt->fetch()[0];
 								<th scope="col">Product Name</th>
 								<th scope="col">Location</th>
 								<th scope="col">Price</th>
-								<th scope="col">Action</th>
+								<?php
+								if ($adminPriv == true) {
+									//action column is only available to admins
+									echo '<th scope="col">Action</th>';
+								}
+								?>
 							</tr>
 						</thead>
 						<tbody>

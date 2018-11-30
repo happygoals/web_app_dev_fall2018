@@ -21,11 +21,11 @@
 			</div>
 			<div class="col-sm-1 sidebg"></div>
 			<div class="col-sm-8 text-left">
+				<form action="survey_stack.php" id="survey" method="post" name="survey" onsubmit="return validate();">
 				<p style="width:80%">Snackfacts would like to thank you in advance for your participation in the survey, the data you provide will 
 				be used to generate analyzed date on this webpage. In doing so we hope that this data can help inform companies about what consumers like you,
 				want in the vending machines around your campus.</p>
 				<!-- Question 1 Start -->
-				<form action="survey_stack.php" id="survey" method="post" name="survey" onsubmit="return true;">
 				<div id="question1" name="question1">
 					<h6>1) Which of the following would you consider yourself at your respective campus?</h6>
 					<ul style="list-style:none;">
@@ -39,9 +39,9 @@
 				<!-- Question 2 START-->
 				<div id="question2" name="question2">
 					<h6>2) What sex are you?</h6>
-					<label class="radio-inline"><input id="op2.0.0" name="opt2" type="radio">Male</label>
-					<label class="radio-inline"><input id="op2.0.1" name="opt2" type="radio">Female</label>
-					<label class="radio-inline"><input id="op2.0.2" name="opt2" type="radio">Other</label>
+					<label class="radio-inline"><input id="op2.0.0" name="opt2" type="radio" value="Male">Male</label>
+					<label class="radio-inline"><input id="op2.0.1" name="opt2" type="radio" value="Female">Female</label>
+					<label class="radio-inline"><input id="op2.0.2" name="opt2" type="radio" value="other">Other</label>
 				</div>
 				<!-- Question 2 END-->
 		        <!-- Question 3 START-->
@@ -52,37 +52,37 @@
 		    	</div>
 		    	<div id="question3.1" name="question3.1" style="display: none">
 		    		<h6>Why not?</h6>
-		    		<textarea id="op3.1.0" cols="75" name="Why" rows="5"></textarea><br>
+		    		<textarea id="op3.1.0" cols="75" name="Why" rows="5" value=""></textarea><br>
 		    	</div>
 		    	<div id="question3.2" name="question3.2" style="display: none">
 		    		<h6>How often?</h6>
 		    		<ul style="list-style:none;">
-		    			<li><input id="op3.2.0" name="op3.2.0" type="radio">Once a week</li>
-		    			<li><input id="op3.2.1" name="op3.2.0" type="radio">One to two times a week</li>
-		    			<li><input id="op3.2.2" name="op3.2.0" type="radio">Three to four times a week</li>
-		    			<li><input id="op3.2.3" name="op3.2.0" type="radio">Five to six times a week</li>
-		    			<li><input id="op3.2.4" name="op3.2.0" type="radio">Seven or more times a week</li>
+		    			<li><input id="op3.2.0" name="op3.2.0" type="radio" value="Once a week">Once a week</li>
+		    			<li><input id="op3.2.1" name="op3.2.0" type="radio" value="One to two times a week">One to two times a week</li>
+		    			<li><input id="op3.2.2" name="op3.2.0" type="radio" value="Three to four times a week">Three to four times a week</li>
+		    			<li><input id="op3.2.3" name="op3.2.0" type="radio" value="Five to six times a week">Five to six times a week</li>
+		    			<li><input id="op3.2.4" name="op3.2.0" type="radio" value="Seven or more times a week">Seven or more times a week</li>
 		    		</ul>
 		    	</div>
 		    	<!--Question 3 END-->
 		    	<!--Question 4 START-->
 				<div id="question4" name="question4">
 					<h6>4) Do you purchase beverages on campus currently?</h6>
-					<label class="radio-inline"><input id="op4.0.0" name="opt4" onclick="expandCollapseBox('question4.2', 'question4.1');" type="radio">Yes</label> 
-					<label class="radio-inline"><input id="op4.0.1" name="opt4" onclick="expandCollapseBox('question4.1', 'question4.2');" type="radio">No</label>
+					<label class="radio-inline"><input id="op4.0.0" name="opt4" onclick="expandCollapseBox('question4.2', 'question4.1');" type="radio" value="yes">Yes</label> 
+					<label class="radio-inline"><input id="op4.0.1" name="opt4" onclick="expandCollapseBox('question4.1', 'question4.2');" type="radio" value="no">No</label>
 				</div>
 				<div id="question4.1" name="question4.1" style="display: none">
 					<h6>Why not?</h6>
-					<textarea id="op4.1.0" cols="75" name="why2" rows="5"></textarea><br>
+					<textarea id="op4.1.0" cols="75" name="why2" rows="5" value=""></textarea><br>
 				</div>
 				<div id="question4.2" name="question4.2" style="display: none">
 					<h6>How often?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op4.2.0" name="op4.2.0" type="radio">Once a week</li>
-						<li><input id="op4.2.1" name="op4.2.0" type="radio">One to two times a week</li>
-						<li><input id="op4.2.2" name="op4.2.0" type="radio">Three to four times a week</li>
-						<li><input id="op4.2.3" name="op4.2.0" type="radio">Five to six times a week</li>
-						<li><input id="op4.2.4" name="op4.2.0" type="radio">Seven or more times a week</li>
+						<li><input id="op4.2.0" name="op4.2.0" type="radio" value="Once a week">Once a week</li>
+						<li><input id="op4.2.1" name="op4.2.0" type="radio" value="One to two times a week">One to two times a week</li>
+						<li><input id="op4.2.2" name="op4.2.0" type="radio" value="Three to four times a week">Three to four times a week</li>
+						<li><input id="op4.2.3" name="op4.2.0" type="radio" value="Five to six times a week">Five to six times a week</li>
+						<li><input id="op4.2.4" name="op4.2.0" type="radio" value="Seven or more times a week">Seven or more times a week</li>
 					</ul>
 				</div>
 				<!-- Question 4 END-->
@@ -137,57 +137,57 @@
 				<div id="question9" name="question9">
 					<h6>9) What food product do you most commonly purchase from vending machines on campus?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op9.0.0" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="energybar">Energy Bar</li>
-						<li><input id="op9.0.1" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="chips">Chips</li>
-						<li><input id="op9.0.2" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="candy">Candy</li>
-						<li><input id="op9.0.3" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="cutecookie">Cute Cookie</li>
-						<li><input id="op9.0.4" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="pretzels">Pretzels</li>
-						<li><input id="op9.0.5" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="gum">Gum</li>
-						<li><input id="op9.0.6" name="op9.0.0" onclick="collapseOnly('question9.1');" type="radio" value="nothing">Nothing</li>
-						<li><input id="op9.0.7" name="op9.0.0" onclick="expandOnly('question9.1');" type="radio">Other Snack</li>
+						<li><input id="op9.0.0" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Energy Bar">Energy Bar</li>
+						<li><input id="op9.0.1" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Chips">Chips</li>
+						<li><input id="op9.0.2" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Candy">Candy</li>
+						<li><input id="op9.0.3" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Cutecookie">Cute Cookie</li>
+						<li><input id="op9.0.4" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Pretzels">Pretzels</li>
+						<li><input id="op9.0.5" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Gum">Gum</li>
+						<li><input id="op9.0.6" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Nothing">Nothing</li>
+						<li><input id="op9.0.7" name="op9" onclick="expandOnly('question9.1');" type="radio" value="Other">Other Snack</li>
 					</ul>
 				</div>
 				<div id="question9.1" name="question9.1" style="display: none">
 					<h6>Please specify:</h6>
-					<textarea id="9.1.0" cols="75" name="Why3" rows="5"></textarea><br>
+					<textarea id="9.1.0" cols="75" name="Why3" rows="5" value=""></textarea><br>
 				</div>
 				<!-- Question 9 END-->
 				<!-- Question 10 START-->
 				<div id="question10" name="question10">
 					<h6>10) What beverage product do you most commonly purchase from vending machines on campus?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op10.0.0" name="op10.0.0" onclick="collapseOnly('question10.1');" type="radio" value="energydrink">Energy Drink</li>
-						<li><input id="op10.0.1" name="op10.0.0" onclick="collapseOnly('question10.1');" type="radio" value="coffee">Coffee</li>
-						<li><input id="op10.0.2" name="op10.0.0" onclick="collapseOnly('question10.1');" type="radio" value="pepsi">Pepsi</li>
-						<li><input id="op10.0.3" name="op10.0.0" onclick="collapseOnly('question10.1');" type="radio" value="mountaindew">Mountain Dew</li>
-						<li><input id="op10.0.4" name="op10.0.0" onclick="collapseOnly('question10.1');" type="radio" value="drpepper">Dr. Pepper</li>
-						<li><input id="op10.0.5" name="op10.0.0" onclick="collapseOnly('question10.1');" type="radio" value="water">Water</li>
-						<li><input id="op10.0.6" name="op10.0.0" onclick="collapseOnly('question10.1');" type="radio" value="nothing">Nothing</li>
-						<li><input id="op10.0.7" name="op10.0.0" onclick="expandOnly('question10.1');" type="radio">Other Beverage</li>
+						<li><input id="op10.0.0" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="energydrink">Energy Drink</li>
+						<li><input id="op10.0.1" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="coffee">Coffee</li>
+						<li><input id="op10.0.2" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="pepsi">Pepsi</li>
+						<li><input id="op10.0.3" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="mountaindew">Mountain Dew</li>
+						<li><input id="op10.0.4" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="drpepper">Dr. Pepper</li>
+						<li><input id="op10.0.5" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="water">Water</li>
+						<li><input id="op10.0.6" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="nothing">Nothing</li>
+						<li><input id="op10.0.7" name="op10" onclick="expandCollapseBoxB('question10.1');" type="radio" value="">Other Beverage</li>
 					</ul>
 				</div>
 				<div id="question10.1" name="question10.1" style="display: none">
 					<h6>Please specify:</h6>
-					<textarea id="10.1.0" cols="75" name="Why4" rows="5"></textarea><br>
+					<textarea id="10.1.0" cols="75" name="Why4" rows="5" value=""></textarea><br>
 				</div>
 				<!-- Question 10 END-->
 				<!-- Question 11 START-->
 				<div id="question11" name="question11">
 					<h6>11) What food product do you most want removed from vending machines on campus?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op11.0.0" name="op11" type="radio" value="energybar">Energy Bar</li>
-						<li><input id="op11.0.1" name="op11" type="radio" value="chips">Chips</li>
-						<li><input id="op11.0.2" name="op11" type="radio" value="candy">Candy</li>
-						<li><input id="op11.0.3" name="op11" type="radio" value="cutecookie">Cute Cookie</li>
-						<li><input id="op11.0.4" name="op11" type="radio" value="pretzels">Pretzels</li>
-						<li><input id="op11.0.5" name="op11" type="radio" value="gum">Gum</li>
-						<li><input id="op11.0.6" name="op11" type="radio" value="nothing">Nothing</li>
-						<li><input id="op11.0.7" name="op11" onclick="expandCollapseBoxB('question11.1');" type="radio">Other Snack</li>
+						<li><input id="op11.0.0" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="energybar">Energy Bar</li>
+						<li><input id="op11.0.1" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="chips">Chips</li>
+						<li><input id="op11.0.2" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="candy">Candy</li>
+						<li><input id="op11.0.3" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="cutecookie">Cute Cookie</li>
+						<li><input id="op11.0.4" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="pretzels">Pretzels</li>
+						<li><input id="op11.0.5" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="gum">Gum</li>
+						<li><input id="op11.0.6" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="nothing">Nothing</li>
+						<li><input id="op11.0.7" name="op11" onclick="expandCollapseBoxB('question11.1');" type="radio" value="Other">Other Snack</li>
 					</ul>
 				</div>
 				<div id="question11.1" name="question11.1" style="display: none">
 					<h6>Please specify:</h6>
-					<textarea id="11.1.0" cols="75" name="Why5" rows="5"></textarea><br>
+					<textarea id="11.1.0" cols="75" name="Why5" rows="5" value=""></textarea><br>
 				</div>
 				<!-- Question 11 END-->
 				<!-- Question 12 START-->
@@ -201,12 +201,12 @@
 						<li><input id="op12.0.4" name="op12" type="radio" value="drpepper">Dr. Pepper</li>
 						<li><input id="op12.0.5" name="op12" type="radio" value="water">Water</li>
 						<li><input id="op12.0.6" name="op12" type="radio" value="nothing">Nothing</li>
-						<li><input id="op12.0.7" name="op12" onclick="expandCollapseBoxB('question12.1');" type="radio">Other Beverage</li>
+						<li><input id="op12.0.7" name="op12" onclick="expandCollapseBoxB('question12.1');" type="radio" value="Other">Other Beverage</li>
 					</ul>
 				</div>
 				<div id="question12.1" name="question12.1" style="display: none">
 					<h6>Please specify:</h6>
-					<textarea id="12.1.0" cols="75" name="Why6" rows="5"></textarea><br>
+					<textarea id="12.1.0" cols="75" name="Why6" rows="5" value=""></textarea><br>
 				</div>
 				<!-- Question 12 END-->
 				<!-- Question 13 Start -->
@@ -352,23 +352,24 @@
 				</div>
 				<div id="question15.1" name="question15.1" style="display: none">
 					<h6>Why not?</h6>
-					<textarea id="question15.1.0" cols="75" name="Why7" rows="5"></textarea><br>
+					<textarea id="question15.1.0" cols="75" name="Why7" rows="5" value=""></textarea><br>
 				</div>
 				<!-- Question 15 End -->
 				<!-- Question 16 Start -->
 				<div id="question16" name="question16">
 					<h6>16) Is there anything else that you might want to share with us here at Snackfacts?</h6>
-					<textarea id="question16.0.0" cols="75" name="Why8" rows="5"></textarea><br>
+					<textarea id="question16.0.0" cols="75" name="Why8" rows="5" value=""></textarea><br>
 				</div>
 				<!-- Question 16 End -->
 				<!--Name and Email Gather START-->
 				<p style="width:80%">To complete this survey we ask that you provide your name and email. The purpose of these provisions is to create 
 				a PDF version that can be sent to your email. The email will not be used to send advertisements or spam. Thanks for your cooperation!</p><br>
 				<div>
-					<label style="width:6%">Name:</label><input id="name" name="name" type="text"><br>
-					<label style="width:6%">Email:</label><input id="email" name="email" type="text"><br>
-					I agree to Snackfacts' terms and conditions: <input id="agreement" name="agreement" onclick="disable();" type="checkbox"><br><br>
-					<input disabled id="submit" type="submit" value="submit" name="submit"><br><br>
+					<label style="width:6%">Name:</label><input id="name" name="name" type="text" value=""><br>
+					<label style="width:6%">Email:</label><input id="email" name="email" type="text" value=""><br>
+					<label>I agree to Snackfacts' terms and conditions: <input id="agreement" name="agreement" onclick="toggle();" type="checkbox"></label>
+					<br><br>
+					<input disabled id="submit" type="submit" value="Submit" name="submit"><br><br>
 				</div>
 				<!--Name and Email Gather END-->
 			</div>

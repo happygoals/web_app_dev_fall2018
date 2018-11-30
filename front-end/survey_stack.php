@@ -16,11 +16,12 @@ if (isset($_POST['submit'])) {
     $question8 = $_POST['opt8'];        //beverage influences
     
     //pop up choose one 
-    $question9 = $_POST['op9.0.0'];     //most commonly purchased food
+    $question9 = $_POST['op9'];     //most commonly purchased food
     $question9_1 = $_POST['Why3'];          //other type of snacks
-    
-    $question10 = $_POST['op10.0.0'];   //most commonly purchased beverage
+    $question10 = $_POST['op10'];   //most commonly purchased beverage
     $question10_1 = $_POST['Why4'];         //other type of drink
+    
+    
     
     $question11 = $_POST['op11'];       //remove food
     $question11_1 = $_POST['Why5'];         //other
@@ -60,9 +61,11 @@ if (isset($_POST['submit'])) {
     }
     else {
         echo "Record was inserted into DB!\n";
+        header( "refresh:1;url=home.php" );
     }
 }
 else {
     echo "was not submitted";
+    header( "refresh:1;url=home.php" );
 }
 ?>

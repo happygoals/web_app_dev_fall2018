@@ -38,7 +38,7 @@
 				</div>
 				<div class="col-sm-2 sidenavr right"></div>
 			</div>
-			<div class="row row-eq-height" style="padding-top: 70px">
+			<div class="row row-eq-height" style="padding-top: 70px;">
 				<div class="col-sm-2 sidenavr left"></div>
 				<div class="col-sm-8 intro text-left">
 					<h2>Who we are</h2>
@@ -49,7 +49,7 @@
 				</div>
 			</div>
 		</div>
-		<?php include "footer.php" ?>
 	</div>
+	<?php include "footer.php" ?>
 </body>
 </html>
