@@ -1,8 +1,6 @@
 <?php
 session_start();
-
 require ('connection.php');
-
 //determine if user has admin privs or not
 $adminPriv = false;
 if (isset($_SESSION["username"])) {
@@ -14,11 +12,9 @@ if (isset($_SESSION["username"])) {
 		$adminPriv = true;
 	}
 }
-
 //get survey data for later use
 $stmt = $connection->prepare("SELECT COUNT(*) FROM survey1");
 $stmt->execute() or die(mysqli_error());
-
 $numSurveys = $stmt->fetch()[0];
 ?>
 
