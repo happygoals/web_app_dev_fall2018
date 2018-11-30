@@ -196,10 +196,12 @@ function validate() {
 		alert("You must provide your name!");
 		return false;
 	}
-
 	// Checks that the Email is a valid Email
 	if (!ValidateEmail(document.getElementById('email').value)) {
 		alert("The email address you provided is Invalid!");
 		return false;
 	}
 }
+
+
+/////////solving merge conflict
