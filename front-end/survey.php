@@ -25,7 +25,7 @@
 				be used to generate analyzed date on this webpage. In doing so we hope that this data can help inform companies about what consumers like you,
 				want in the vending machines around your campus.</p>
 				<!-- Question 1 Start -->
-				<form action="survey_stack2.php" id="survey" method="post" name="survey" onsubmit="return true;">
+				<form action="survey_stack.php" id="survey" method="post" name="survey" onsubmit="return true;">
 				<div id="question1" name="question1">
 					<h6>1) Which of the following would you consider yourself at your respective campus?</h6>
 					<ul style="list-style:none;">
