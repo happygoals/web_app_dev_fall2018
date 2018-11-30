@@ -32,9 +32,11 @@ $stmt3->execute() or die(mysqli_error());
 $mostPopular = $stmt3->fetch()[0];
 
 //get Top Sale List 
-$stmt4 = $connection->prepare("SELECT question9 FROM `survey1` WHERE DATE(Date) = CURDATE() and question9 IS NOT NULL;");
+$stmt4 = $connection->prepare("SELECT question9 FROM `survey1`");
 $stmt4->execute() or die(mysqli_error());
 $TodaySale = $stmt4->fetch();
+
+
 ?>
 
 <html lang="en">
@@ -132,12 +134,8 @@ $TodaySale = $stmt4->fetch();
 				<!--list boxes-->
 				<div class="row">
 					<?php
-						olistbox("#17a2b8", "Top Sale List", array("Coke", "Orange Juice", "Potato Chips"));
+						ulistbox("#17a2b8", "Today's Sale List", $TodaySale);
 						ulistbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
-<<<<<<< HEAD
-
-=======
->>>>>>> 8b62d869e30457a8a7781da25b7f0f067eb10172
 					?>
 				</div>
 				<!-- Table -->
