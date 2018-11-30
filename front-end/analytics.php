@@ -64,7 +64,7 @@ require ('connection.php');
 				</script>
 			</div>
 			<div class="col-sm-8 text-left">
-				<div class="row">
+				<div class="row" style="margin: 5px auto;" >
 					<?php
 						simpleBox("Orange", "far fa-clipboard", "Total Surveys", "257");
 						simpleBox("Salmon", "far fa-user", "New Visitors", "19");
