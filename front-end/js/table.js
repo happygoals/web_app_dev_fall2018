@@ -17,19 +17,20 @@ function addRow() {
 }
 						
 function deleteRow(btn) {
-	//remove the row
-	var removedRow = btn.parentNode.parentNode;
-	removedRow.parentNode.removeChild(removedRow);
+    var confirmed = confirm("This will delete the row from the DB and cannot be undone. Are you sure? (it actually doesn't though)");
+    
+    if (confirmed == true) {
+        //remove the row
+    	var removedRow = btn.parentNode.parentNode;
+	    removedRow.parentNode.removeChild(removedRow);
 
-    //reset indexes for each remaining row
-    var table = document.getElementById("table").getElementsByTagName('tbody')[0];
-    for (var i = 0, row; i<table.rows.length; i++) {
-        row = table.rows[i];
-		row.cells[0].innerHTML = i + 1;
-	}
-
-    //remove the row from the database
-    //coming soon
+        //reset indexes for each remaining row
+        var table = document.getElementById("table").getElementsByTagName('tbody')[0];
+        for (var i = 0, row; i<table.rows.length; i++) {
+            row = table.rows[i];
+		    row.cells[0].innerHTML = i + 1;
+	    }
+    }
 }
 
 function saveRow(btn) {
