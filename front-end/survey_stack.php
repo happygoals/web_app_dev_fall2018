@@ -5,20 +5,20 @@ if (isset($_POST['submit'])) {
     $question1 = $_POST['opt'];         //user type
     $question2 = $_POST['opt2'];        //gender
     $question3 = $_POST['opt3'];        //purchase snacks on campus
-    $question3_1 = $_POST['why'];           //why not
-    $question3_2 = $_POST['op3.2.0'];       //how often
+    $question3_1 = $_POST['3why'];           //why not
+    $question3_2 = $_POST['3howOften'];       //how often
     $question4 = $_POST['opt4'];        //purchase beverages on campus
     $question4_1 = $_POST['why2'];          //why not
-    $question4_2 = $_POST['op4.2.0'];       //how often
+    $question4_2 = $_POST['4howOften'];       //how often
     $question5 = $_POST['opt5'];        //preferred payment option
     $question6 = $_POST['opt6'];        //willing to spend
     $question7 = $_POST['opt7'];        //snack influences
     $question8 = $_POST['opt8'];        //beverage influences
     
     //pop up choose one 
-    $question9 = $_POST['op9.0.0'];     //most commonly purchased food
+    $question9 = $_POST['op9'];     //most commonly purchased food
     $question9_1 = $_POST['Why3'];          //other type of snacks
-    $question10 = $_POST['op10.0.0'];   //most commonly purchased beverage
+    $question10 = $_POST['op10'];   //most commonly purchased beverage
     $question10_1 = $_POST['Why4'];         //other type of drink
     
     
@@ -30,9 +30,9 @@ if (isset($_POST['submit'])) {
     $question12_1 = $_POST['Why6'];         //other
     
     $question13 = $_POST['locatons13']; //where to put new vending machine
-    $question13_1 = $_POST['vendtypes'];    //type
+    $question13_1 = $_POST['vendtypesAdd'];    //type
     $question14 = $_POST['locatons14']; //where to remove vending machine
-    $question14_1 = $_POST['vendtypes'];    //type
+    $question14_1 = $_POST['vendtypesRemove'];    //type
     
     $question15 = $_POST['opt15'];      //was the survey biased
     $question15_1 = $_POST['Why7'];         //why

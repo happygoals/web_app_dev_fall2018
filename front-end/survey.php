@@ -52,16 +52,16 @@
 		    	</div>
 		    	<div id="question3.1" name="question3.1" style="display: none">
 		    		<h6>Why not?</h6>
-		    		<textarea id="op3.1.0" cols="75" name="Why" rows="5" value=""></textarea><br>
+		    		<textarea id="op3.1.0" cols="75" name="3why" rows="5" value=""></textarea><br>
 		    	</div>
 		    	<div id="question3.2" name="question3.2" style="display: none">
 		    		<h6>How often?</h6>
 		    		<ul style="list-style:none;">
-		    			<li><input id="op3.2.0" name="op3.2.0" type="radio" value="Once a week">Once a week</li>
-		    			<li><input id="op3.2.1" name="op3.2.0" type="radio" value="One to two times a week">One to two times a week</li>
-		    			<li><input id="op3.2.2" name="op3.2.0" type="radio" value="Three to four times a week">Three to four times a week</li>
-		    			<li><input id="op3.2.3" name="op3.2.0" type="radio" value="Five to six times a week">Five to six times a week</li>
-		    			<li><input id="op3.2.4" name="op3.2.0" type="radio" value="Seven or more times a week">Seven or more times a week</li>
+		    			<li><input id="op3.2.0" name="3howOften" type="radio" value="Once a week">Once a week</li>
+		    			<li><input id="op3.2.1" name="3howOften" type="radio" value="One to two times a week">One to two times a week</li>
+		    			<li><input id="op3.2.2" name="3howOften" type="radio" value="Three to four times a week">Three to four times a week</li>
+		    			<li><input id="op3.2.3" name="3howOften" type="radio" value="Five to six times a week">Five to six times a week</li>
+		    			<li><input id="op3.2.4" name="3howOften" type="radio" value="Seven or more times a week">Seven or more times a week</li>
 		    		</ul>
 		    	</div>
 		    	<!--Question 3 END-->
@@ -78,11 +78,11 @@
 				<div id="question4.2" name="question4.2" style="display: none">
 					<h6>How often?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op4.2.0" name="op4.2.0" type="radio" value="Once a week">Once a week</li>
-						<li><input id="op4.2.1" name="op4.2.0" type="radio" value="One to two times a week">One to two times a week</li>
-						<li><input id="op4.2.2" name="op4.2.0" type="radio" value="Three to four times a week">Three to four times a week</li>
-						<li><input id="op4.2.3" name="op4.2.0" type="radio" value="Five to six times a week">Five to six times a week</li>
-						<li><input id="op4.2.4" name="op4.2.0" type="radio" value="Seven or more times a week">Seven or more times a week</li>
+						<li><input id="op4.2.0" name="4howOften" type="radio" value="Once a week">Once a week</li>
+						<li><input id="op4.2.1" name="4howOften" type="radio" value="One to two times a week">One to two times a week</li>
+						<li><input id="op4.2.2" name="4howOften" type="radio" value="Three to four times a week">Three to four times a week</li>
+						<li><input id="op4.2.3" name="4howOften" type="radio" value="Five to six times a week">Five to six times a week</li>
+						<li><input id="op4.2.4" name="4howOften" type="radio" value="Seven or more times a week">Seven or more times a week</li>
 					</ul>
 				</div>
 				<!-- Question 4 END-->
@@ -255,7 +255,7 @@
 				<div id="question13.1" name="question13.1" style="display: none">
 					What type of vending machine?
 					<br>
-					<select id="vendtypes" name="vendtypes">
+					<select id="vendtypes" name="vendtypesAdd">
 						<option id="op13.1.0" value="">
 							Choose Option
 						</option>
@@ -324,7 +324,7 @@
 				<div id="question14.1" name="question14.1" style="display: none">
 					What type of vending machine?
 					<br>
-					<select id="vendtypes" name="vendtypes">
+					<select id="vendtypes" name="vendtypesRemove">
 						<option id="op14.1.0" value="">
 							Choose Option
 						</option>

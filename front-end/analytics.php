@@ -142,7 +142,7 @@ $mostPopular = $stmt->fetch()[0];
 					}
 					?>
 					
-					<table class="table" id="table" style="-ms-overflow-style: -ms-autohiding-scrollbar; max-height: 200px;">
+					<table class="table" id="table" style="-ms-overflow-style: -ms-autohiding-scrollbar; max-height: 200px; margin: 10px auto;">
 						<thead>
 							<tr style="text-align:center;">
 								<th scope="col">#</th>
@@ -179,5 +179,8 @@ $mostPopular = $stmt->fetch()[0];
 		</div>
 	</div>
 	<?php include "footer.php" ?>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/Chart.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
