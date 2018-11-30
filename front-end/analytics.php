@@ -1,6 +1,8 @@
 <?php
 session_start();
+
 require ('connection.php');
+
 //determine if user has admin privs or not
 $adminPriv = false;
 if (isset($_SESSION["username"])) {
@@ -12,9 +14,11 @@ if (isset($_SESSION["username"])) {
 		$adminPriv = true;
 	}
 }
+
 //get survey data for later use
 $stmt = $connection->prepare("SELECT COUNT(*) FROM survey1");
 $stmt->execute() or die(mysqli_error());
+
 $numSurveys = $stmt->fetch()[0];
 ?>
 
@@ -126,7 +130,7 @@ $numSurveys = $stmt->fetch()[0];
 					}
 					?>
 					
-					<table class="table" id="table" style="-ms-overflow-style: -ms-autohiding-scrollbar; max-height: 200px;">
+					<table class="table" id="table" style="-ms-overflow-style: -ms-autohiding-scrollbar; max-height: 200px; margin: 10px auto;">
 						<thead>
 							<tr style="text-align:center;">
 								<th scope="col">#</th>
@@ -158,5 +162,6 @@ $numSurveys = $stmt->fetch()[0];
 		</div>
 	</div>
 	<?php include "footer.php" ?>
+	<script type="text/javascript" src="js/barGraph.js"></script>
 </body>
 </html>

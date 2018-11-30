@@ -1,39 +1,50 @@
-var labels = ["Kitkat", "Starbucks coffee", "Cute cookie", "Sandwich", "Pizza"];
-var data = [12, 19, 3, 5, 2];
-var color = ['255, 99, 132', '54, 162, 235', '255, 206, 86', '75, 192, 192', '153, 102, 255'];
+var labels = [];
+var numbers = [];
 
-addBarGraph("barGraph1", labels, data, color);
+$(document).ready(function(){
+	$.ajax({
+		url: "/front-end/data.php",
+		method: "GET",
+		success: function(data) {
+			console.log(data);
+				var ctx = document.getElementById(targetID).getContext('2d');
+				var borderColors = [];
+            	var backgroundColors = ['255, 99, 132', '54, 162, 235', '255, 206, 86', '75, 192, 192', '153, 102, 255'];
 
-function addBarGraph(targetID, inputLabels, inputData, backgroundColorsIn) {
-	var ctx = document.getElementById(targetID).getContext('2d');
-	var borderColors = [];
-	var backgroundColors = [];
-	
+			for(var i in data) {
+				labels.push(data[i].name);
+				numbers.push(data[i].wouldPurchase);
+			}
+
 	for (var i=0; i<backgroundColorsIn.length; i++) {
 		backgroundColors.push("rgba(" + backgroundColorsIn[i] + ", 0.2)");
 		borderColors.push("rgba(" + backgroundColorsIn[i] + ", 1.0)");
 	}
+	
 
-	var barGraph = new Chart(ctx, {
-		type: "bar",
-		data: {
-			labels: inputLabels,
-			datasets: [{
-				label: '# of Votes',
-				data: inputData,
-				backgroundColor: backgroundColors,
-				borderColor: borderColors,
-				borderWidth: 1
-			}]
-		},
-		options: {
-			scales: {
-				yAxes: [{
-					ticks: {
-						beginAtZero: true
+		var testdata= {
+				labels: labels,
+		datasets: [{
+						label: '# of Votes',
+        				backgroundColor: backgroundColors,
+        				borderColor: borderColors,
+        				borderWidth: 1,
+						data: numbers
 					}
-				}]
-			}
+				]
+			};
+
+			
+			
+			var ctx = document.getElementById(targetID).getContext('2d');
+
+			var barGraph = new Chart(ctx, {
+				type: 'bar',
+				data: testdata
+			});
+		},
+		error: function(data) {
+			console.log(data);
 		}
 	});
-}
+});
