@@ -29,7 +29,7 @@ function deleteRow(btn) {
         for (var i = 0, row; i<table.rows.length; i++) {
             row = table.rows[i];
 		    row.cells[0].innerHTML = i + 1;
-	    }
+	    }  
     }
 }
 
