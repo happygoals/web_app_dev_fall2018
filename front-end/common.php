@@ -19,7 +19,7 @@ function listbox($background, $title, $list) { ?>
 
 <?php
 function simpleBox($background, $icon, $title, $value) { ?>
-	<div class="card text-white bg-light text-center mb-5" style="min-width: 11rem; max-width: 20rem; margin: 0px auto;">
+	<div class="card text-white bg-light text-center mb-5" style="min-width: 11rem; max-width: 20rem;">
 		<div class="card-header" style="background-color:<?php echo $background ?>;">
 			<h6><?php echo $title ?></h6>
 		</div>

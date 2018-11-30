@@ -222,7 +222,8 @@ input[type="checkbox"] {
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 
 .row.content {
-	height: 500px
+	height: 500px;
+
 }
 /* Set gray background vending machine image and 100% height */
 
