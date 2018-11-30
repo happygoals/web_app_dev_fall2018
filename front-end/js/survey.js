@@ -202,8 +202,6 @@ function validate() {
 		return false;
 	}
 	// Checks that the Email is a valid Email
-	if (ValidateEmail(document.getElementById('email')) == false) {
-		alert("The email address you provided is Invalid!");
-		return false;
-	}
+	
+	return true;
 }

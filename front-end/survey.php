@@ -364,10 +364,11 @@
 				<!--Name and Email Gather START-->
 				<p style="width:80%">To complete this survey we ask that you provide your name and email. The purpose of these provisions is to create 
 				a PDF version that can be sent to your email. The email will not be used to send advertisements or spam. Thanks for your cooperation!</p><br>
-				<div onsubmit="return">
+				<div>
 					<label style="width:6%">Name:</label><input id="name" name="name" type="text"><br>
 					<label style="width:6%">Email:</label><input id="email" name="email" type="text"><br>
-					I agree to Snackfacts' terms and conditions: <input id="agreement" name="agreement" onclick="toggle();" type="checkbox"><br><br>
+					<label>I agree to Snackfacts' terms and conditions: <input id="agreement" name="agreement" onclick="toggle();" type="checkbox"></label>
+					<br><br>
 					<input disabled id="submit" type="submit" value="submit" name="submit"><br><br>
 				</div>
 				<!--Name and Email Gather END-->
