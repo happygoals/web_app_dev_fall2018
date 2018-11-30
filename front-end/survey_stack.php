@@ -61,11 +61,11 @@ if (isset($_POST['submit'])) {
     }
     else {
         echo "Record was inserted into DB!\n";
-        header( "refresh:5;url=home.php" );
+        header( "refresh:1;url=home.php" );
     }
 }
 else {
     echo "was not submitted";
-    header( "refresh:5;url=home.php" );
+    header( "refresh:1;url=home.php" );
 }
 ?>
