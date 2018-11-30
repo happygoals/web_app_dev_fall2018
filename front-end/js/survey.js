@@ -75,13 +75,18 @@ function isOneCheckedCombo(question){
 }
 
 // Validates Email types
-function ValidateEmail(mail) 
+function ValidateEmail(email) 
 {
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
-  {
-    return (true)
-  }
- return (false)
+	var emailtxt = email.value;
+	
+	if( /(.+)@(.+){2,}\.(.+){2,}/.test(emailtxt) ){
+	  // valid emai
+	  return true;
+	} 
+	else {
+	  // invalid email
+	  return false;
+	}
 }
 
 // Checks that the form has an answer to all questions, and if so allows the submission process to continue!
@@ -197,11 +202,8 @@ function validate() {
 		return false;
 	}
 	// Checks that the Email is a valid Email
-	if (!ValidateEmail(document.getElementById('email').value)) {
+	if (ValidateEmail(document.getElementById('email')) == false) {
 		alert("The email address you provided is Invalid!");
 		return false;
 	}
 }
-
-
-/////////solving merge conflict
