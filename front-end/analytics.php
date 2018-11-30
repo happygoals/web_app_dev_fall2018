@@ -28,8 +28,10 @@ $numNewUsers = $stmt2->fetch()[0];
 //get most popular snack
 $stmt = $connection->prepare("SELECT name FROM Product");
 $stmt->execute() or die(mysqli_error());
-
 $mostPopular = $stmt->fetch()[0];
+
+//get Top Sale List 
+
 ?>
 
 <html lang="en">
@@ -128,7 +130,7 @@ $mostPopular = $stmt->fetch()[0];
 				<div class="row">
 					<?php
 						listbox("#17a2b8", "Top Sale List", array("Coke", "Orange Juice", "Potato Chips"));
-						listbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
+						listbox("#6c757d", "New Entry Rank", array("Cute Cookie", "Buritto", "Banana"));
 					?>
 				</div>
 				<!-- Table -->
