@@ -162,6 +162,8 @@ $numSurveys = $stmt->fetch()[0];
 		</div>
 	</div>
 	<?php include "footer.php" ?>
-	<script type="text/javascript" src="js/barGraph.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/Chart.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

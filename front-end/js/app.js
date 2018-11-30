@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$.ajax({
-		url: "http://localhost/chartjs/data.php",
+		url: "http://snackfacts-happygoals.c9users.io/chartjs/chartdata.php",
 		method: "GET",
 		success: function(data) {
 			console.log(data);
