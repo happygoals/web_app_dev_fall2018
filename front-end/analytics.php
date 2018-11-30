@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+require ('connection.php');
 ?>
 
 <html lang="en">
@@ -18,10 +20,8 @@ session_start();
     $adminPriv = false;
     if (isset($_SESSION["username"])) {
         //user is logged in, check if they're an admin
-        require ('connection.php');
         $result = $connection->prepare("SELECT * FROM Person WHERE (user = ?) and (isAdmin = 1)");
         $result->execute(array($_SESSION["username"])) or die(mysqli_error());
-        echo "failed";
         if ($result->rowCount() == 1) {
             //user is an admin
             $adminPriv = true;
@@ -135,11 +135,16 @@ session_start();
 						</thead>
 						<tbody>
 					<?php
-						productRow(1, "Kitkat", 1, 1.00, $adminPriv);
-						productRow(2, "Starbucks coffee", 2, 2.50, $adminPriv);
-						productRow(3, "Cute cookie", 1, 2.00, $adminPriv);
-						productRow(4, "Sandwich", 3, 2.30, $adminPriv);
-						productRow(5, "Pizza", 3, 3.00, $adminPriv);
+						//get product data from db
+						$stmt = $connection->prepare("SELECT * FROM Product ORDER BY wouldPurchase DESC");
+						$stmt->execute(array($_SESSION["username"])) or die(mysqli_error());
+						
+						//insert each into the table
+						$i = 1;
+						while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+							productRow($i, $result["name"], $result["machines"], $result["price"], $adminPriv);
+							$i++;
+						}
 					?>
 						</tbody>
 					</table>
