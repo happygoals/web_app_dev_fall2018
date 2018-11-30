@@ -224,7 +224,6 @@ function validate() {
 		alert("You must provide your name!");
 		return false;
 	}
-<<<<<<< HEAD
 	
 	// Checks that the Email Field was completed
 	if (!document.forms.survey.email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
@@ -232,8 +231,6 @@ function validate() {
 		return false;
 	}
 	
-=======
->>>>>>> 9b514aeff5bfc20d2c24778ff46a566e42d9eefb
 	// Checks that the Email is a valid Email
 	if (!ValidateEmail(document.getElementById('email').value)) {
 		alert((document.getElementById('email').value));
@@ -242,3 +239,6 @@ function validate() {
 		return false;
 	}
 }
+
+
+/////////solving merge conflict

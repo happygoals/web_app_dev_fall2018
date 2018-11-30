@@ -28,11 +28,15 @@ if (isset($_POST['submit'])) {
     $question12 = $_POST['op12'];
     $question12_1 = $_POST['Why6'];
     
+    
+    
     //dropdown list - need to update
-    $question13 = $_POST[''];  
-    $question13_1 = $_POST[''];
-    $question14 = $_POST[''];  
-    $question14_1 = $_POST[''];
+    $question13 = $_POST['locatons13'];  
+    $question13_1 = $_POST['vendtypes'];
+    $question14 = $_POST['locatons14'];  
+    $question14_1 = $_POST['vendtypes'];
+    
+    
     
     $question15 = $_POST['opt15'];  
     $question15_1 = $_POST['Why7'];
