@@ -1,3 +1,4 @@
+
 <?php
 //setting header to json
 header('Content-Type: application/json');
@@ -15,14 +16,11 @@ if(!$mysqli){
 	die("Connection failed: " . $mysqli->error);
 }
 
-
-
 //query to get data from the table
-$query1 = sprintf("SELECT name, wouldPurchase FROM Product ORDER BY wouldPurchase DESC");
-
+$query = sprintf("SELECT name, wouldPurchase FROM Product ORDER BY wouldPurchase DESC");
 
 //execute query
-$result = $mysqli->query($query1);
+$result = $mysqli->query($query);
 
 //loop through the returned data
 $data = array();
@@ -38,4 +36,4 @@ $mysqli->close();
 
 //now print the data
 print json_encode($data);
-?>
+
