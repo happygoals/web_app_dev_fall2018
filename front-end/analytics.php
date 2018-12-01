@@ -1,6 +1,8 @@
 <?php
 session_start();
+
 require ('connection.php');
+
 //determine if user has admin privs or not
 $adminPriv = false;
 if (isset($_SESSION["username"])) {
@@ -12,10 +14,12 @@ if (isset($_SESSION["username"])) {
 		$adminPriv = true;
 	}
 }
+
 //get survey data for later use
 $stmt = $connection->prepare("SELECT COUNT(*) FROM survey1");
 $stmt->execute() or die(mysqli_error());
 $numSurveys = $stmt->fetch()[0];
+
 //get new visitors based on the date
 /*
 $stmt2 = $connection->prepare("SELECT count(*) FROM `survey1` WHERE DATE(Date) = CURDATE()");
@@ -23,13 +27,10 @@ $stmt2->execute() or die(mysqli_error());
 $numNewUsers = $stmt2->fetch()[0];
 */
 //get most popular snack
-$stmt3 = $connection->prepare("SELECT name FROM Product");
-$stmt3->execute() or die(mysqli_error());
-$mostPopular = $stmt3->fetch()[0];
-//get Top Sale List 
-$stmt4 = $connection->prepare("SELECT question9 FROM `survey1`");
-$stmt4->execute() or die(mysqli_error());
-$TodaySale = $stmt4->fetch();
+$stmt = $connection->prepare("SELECT name FROM Product");
+$stmt->execute() or die(mysqli_error());
+
+$mostPopular = $stmt->fetch()[0];
 ?>
 
 <html lang="en">
@@ -127,7 +128,7 @@ $TodaySale = $stmt4->fetch();
 				<!--list boxes-->
 				<div class="row">
 					<?php
-						olistbox("#17a2b8", "Today's Sale List", $TodaySale);
+						olistbox("#17a2b8", "Top Sale List", array("Coke", "Orange Juice", "Potato Chips"));
 						ulistbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
 					?>
 				</div>
