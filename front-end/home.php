@@ -33,15 +33,17 @@
 					<h3>About</h3>
 				</div>
 				<div class="col-sm-8 text-left">
-					<h2>What we make</h2>
-					<p>Snackfacts is a vending machine marketing analytics tool.</p>
+					<h2>What is snackfacts?</h2>
+					<p>Snackfacts is a vending machine marketing analytics tool. A user can input data into surveys, which are the saved into our database.
+					The data we collect is then presented in an comprehensive analysis screen. Users can create accounts to save data they enter, and then the administrators can have special admin accounts.
+					Many types of vending machines are supported, along with various types of snacks and drinks.</p>
 				</div>
 				<div class="col-sm-2 sidenavr right"></div>
 			</div>
 			<div class="row row-eq-height" style="padding-top: 70px;">
 				<div class="col-sm-2 sidenavr left"></div>
 				<div class="col-sm-8 intro text-left">
-					<h2>Who we are</h2>
+					<h2>Who developed Snackfacts?</h2>
 					<p>Developed for Purdue University Fort Wayne CS372 Fall 2018 by Haemin Ryu, Mack Crawford, Michael Wolgast, Min Namgung, and Nicholas Barnard</p>
 				</div>
 				<div class="col-sm-2 sidenavr righttext">
