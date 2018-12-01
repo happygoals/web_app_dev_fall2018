@@ -16,35 +16,41 @@ if (isset($_SESSION["username"])) {
 $stmt = $connection->prepare("SELECT COUNT(*) FROM survey1");
 $stmt->execute() or die(mysqli_error());
 $numSurveys = $stmt->fetch()[0];
+
 //get new visitors based on the date
-/*
-$stmt2 = $connection->prepare("SELECT count(*) FROM `survey1` WHERE DATE(Date) = CURDATE()");
+$stmt2 = $connection->prepare("SELECT count(*) FROM `survey1` WHERE DATE(Date) BETWEEN CURDATE() - INTERVAL 7 DAY AND CURDATE()");
 $stmt2->execute() or die(mysqli_error());
 $numNewUsers = $stmt2->fetch()[0];
-*/
+
+
 //get most popular snack
 $stmt3 = $connection->prepare("SELECT name FROM Product");
 $stmt3->execute() or die(mysqli_error());
 $mostPopular = $stmt3->fetch()[0];
 
 
-$stmt4 = $connection->prepare("SELECT question9 FROM `survey1`");
+//get Top Sale List
+$stmt4 = $connection->prepare("SELECT question9 FROM survey1 LIMIT 4");
 $stmt4->execute() or die(mysqli_error());
-$TodaySale = $stmt4->fetch()[0];
-
-/* Need to finish 
-//get Top Sale List 
-$stmt4 = $connection->prepare("SELECT question9 FROM `survey1`");
-$stmt4->execute() or die(mysqli_error());
-//$TodaySale = $stmt4->fetch();
-if($stmt4){
-	while ($stmt4->mysqli_fetch_assoc())
-	{
- 		$TodaySale = $row["question9"];
- 		return $TodaySale;
-	}
+//that query returns several rows (up to 3), so we put each row into a new array
+$i = 0;
+while ($result = $stmt4->fetch()) {
+    $TodaySale[$i] = $result[0];
+    $i++;
 }
-*/
+
+
+//get Popular vending machine building
+$stmt5 = $connection->prepare("SELECT question13 FROM survey1 LIMIT 4");
+$stmt5->execute() or die(mysqli_error());
+
+//that query returns several rows (up to 3), so we put each row into a new array
+$j = 0;
+while ($result = $stmt5->fetch()) {
+    $Vending[$j] = $result[0];
+    $j++;
+}
+
 
 ?>
 
@@ -144,7 +150,7 @@ if($stmt4){
 				<div class="row">
 					<?php
 						ulistbox("#17a2b8", "Today's Sale List", $TodaySale);
-						ulistbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
+						ulistbox("#6c757d", "Popular Vending Maching Building", $Vending);
 					?>
 				</div>
 				<!-- Table -->
