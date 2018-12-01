@@ -61,7 +61,9 @@ function isOneCheckedRadio(question) {
       return true;
     } 
   }
-  return false;
+  
+	question.scrollIntoView({behavior: "instant", block: "end", inline: "nearest"});
+	return false;
 }
 
 //Checks that in a selected that a choice has been made, and that it is still not "Choose One"
@@ -69,24 +71,10 @@ function isOneCheckedCombo(question){
 	var objects = question.getElementsByTagName('select');
 	var option = objects[0].options[objects[0].selectedIndex];
 	if(option.value == ""){
-			return false;
+		question.scrollIntoView({behavior: "instant", block: "end", inline: "nearest"});
+		return false;
 	}
 	return true;
-}
-
-// Validates Email types
-function ValidateEmail(email) 
-{
-	var emailtxt = email.value;
-	
-	if( /(.+)@(.+){2,}\.(.+){2,}/.test(emailtxt) ){
-	  // valid emai
-	  return true;
-	} 
-	else {
-	  // invalid email
-	  return false;
-	}
 }
 
 // Checks that the form has an answer to all questions, and if so allows the submission process to continue!
@@ -201,7 +189,14 @@ function validate() {
 		alert("You must provide your name!");
 		return false;
 	}
-	// Checks that the Email is a valid Email
+	
+	// Checks that the Email Field was completed
+	var email = document.getElementById('email').value;
+	
+	if (!email.match(/.+@.+\.com$/)){
+		alert("Wrong Email Input");
+		return false;
+	}
 	
 	return true;
 }

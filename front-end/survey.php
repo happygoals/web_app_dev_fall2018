@@ -29,10 +29,10 @@
 				<div id="question1" name="question1">
 					<h6>1) Which of the following would you consider yourself at your respective campus?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op1.0.0" name="opt" type="radio" value="faculty">Faculty</li>
-						<li><input id="op1.0.1" name="opt" type="radio" value="staff">Staff</li>
-						<li><input id="op1.0.2" name="opt" type="radio" value="student">Student</li>
-						<li><input id="op1.0.3" name="opt" type="radio" value="visitor">Visitor</li>
+						<li><label><input id="op1.0.0" name="opt" type="radio" value="Faculty">Faculty</label></li>
+						<li><label><input id="op1.0.1" name="opt" type="radio" value="Staff">Staff</label></li>
+						<li><label><input id="op1.0.2" name="opt" type="radio" value="Student">Student</label></li>
+						<li><label><input id="op1.0.3" name="opt" type="radio" value="Visitor">Visitor</label></li>
 					</ul>
 				</div>
 				<!-- Question 1 End -->
@@ -41,14 +41,14 @@
 					<h6>2) What sex are you?</h6>
 					<label class="radio-inline"><input id="op2.0.0" name="opt2" type="radio" value="Male">Male</label>
 					<label class="radio-inline"><input id="op2.0.1" name="opt2" type="radio" value="Female">Female</label>
-					<label class="radio-inline"><input id="op2.0.2" name="opt2" type="radio" value="other">Other</label>
+					<label class="radio-inline"><input id="op2.0.2" name="opt2" type="radio" value="Other">Other</label>
 				</div>
 				<!-- Question 2 END-->
 		        <!-- Question 3 START-->
 		    	<div id="question3" name="question3">
 		    		<h6>3) Do you purchase snacks on campus currently?</h6>
-		    		<label class="radio-inline"><input id="op3.0.0" name="opt3" onclick="expandCollapseBox('question3.2', 'question3.1');" value="yes" type="radio">Yes</label> 
-		    		<label class="radio-inline"><input id="op3.0.1" name="opt3" onclick="expandCollapseBox('question3.1', 'question3.2');" value= "no" type="radio">No</label>
+		    		<label class="radio-inline"><input id="op3.0.0" name="opt3" onclick="expandCollapseBox('question3.2', 'question3.1');" value="Yes" type="radio">Yes</label> 
+		    		<label class="radio-inline"><input id="op3.0.1" name="opt3" onclick="expandCollapseBox('question3.1', 'question3.2');" value="No" type="radio">No</label>
 		    	</div>
 		    	<div id="question3.1" name="question3.1" style="display: none">
 		    		<h6>Why not?</h6>
@@ -57,19 +57,19 @@
 		    	<div id="question3.2" name="question3.2" style="display: none">
 		    		<h6>How often?</h6>
 		    		<ul style="list-style:none;">
-		    			<li><input id="op3.2.0" name="3howOften" type="radio" value="Once a week">Once a week</li>
-		    			<li><input id="op3.2.1" name="3howOften" type="radio" value="One to two times a week">One to two times a week</li>
-		    			<li><input id="op3.2.2" name="3howOften" type="radio" value="Three to four times a week">Three to four times a week</li>
-		    			<li><input id="op3.2.3" name="3howOften" type="radio" value="Five to six times a week">Five to six times a week</li>
-		    			<li><input id="op3.2.4" name="3howOften" type="radio" value="Seven or more times a week">Seven or more times a week</li>
+		    			<li><label><input id="op3.2.0" name="3howOften" type="radio" value="Once a week">Once a week</label></li>
+		    			<li><label><input id="op3.2.1" name="3howOften" type="radio" value="One to two times a week">One to two times a week</label></li>
+		    			<li><label><input id="op3.2.2" name="3howOften" type="radio" value="Three to four times a week">Three to four times a week</label></li>
+		    			<li><label><input id="op3.2.3" name="3howOften" type="radio" value="Five to six times a week">Five to six times a week</label></li>
+		    			<li><label><input id="op3.2.4" name="3howOften" type="radio" value="Seven or more times a week">Seven or more times a week</label></li>
 		    		</ul>
 		    	</div>
 		    	<!--Question 3 END-->
 		    	<!--Question 4 START-->
 				<div id="question4" name="question4">
 					<h6>4) Do you purchase beverages on campus currently?</h6>
-					<label class="radio-inline"><input id="op4.0.0" name="opt4" onclick="expandCollapseBox('question4.2', 'question4.1');" type="radio" value="yes">Yes</label> 
-					<label class="radio-inline"><input id="op4.0.1" name="opt4" onclick="expandCollapseBox('question4.1', 'question4.2');" type="radio" value="no">No</label>
+					<label class="radio-inline"><input id="op4.0.0" name="opt4" onclick="expandCollapseBox('question4.2', 'question4.1');" type="radio" value="Yes">Yes</label> 
+					<label class="radio-inline"><input id="op4.0.1" name="opt4" onclick="expandCollapseBox('question4.1', 'question4.2');" type="radio" value="No">No</label>
 				</div>
 				<div id="question4.1" name="question4.1" style="display: none">
 					<h6>Why not?</h6>
@@ -78,11 +78,11 @@
 				<div id="question4.2" name="question4.2" style="display: none">
 					<h6>How often?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op4.2.0" name="4howOften" type="radio" value="Once a week">Once a week</li>
-						<li><input id="op4.2.1" name="4howOften" type="radio" value="One to two times a week">One to two times a week</li>
-						<li><input id="op4.2.2" name="4howOften" type="radio" value="Three to four times a week">Three to four times a week</li>
-						<li><input id="op4.2.3" name="4howOften" type="radio" value="Five to six times a week">Five to six times a week</li>
-						<li><input id="op4.2.4" name="4howOften" type="radio" value="Seven or more times a week">Seven or more times a week</li>
+						<li><label><input id="op4.2.0" name="4howOften" type="radio" value="Once a week">Once a week</label></li>
+						<li><label><input id="op4.2.1" name="4howOften" type="radio" value="One to two times a week">One to two times a week</label></li>
+						<li><label><input id="op4.2.2" name="4howOften" type="radio" value="Three to four times a week">Three to four times a week</label></li>
+						<li><label><input id="op4.2.3" name="4howOften" type="radio" value="Five to six times a week">Five to six times a week</label></li>
+						<li><label><input id="op4.2.4" name="4howOften" type="radio" value="Seven or more times a week">Seven or more times a week</label></li>
 					</ul>
 				</div>
 				<!-- Question 4 END-->
@@ -90,11 +90,11 @@
 				<div id="question5" name="question5">
 					<h6>5) What preffered payment methods would you like to use at a vending machine?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op5.0.0" name="opt5" type="radio" value="credit">Credit</li>
-						<li><input id="op5.0.1" name="opt5" type="radio" value="debit">Debit</li>
-						<li><input id="op5.0.2" name="opt5" type="radio" value="cash">Cash</li>
-						<li><input id="op5.0.3" name="opt5" type="radio" value="chip">Chip</li>
-						<li><input id="op5.0.4" name="opt5" type="radio" value="other">Other Payment Type</li>
+						<li><label><input id="op5.0.0" name="opt5" type="radio" value="Credit">Credit</label></li>
+						<li><label><input id="op5.0.1" name="opt5" type="radio" value="Debit">Debit</label></li>
+						<li><label><input id="op5.0.2" name="opt5" type="radio" value="Cash">Cash</label></li>
+						<li><label><input id="op5.0.3" name="opt5" type="radio" value="Chip">Chip</label></li>
+						<li><label><input id="op5.0.4" name="opt5" type="radio" value="Other">Other Payment Type</label></li>
 					</ul>
 				</div>
 				<!-- Question 5 End -->
@@ -102,10 +102,10 @@
 				<div id="question6" name="question6">
 					<h6>6) How much are you wiling to spend on a beverage or snack from the vending machine?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op6.0.0" name="opt6" type="radio" value="0.75">$0.75</li>
-						<li><input id="op6.0.1" name="opt6" type="radio" value="1.00">$1.00</li>
-						<li><input id="op6.0.2" name="opt6" type="radio" value="1.50">$1.50</li>
-						<li><input id="op6.0.3" name="opt6" type="radio" value="2.00">$2.00</li>
+						<li><label><input id="op6.0.0" name="opt6" type="radio" value="0.75">$0.75</label></li>
+						<li><label><input id="op6.0.1" name="opt6" type="radio" value="1.00">$1.00</label></li>
+						<li><label><input id="op6.0.2" name="opt6" type="radio" value="1.50">$1.50</label></li>
+						<li><label><input id="op6.0.3" name="opt6" type="radio" value="2.00">$2.00</label></li>
 					</ul>
 				</div>
 				<!-- Question 6 END-->
@@ -113,11 +113,11 @@
 				<div id="question7" name="question7">
 					<h6>7) When purchasing a snack, what most influences your purchase?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op7.0.0" name="opt7" type="radio" value="Interest in a new snack">Interest in a new snack</li>
-						<li><input id="op7.0.1" name="opt7" type="radio" value="Snack taste">Snack taste</li>
-						<li><input id="op7.0.2" name="opt7" type="radio" value="Snack price">Snack price</li>
-						<li><input id="op7.0.3" name="opt7" type="radio" value="How healthy a snack is">How healthy a snack is</li>
-						<li><input id="op7.0.4" name="opt7" type="radio" value="How hungry you might be at a given time">How hungry you might be at a given time</li>
+						<li><label><input id="op7.0.0" name="opt7" type="radio" value="Interest in a new snack">Interest in a new snack</label></li>
+						<li><label><input id="op7.0.1" name="opt7" type="radio" value="Snack taste">Snack taste</label></li>
+						<li><label><input id="op7.0.2" name="opt7" type="radio" value="Snack price">Snack price</label></li>
+						<li><label><input id="op7.0.3" name="opt7" type="radio" value="How healthy a snack is">How healthy a snack is</label></li>
+						<li><label><input id="op7.0.4" name="opt7" type="radio" value="How hungry you might be at a given time">How hungry you might be at a given time</label></li>
 					</ul>
 				</div>
 				<!-- Question 7 END-->
@@ -125,11 +125,11 @@
 				<div id="question8" name="question8">
 					<h6>8) When purchasing a beverage, what most influences your purchase?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op8.0.0" name="opt8" type="radio" value="Interest in a new beverage">Interest in a new beverage</li>
-						<li><input id="op8.0.1" name="opt8" type="radio" value="Beverage taste">Beverage taste</li>
-						<li><input id="op8.0.2" name="opt8" type="radio" value="Beverage price">Beverage price</li>
-						<li><input id="op8.0.3" name="opt8" type="radio" value="How healthy a beverag is">How healthy a beverage is</li>
-						<li><input id="op8.0.4" name="opt8" type="radio" value="How thirsty you might be at a given time">How thirsty you might be at a given time</li>
+						<li><label><input id="op8.0.0" name="opt8" type="radio" value="Interest in a new beverage">Interest in a new beverage</label></li>
+						<li><label><input id="op8.0.1" name="opt8" type="radio" value="Beverage taste">Beverage taste</label></li>
+						<li><label><input id="op8.0.2" name="opt8" type="radio" value="Beverage price">Beverage price</label></li>
+						<li><label><input id="op8.0.3" name="opt8" type="radio" value="How healthy a beverag is">How healthy a beverage is</label></li>
+						<li><label><input id="op8.0.4" name="opt8" type="radio" value="How thirsty you might be at a given time">How thirsty you might be at a given time</label></li>
 					</ul>
 				</div>
 				<!-- Question 8 END-->
@@ -137,14 +137,14 @@
 				<div id="question9" name="question9">
 					<h6>9) What food product do you most commonly purchase from vending machines on campus?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op9.0.0" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Energy Bar">Energy Bar</li>
-						<li><input id="op9.0.1" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Chips">Chips</li>
-						<li><input id="op9.0.2" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Candy">Candy</li>
-						<li><input id="op9.0.3" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Cutecookie">Cute Cookie</li>
-						<li><input id="op9.0.4" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Pretzels">Pretzels</li>
-						<li><input id="op9.0.5" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Gum">Gum</li>
-						<li><input id="op9.0.6" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Nothing">Nothing</li>
-						<li><input id="op9.0.7" name="op9" onclick="expandOnly('question9.1');" type="radio" value="Other">Other Snack</li>
+						<li><label><input id="op9.0.0" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Energy Bar">Energy Bar</label></li>
+						<li><label><input id="op9.0.1" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Chips">Chips</label></li>
+						<li><label><input id="op9.0.2" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Candy">Candy</label></li>
+						<li><label><input id="op9.0.3" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Cutecookie">Cute Cookie</label></li>
+						<li><label><input id="op9.0.4" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Pretzels">Pretzels</label></li>
+						<li><label><input id="op9.0.5" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Gum">Gum</label></li>
+						<li><label><input id="op9.0.6" name="op9" onclick="collapseOnly('question9.1');" type="radio" value="Nothing">Nothing</label></li>
+						<li><label><input id="op9.0.7" name="op9" onclick="expandOnly('question9.1');" type="radio" value="Other">Other Snack</label></li>
 					</ul>
 				</div>
 				<div id="question9.1" name="question9.1" style="display: none">
@@ -156,14 +156,14 @@
 				<div id="question10" name="question10">
 					<h6>10) What beverage product do you most commonly purchase from vending machines on campus?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op10.0.0" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="energydrink">Energy Drink</li>
-						<li><input id="op10.0.1" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="coffee">Coffee</li>
-						<li><input id="op10.0.2" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="pepsi">Pepsi</li>
-						<li><input id="op10.0.3" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="mountaindew">Mountain Dew</li>
-						<li><input id="op10.0.4" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="drpepper">Dr. Pepper</li>
-						<li><input id="op10.0.5" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="water">Water</li>
-						<li><input id="op10.0.6" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="nothing">Nothing</li>
-						<li><input id="op10.0.7" name="op10" onclick="expandCollapseBoxB('question10.1');" type="radio" value="">Other Beverage</li>
+						<li><label><input id="op10.0.0" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="Energy Drink">Energy Drink</label></li>
+						<li><label><input id="op10.0.1" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="Coffee">Coffee</label></li>
+						<li><label><input id="op10.0.2" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="Pepsi">Pepsi</label></li>
+						<li><label><input id="op10.0.3" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="Mountain Dew">Mountain Dew</label></li>
+						<li><label><input id="op10.0.4" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="Dr. Pepper">Dr. Pepper</label></li>
+						<li><label><input id="op10.0.5" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="Water">Water</label></li>
+						<li><label><input id="op10.0.6" name="op10" onclick="collapseOnly('question10.1');" type="radio" value="Nothing">Nothing</label></li>
+						<li><label><input id="op10.0.7" name="op10" onclick="expandCollapseBoxB('question10.1');" type="radio" value="Other">Other Beverage</label></li>
 					</ul>
 				</div>
 				<div id="question10.1" name="question10.1" style="display: none">
@@ -175,14 +175,14 @@
 				<div id="question11" name="question11">
 					<h6>11) What food product do you most want removed from vending machines on campus?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op11.0.0" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="energybar">Energy Bar</li>
-						<li><input id="op11.0.1" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="chips">Chips</li>
-						<li><input id="op11.0.2" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="candy">Candy</li>
-						<li><input id="op11.0.3" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="cutecookie">Cute Cookie</li>
-						<li><input id="op11.0.4" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="pretzels">Pretzels</li>
-						<li><input id="op11.0.5" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="gum">Gum</li>
-						<li><input id="op11.0.6" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="nothing">Nothing</li>
-						<li><input id="op11.0.7" name="op11" onclick="expandCollapseBoxB('question11.1');" type="radio" value="Other">Other Snack</li>
+						<li><label><input id="op11.0.0" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="Energy Bar">Energy Bar</label></li>
+						<li><label><input id="op11.0.1" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="Chips">Chips</label></li>
+						<li><label><input id="op11.0.2" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="Candy">Candy</label></li>
+						<li><label><input id="op11.0.3" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="Cutecookie">Cute Cookie</label></li>
+						<li><label><input id="op11.0.4" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="Pretzels">Pretzels</label></li>
+						<li><label><input id="op11.0.5" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="Gum">Gum</label></li>
+						<li><label><input id="op11.0.6" name="op11" onclick="collapseOnly('question11.1');" type="radio" value="Nothing">Nothing</label></li>
+						<li><label><input id="op11.0.7" name="op11" onclick="expandCollapseBoxB('question11.1');" type="radio" value="Other">Other Snack</label></li>
 					</ul>
 				</div>
 				<div id="question11.1" name="question11.1" style="display: none">
@@ -194,14 +194,14 @@
 				<div id="question12" name="question12">
 					<h6>12) What beverage product do you most want removed from vending machines on campus?</h6>
 					<ul style="list-style:none;">
-						<li><input id="op12.0.0" name="op12" type="radio" value="energydrink">Energy Drink</li>
-						<li><input id="op12.0.1" name="op12" type="radio" value="coffee">Coffee</li>
-						<li><input id="op12.0.2" name="op12" type="radio" value="pepsi">Pepsi</li>
-						<li><input id="op12.0.3" name="op12" type="radio" value="mountaindew">Mountain Dew</li>
-						<li><input id="op12.0.4" name="op12" type="radio" value="drpepper">Dr. Pepper</li>
-						<li><input id="op12.0.5" name="op12" type="radio" value="water">Water</li>
-						<li><input id="op12.0.6" name="op12" type="radio" value="nothing">Nothing</li>
-						<li><input id="op12.0.7" name="op12" onclick="expandCollapseBoxB('question12.1');" type="radio" value="Other">Other Beverage</li>
+						<li><label><input id="op12.0.0" name="op12" onclick="collapseOnly('question12.1');" type="radio" value="Energy Drink">Energy Drink</label></li>
+						<li><label><input id="op12.0.1" name="op12" onclick="collapseOnly('question12.1');" type="radio" value="Coffee">Coffee</label></li>
+						<li><label><input id="op12.0.2" name="op12" onclick="collapseOnly('question12.1');" type="radio" value="Pepsi">Pepsi</label></li>
+						<li><label><input id="op12.0.3" name="op12" onclick="collapseOnly('question12.1');" type="radio" value="Mountain Dew">Mountain Dew</label></li>
+						<li><label><input id="op12.0.4" name="op12" onclick="collapseOnly('question12.1');" type="radio" value="Dr. Pepper">Dr. Pepper</label></li>
+						<li><label><input id="op12.0.5" name="op12" onclick="collapseOnly('question12.1');" type="radio" value="Water">Water</label></li>
+						<li><label><input id="op12.0.6" name="op12" onclick="collapseOnly('question12.1');" type="radio" value="Nothing">Nothing</label></li>
+						<li><label><input id="op12.0.7" name="op12" onclick="expandCollapseBoxB('question12.1');" type="radio" value="Other">Other Beverage</label></li>
 					</ul>
 				</div>
 				<div id="question12.1" name="question12.1" style="display: none">
@@ -347,8 +347,8 @@
 				<!-- Question 15 Start -->
 				<div id="question15" name="question15">
 					<h6>15) Did you find that this survey was unbiased and gave you a chance to express your opinion fairly?</h6>
-					<label class="radio-inline"><input id="op15.0.0" name="opt15" type="radio" onclick="collapseOnly('question15.1');" value="yes">Yes</label>
-					<label class="radio-inline"><input id="q15.0.1" name="opt15" type="radio" onclick="expandOnly('question15.1');" value="no">No</label><br>
+					<label class="radio-inline"><input id="op15.0.0" name="opt15" type="radio" onclick="collapseOnly('question15.1');" value="Yes">Yes</label>
+					<label class="radio-inline"><input id="q15.0.1" name="opt15" type="radio" onclick="expandOnly('question15.1');" value="No">No</label><br>
 				</div>
 				<div id="question15.1" name="question15.1" style="display: none">
 					<h6>Why not?</h6>
@@ -365,8 +365,8 @@
 				<p style="width:80%">To complete this survey we ask that you provide your name and email. The purpose of these provisions is to create 
 				a PDF version that can be sent to your email. The email will not be used to send advertisements or spam. Thanks for your cooperation!</p><br>
 				<div>
-					<label style="width:6%">Name:</label><input id="name" name="name" type="text" value=""><br>
-					<label style="width:6%">Email:</label><input id="email" name="email" type="text" value=""><br>
+					<label style="width:6%">Name:</label><input id="name" name="name" type="text"><br>
+					<label style="width:6%">Email:</label><input id="email" name="email" type="text"><br>
 					<label>I agree to Snackfacts' terms and conditions: <input id="agreement" name="agreement" onclick="toggle();" type="checkbox"></label>
 					<br><br>
 					<input disabled id="submit" type="submit" value="Submit" name="submit"><br><br>
