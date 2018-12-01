@@ -27,7 +27,7 @@ $stmt3 = $connection->prepare("SELECT name FROM Product");
 $stmt3->execute() or die(mysqli_error());
 $mostPopular = $stmt3->fetch()[0];
 //get Top Sale List 
-$stmt4 = $connection->prepare("SELECT question9 FROM survey1");
+$stmt4 = $connection->prepare("SELECT question9 FROM `survey1`");
 $stmt4->execute() or die(mysqli_error());
 $TodaySale = $stmt4->fetch();
 ?>
@@ -127,7 +127,7 @@ $TodaySale = $stmt4->fetch();
 				<!--list boxes-->
 				<div class="row">
 					<?php
-						ulistbox("#17a2b8", "Today's Sale List", $TodaySale);
+						olistbox("#17a2b8", "Today's Sale List", $TodaySale);
 						ulistbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
 					?>
 				</div>
