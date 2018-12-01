@@ -32,6 +32,20 @@ $stmt4 = $connection->prepare("SELECT question9 FROM `survey1`");
 $stmt4->execute() or die(mysqli_error());
 $TodaySale = $stmt4->fetch()[0];
 
+/* Need to finish 
+//get Top Sale List 
+$stmt4 = $connection->prepare("SELECT question9 FROM `survey1`");
+$stmt4->execute() or die(mysqli_error());
+//$TodaySale = $stmt4->fetch();
+if($stmt4){
+	while ($stmt4->mysqli_fetch_assoc())
+	{
+ 		$TodaySale = $row["question9"];
+ 		return $TodaySale;
+	}
+}
+*/
+
 ?>
 
 <html lang="en">
@@ -129,7 +143,7 @@ $TodaySale = $stmt4->fetch()[0];
 				<!--list boxes-->
 				<div class="row">
 					<?php
-						olistbox("#17a2b8", "Today's Sale List", $TodaySale);
+						ulistbox("#17a2b8", "Today's Sale List", $TodaySale);
 						ulistbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
 					?>
 				</div>
