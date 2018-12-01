@@ -1,4 +1,4 @@
-function addRow() {
+addRow() {
     var table = document.getElementById('table').getElementsByTagName('tbody')[0];
 
 	// Insert a row in the table at the last row
