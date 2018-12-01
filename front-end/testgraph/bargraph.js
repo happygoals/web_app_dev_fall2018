@@ -22,7 +22,7 @@ $(document).ready(function(){
             
 			for(var i in data) {
 				item.push(data[i].name);
-				would.push(data[i].wouldPurchase);
+				would.push(data[i].wouldPurchase - data[i].wouldRemove);
 			}
 			var chartdata = {
 				labels: item,
