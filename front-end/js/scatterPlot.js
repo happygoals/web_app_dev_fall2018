@@ -38,13 +38,13 @@ $(document).ready(function(){
 				],
             options: {
                  responsive: true,
-                 title: {
+                 title: [{
                     display: true,
                     position: "top",
                     text: "Item Popularity",
                     fontSize: 18,
                     fontColor: "#111"
-                },
+                }],
                 scales: {
                     xAxes: [{
                         type: 'linear',
