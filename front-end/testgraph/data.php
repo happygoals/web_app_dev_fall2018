@@ -17,7 +17,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query = sprintf("SELECT name, wouldPurchase FROM Product ORDER BY wouldPurchase DESC");
+$query = sprintf("SELECT name, wouldPurchase, wouldRemove FROM Product ORDER BY wouldPurchase DESC");
 
 //execute query
 $result = $mysqli->query($query);

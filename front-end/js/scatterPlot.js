@@ -19,6 +19,7 @@ $(document).ready(function(){
 		colors.push("rgba(" + color[i] + ", 1.0)");
 	}
 
+        //data
     	for(var i in data) {
 				item.push(data[i].name);
 				would.push("{x:"+data[i].wouldPurchase+", y:"+data[i].wouldRemove+"}");
