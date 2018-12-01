@@ -21,6 +21,7 @@ $(document).ready(function(){
 				item.push(data[i].name);
 				would.push(data[i].wouldPurchase);
 			}
+			//chart data
 			var chartdata = {
 				labels: item,
 				datasets : [
@@ -33,11 +34,33 @@ $(document).ready(function(){
 					}
 				]
 			};
+			//option 
+				    var options = {
+				        responsive: true,
+				        title: {
+				            display: true,
+				            position: "top",
+				            text: "Item Popularity ('most common' - 'least common')",
+				            fontSize: 18,
+				            fontColor: "#111"
+				        },
+				        legend: {
+				            display: true,
+				            position: "bottom",
+				            labels: {
+				                fontColor: "#333",
+				                fontSize: 16
+				        }
+    					 }
+					   };
+					   
 
 			var ctx = $("#pieChart1");
-			var pieChart = new Chart(ctx, {
+
+			var barGraph = new Chart(ctx, {
 				type: 'pie',
-				data: chartdata
+				data: chartdata,
+				options: options
 			});
 		},
 		error: function(data) {

@@ -9,6 +9,8 @@ $(document).ready(function(){
 			var item = [];
 			var would = [];
 			
+			
+			
 			//
         	var borderColors = [];
         	var backgroundColors = [];
@@ -19,10 +21,17 @@ $(document).ready(function(){
         	}
             //
             
-            
 			for(var i in data) {
 				item.push(data[i].name);
-				would.push(data[i].wouldPurchase - data[i].wouldRemove);
+							var first = data[i].wouldPurchase;
+							var second = data[i].wouldRemove;
+							
+				 first = parseFloat(first.replace(',','')); 
+				 console.log(first); 
+				 
+				 var total = (first - second);
+				 console.log(total); 
+				would.push(total);
 			}
 			var chartdata = {
 				labels: item,
@@ -34,14 +43,45 @@ $(document).ready(function(){
         				borderWidth: 1,
 						data: would
 					}
-				]
+				], options: {
+                 responsive: true,
+                 title: [{
+                    display: true,
+                    position: "top",
+                    text: "Item Popularity",
+                    fontSize: 18,
+                    fontColor: "#111"
+                }]
+					
+				}
+				
 			};
 
+
+    var options = {
+        responsive: true,
+        title: {
+            display: true,
+            position: "top",
+            text: "Item Popularity",
+            fontSize: 18,
+            fontColor: "#111"
+        },
+        legend: {
+            display: true,
+            position: "bottom",
+            labels: {
+                fontColor: "#333",
+                fontSize: 16
+            }
+        }
+    };
 			var ctx = $("#mycanvas");
 
 			var barGraph = new Chart(ctx, {
 				type: 'bar',
-				data: chartdata
+				data: chartdata,
+				        options: options
 			});
 		},
 		error: function(data) {

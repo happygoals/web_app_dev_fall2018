@@ -22,6 +22,7 @@ $(document).ready(function(){
 				would.push(data[i].wouldPurchase);
 			}
 			
+			//chart data
 			var chartdata = {
 				labels: item,
 				datasets : [
@@ -34,12 +35,33 @@ $(document).ready(function(){
 					}
 				]
 			};
-            
-            var ctx = $("#lineChart1");
+			//option 
+				    var options = {
+				        responsive: true,
+				        title: {
+				            display: true,
+				            position: "top",
+				            text: "Item Popularity ('most common' - 'least common')",
+				            fontSize: 18,
+				            fontColor: "#111"
+				        },
+				        legend: {
+				            display: true,
+				            position: "bottom",
+				            labels: {
+				                fontColor: "#333",
+				                fontSize: 16
+				        }
+    					 }
+					   };
+					   
 
-			var lineGraph = new Chart(ctx, {
+			var ctx = $("#lineChart1");
+
+			var barGraph = new Chart(ctx, {
 				type: 'line',
-				data: chartdata
+				data: chartdata,
+				options: options
 			});
 		},
 		error: function(data) {
