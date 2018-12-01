@@ -1,4 +1,3 @@
-
 var color = ['255, 99, 132', '54, 162, 235', '255, 206, 86', '75, 192, 192', '153, 102, 255', '255, 159, 64'];
 
 $(document).ready(function(){
@@ -9,20 +8,22 @@ $(document).ready(function(){
 			console.log(data);
 			var item = [];
 			var would = [];
-			
-			//
-        	var borderColors = [];
+
+            var borderColors = [];
         	var backgroundColors = [];
-        	
-        	for (var i=0; i<color.length; i++) {
-        		backgroundColors.push("rgba(" + color[i] + ", 0.2)");
-        		borderColors.push("rgba(" +color[i] + ", 1.0)");
-        	}
-            
-			for(var i in data) {
+
+	//color
+	var colors = [];
+	
+	for (var i=0; i<color.length; i++) {
+		colors.push("rgba(" + color[i] + ", 1.0)");
+	}
+
+    	for(var i in data) {
 				item.push(data[i].name);
-				would.push(data[i].wouldPurchase);
+				would.push("{x:"+data[i].wouldPurchase+", y:"+data[i].wouldRemove+"}");
 			}
+
 			var chartdata = {
 				labels: item,
 				datasets : [
@@ -54,7 +55,7 @@ $(document).ready(function(){
 
 			var ctx = $("#scatterPlot1");
 
-			var barGraph = new Chart(ctx, {
+			var scatterPlot = new Chart(ctx, {
 				type: 'scatter',
 				data: chartdata
 			});
