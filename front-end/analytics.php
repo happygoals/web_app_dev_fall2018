@@ -1,8 +1,6 @@
 <?php
 session_start();
-
 require ('connection.php');
-
 //determine if user has admin privs or not
 $adminPriv = false;
 if (isset($_SESSION["username"])) {
@@ -14,7 +12,6 @@ if (isset($_SESSION["username"])) {
 		$adminPriv = true;
 	}
 }
-
 //get survey data for later use
 $stmt = $connection->prepare("SELECT COUNT(*) FROM survey1");
 $stmt->execute() or die(mysqli_error());
@@ -25,25 +22,33 @@ $stmt2 = $connection->prepare("SELECT count(*) FROM `survey1` WHERE DATE(Date) B
 $stmt2->execute() or die(mysqli_error());
 $numNewUsers = $stmt2->fetch()[0];
 
-//get most popular snack
-$stmt = $connection->prepare("SELECT name FROM Product");
-$stmt->execute() or die(mysqli_error());
 
-$mostPopular = $stmt->fetch()[0];
+//get most popular snack
 $stmt3 = $connection->prepare("SELECT name FROM Product");
 $stmt3->execute() or die(mysqli_error());
 $mostPopular = $stmt3->fetch()[0];
 
 
 //get Top Sale List
-$stmt4 = $connection->prepare("SELECT question9 FROM survey1 LIMIT 3");
+$stmt4 = $connection->prepare("SELECT question9 FROM survey1 LIMIT 4");
 $stmt4->execute() or die(mysqli_error());
-
 //that query returns several rows (up to 3), so we put each row into a new array
 $i = 0;
 while ($result = $stmt4->fetch()) {
-	$TodaySale[$i] = $result[0];
-	$i++;
+    $TodaySale[$i] = $result[0];
+    $i++;
+}
+
+
+//get Popular vending machine building
+$stmt5 = $connection->prepare("SELECT question13 FROM survey1 LIMIT 4");
+$stmt5->execute() or die(mysqli_error());
+
+//that query returns several rows (up to 3), so we put each row into a new array
+$j = 0;
+while ($result = $stmt5->fetch()) {
+    $Vending[$j] = $result[0];
+    $j++;
 }
 
 
@@ -144,8 +149,8 @@ while ($result = $stmt4->fetch()) {
 				<!--list boxes-->
 				<div class="row">
 					<?php
-						olistbox("#17a2b8", "Top Sale List", array("Coke", "Orange Juice", "Potato Chips"));
-						ulistbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
+						ulistbox("#17a2b8", "Today's Sale List", $TodaySale);
+						ulistbox("#6c757d", "Popular Vending Maching Building", $Vending);
 					?>
 				</div>
 				<!-- Table -->
