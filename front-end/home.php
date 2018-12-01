@@ -21,8 +21,8 @@
 					<h1 style="color:#FEB664">Vending machine</h1>
 					<h1>+</h1>
 					<h1 style="color:#EDC9FE">Data Analytics</h1><br>
-					<p>Make the ideal vending machine you want <a href="survey.php">Surveys</a></p>
-					<p>Maximize your profit from your vending machine <a href="analytics.php">Analytics</a></p>
+					<p>Make the ideal vending machine you want: <a href="survey.php">Surveys</a></p>
+					<p>Maximize your profit from your vending machine: <a href="analytics.php">Analytics</a></p>
 				</div>
 			</div>
 		</header>
@@ -44,7 +44,7 @@
 				<div class="col-sm-2 sidenavr left"></div>
 				<div class="col-sm-8 intro text-left">
 					<h2>Who developed Snackfacts?</h2>
-					<p>Developed for Purdue University Fort Wayne CS372 Fall 2018 by Haemin Ryu, Mack Crawford, Michael Wolgast, Min Namgung, and Nicholas Barnard</p>
+					<p>Developed for Purdue University Fort Wayne CS372 Fall 2018 by Haemin Ryu, Mack Crawford, Michael Wolgast, Min Namgung, and Nicholas Barnard.</p>
 				</div>
 				<div class="col-sm-2 sidenavr righttext">
 					<h3>Member</h3>
