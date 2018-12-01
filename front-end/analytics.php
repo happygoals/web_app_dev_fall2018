@@ -21,16 +21,31 @@ $stmt->execute() or die(mysqli_error());
 $numSurveys = $stmt->fetch()[0];
 
 //get new visitors based on the date
-/*
-$stmt2 = $connection->prepare("SELECT count(*) FROM `survey1` WHERE DATE(Date) = CURDATE()");
+$stmt2 = $connection->prepare("SELECT count(*) FROM `survey1` WHERE DATE(Date) BETWEEN CURDATE() - INTERVAL 7 DAY AND CURDATE()");
 $stmt2->execute() or die(mysqli_error());
 $numNewUsers = $stmt2->fetch()[0];
-*/
+
 //get most popular snack
 $stmt = $connection->prepare("SELECT name FROM Product");
 $stmt->execute() or die(mysqli_error());
 
 $mostPopular = $stmt->fetch()[0];
+$stmt3 = $connection->prepare("SELECT name FROM Product");
+$stmt3->execute() or die(mysqli_error());
+$mostPopular = $stmt3->fetch()[0];
+
+
+//get Top Sale List
+$stmt4 = $connection->prepare("SELECT question9 FROM survey1 LIMIT 3");
+$stmt4->execute() or die(mysqli_error());
+
+//that query returns several rows (up to 3), so we put each row into a new array
+$i = 0;
+while ($result = $stmt4->fetch()) {
+	$TodaySale[$i] = $result[0];
+	$i++;
+}
+
 ?>
 
 <html lang="en">
