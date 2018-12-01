@@ -12,6 +12,7 @@ $(document).ready(function(){
 			var borderColors = [];
         	var backgroundColors = [];
         	
+        	//color setting
         	for (var i=0; i<radarColor.length; i++) {
         		backgroundColors.push("rgba(" + radarColor[i] + ", 0.2)");
         		borderColors.push("rgba(" +radarColor[i] + ", 1.0)");
