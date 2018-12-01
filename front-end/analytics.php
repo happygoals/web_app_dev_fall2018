@@ -1,6 +1,7 @@
 <?php
 session_start();
 require ('connection.php');
+
 //determine if user has admin privs or not
 $adminPriv = false;
 if (isset($_SESSION["username"])) {

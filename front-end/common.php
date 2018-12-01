@@ -44,7 +44,7 @@ function simpleBox($background, $icon, $title, $value) { ?>
 			<h6><?php echo $title ?></h6>
 		</div>
 		<div class="card-body" style="background-color:<?php echo $background ?>;">
-			<h3><i class="<?php echo $icon ?>"></i> <?php echo $value ?></h3>
+			<h5><i class="<?php echo $icon ?>"></i> <?php echo $value ?></h5>
 		</div>
 	</div>
 <?php } ?>
