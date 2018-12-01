@@ -26,10 +26,17 @@ $numNewUsers = $stmt2->fetch()[0];
 $stmt3 = $connection->prepare("SELECT name FROM Product");
 $stmt3->execute() or die(mysqli_error());
 $mostPopular = $stmt3->fetch()[0];
-//get Top Sale List 
-$stmt4 = $connection->prepare("SELECT question9 FROM `survey1`");
+
+//get Top Sale List
+$stmt4 = $connection->prepare("SELECT question9 FROM survey1 LIMIT 3");
 $stmt4->execute() or die(mysqli_error());
-$TodaySale = $stmt4->fetch();
+
+//that query returns several rows (up to 3), so we put each row into a new array
+$i = 0;
+while ($result = $stmt4->fetch()) {
+	$TodaySale[$i] = $result[0];
+	$i++;
+}
 ?>
 
 <html lang="en">
@@ -128,7 +135,7 @@ $TodaySale = $stmt4->fetch();
 				<div class="row">
 					<?php
 						ulistbox("#17a2b8", "Today's Sale List", $TodaySale);
-						ulistbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
+						ulistbox("#6c757d", "New Entry Rank", array("Cute Cookie", "Buritto", "Banana"));
 					?>
 				</div>
 				<!-- Table -->
