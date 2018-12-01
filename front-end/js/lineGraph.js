@@ -16,11 +16,12 @@ $(document).ready(function(){
         		backgroundColors.push("rgba(" + lineColor[i] + ", 0.2)");
         		borderColors.push("rgba(" +lineColor[i] + ", 1.0)");
         	}
-            //
+
             for(var i in data) {
 				item.push(data[i].name);
 				would.push(data[i].wouldPurchase);
 			}
+			
 			var chartdata = {
 				labels: item,
 				datasets : [

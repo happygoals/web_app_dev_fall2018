@@ -1,4 +1,4 @@
-var color = ['255, 99, 132', '54, 162, 235', '255, 206, 86', '75, 192, 192', '153, 102, 255'];
+var pieColor = ['255, 99, 132', '54, 162, 235', '255, 206, 86', '75, 192, 192', '153, 102, 255'];
 
 $(document).ready(function(){
 	$.ajax({
@@ -9,17 +9,14 @@ $(document).ready(function(){
 			var item = [];
 			var would = [];
 			
-			//
         	var borderColors = [];
         	var backgroundColors = [];
         	
-        	for (var i=0; i<color.length; i++) {
-        		backgroundColors.push("rgba(" + color[i] + ", 0.2)");
-        		borderColors.push("rgba(" +color[i] + ", 1.0)");
+        	for (var i=0; i<pieColor.length; i++) {
+        		backgroundColors.push("rgba(" + pieColor[i] + ", 0.2)");
+        		borderColors.push("rgba(" +pieColor[i] + ", 1.0)");
         	}
-            //
-            
-            
+
 			for(var i in data) {
 				item.push(data[i].name);
 				would.push(data[i].wouldPurchase);
@@ -38,8 +35,7 @@ $(document).ready(function(){
 			};
 
 			var ctx = $("#pieChart1");
-
-			var barGraph = new Chart(ctx, {
+			var pieChart = new Chart(ctx, {
 				type: 'pie',
 				data: chartdata
 			});
