@@ -27,6 +27,7 @@ $stmt3 = $connection->prepare("SELECT name FROM Product");
 $stmt3->execute() or die(mysqli_error());
 $mostPopular = $stmt3->fetch()[0];
 
+
 //get Top Sale List
 $stmt4 = $connection->prepare("SELECT question9 FROM survey1 LIMIT 3");
 $stmt4->execute() or die(mysqli_error());
@@ -37,6 +38,7 @@ while ($result = $stmt4->fetch()) {
 	$TodaySale[$i] = $result[0];
 	$i++;
 }
+
 ?>
 
 <html lang="en">
