@@ -15,6 +15,8 @@ if(!$mysqli){
 	die("Connection failed: " . $mysqli->error);
 }
 
+
+
 //query to get data from the table
 $query1 = sprintf("SELECT name, wouldPurchase FROM Product ORDER BY wouldPurchase DESC");
 
