@@ -16,12 +16,12 @@ if (isset($_SESSION["username"])) {
 $stmt = $connection->prepare("SELECT COUNT(*) FROM survey1");
 $stmt->execute() or die(mysqli_error());
 $numSurveys = $stmt->fetch()[0];
+
 //get new visitors based on the date
-/*
-$stmt2 = $connection->prepare("SELECT count(*) FROM `survey1` WHERE DATE(Date) = CURDATE()");
+$stmt2 = $connection->prepare("SELECT count(*) FROM `survey1` WHERE DATE(Date) BETWEEN CURDATE() - INTERVAL 7 DAY AND CURDATE()");
 $stmt2->execute() or die(mysqli_error());
 $numNewUsers = $stmt2->fetch()[0];
-*/
+
 //get most popular snack
 $stmt3 = $connection->prepare("SELECT name FROM Product");
 $stmt3->execute() or die(mysqli_error());
