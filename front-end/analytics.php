@@ -1,8 +1,6 @@
 <?php
 session_start();
-
 require ('connection.php');
-
 //determine if user has admin privs or not
 $adminPriv = false;
 if (isset($_SESSION["username"])) {
@@ -14,12 +12,10 @@ if (isset($_SESSION["username"])) {
 		$adminPriv = true;
 	}
 }
-
 //get survey data for later use
 $stmt = $connection->prepare("SELECT COUNT(*) FROM survey1");
 $stmt->execute() or die(mysqli_error());
 $numSurveys = $stmt->fetch()[0];
-
 //get new visitors based on the date
 /*
 $stmt2 = $connection->prepare("SELECT count(*) FROM `survey1` WHERE DATE(Date) = CURDATE()");
@@ -30,13 +26,10 @@ $numNewUsers = $stmt2->fetch()[0];
 $stmt3 = $connection->prepare("SELECT name FROM Product");
 $stmt3->execute() or die(mysqli_error());
 $mostPopular = $stmt3->fetch()[0];
-
 //get Top Sale List 
 $stmt4 = $connection->prepare("SELECT question9 FROM `survey1`");
 $stmt4->execute() or die(mysqli_error());
 $TodaySale = $stmt4->fetch();
-
-
 ?>
 
 <html lang="en">
@@ -185,5 +178,4 @@ $TodaySale = $stmt4->fetch();
 	</div>
 	<?php include "footer.php" ?>
 </body>
-</html></body>
 </html>
