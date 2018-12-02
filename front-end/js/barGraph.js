@@ -1,6 +1,6 @@
 var color = ['255, 99, 132', '54, 162, 235', '255, 206, 86', '75, 192, 192', '153, 102, 255'];
 
-$(document).ready(function(){
+$(document).ready(function() {
 	$.ajax({
 		url: "/front-end/analytics/data.php",
 		method: "GET",
@@ -9,7 +9,6 @@ $(document).ready(function(){
 			var item = [];
 			var would = [];
 			
-			//
         	var borderColors = [];
         	var backgroundColors = [];
         	
@@ -21,14 +20,12 @@ $(document).ready(function(){
             // calculate two values : (result) = (wouldPurchase) - (wouldRemove)
 			for(var i in data) {
 				item.push(data[i].name);
-							var first = data[i].wouldPurchase;
-							var second = data[i].wouldRemove;
+				var first = data[i].wouldPurchase;
+				var second = data[i].wouldRemove;
 							
-				 first = parseFloat(first.replace(',','')); 
-				 console.log(first); 
+				first = parseFloat(first.replace(',','')); 
 				 
-				 var total = (first - second);
-				 console.log(total); 
+				var total = (first - second);
 				would.push(total);
 			}
 			
@@ -45,26 +42,26 @@ $(document).ready(function(){
 					}
 				]
 			};
+			
 			//option 
-				    var options = {
-				        responsive: true,
-				        title: {
-				            display: true,
-				            position: "top",
-				            text: "Item Popularity ('most common' - 'least common')",
-				            fontSize: 18,
-				            fontColor: "#111"
-				        },
-				        legend: {
-				            display: true,
-				            position: "bottom",
-				            labels: {
-				                fontColor: "#333",
-				                fontSize: 16
-				        }
-    					 }
-					   };
-					   
+			var options = {
+				responsive: true,
+				title: {
+					display: true,
+					position: "top",
+					text: "Item Popularity ('most common' - 'least common')",
+					fontSize: 18,
+					fontColor: "#111"
+				},
+				legend: {
+					display: true,
+					position: "bottom",
+					labels: {
+						fontColor: "#333",
+						fontSize: 16
+					}
+				}
+			};
 
 			var ctx = $("#barGraph1");
 
