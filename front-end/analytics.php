@@ -139,7 +139,7 @@ while ($result = $stmt5->fetch()) {
                 <div class="row">
                     <?php
                         ulistbox("#17a2b8", "Today's Sale List", $TodaySale);
-                        ulistbox("#6c757d", "Popular Vending Maching Building", $Vending);
+                        ulistbox("#6c757d", "Popular Vending Machine Building", $Vending);
                     ?>
                 </div>
                 <!-- Table -->
