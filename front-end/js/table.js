@@ -23,6 +23,8 @@ function deleteRow(btn) {
         //remove the row
     	var removedRow = btn.parentNode.parentNode;
 	    removedRow.parentNode.removeChild(removedRow);
+	    
+	    prodRemove = removedRow.cells[1].children[0].value;
 
         //reset indexes for each remaining row
         var table = document.getElementById("table").getElementsByTagName('tbody')[0];
@@ -30,6 +32,8 @@ function deleteRow(btn) {
             row = table.rows[i];
 		    row.cells[0].innerHTML = i + 1;
 	    }
+	    //delete the row
+	    $sql = DELETE FROM `Product` WHERE name=prodRemove;
     }
 }
 
@@ -41,10 +45,15 @@ function saveRow(btn) {
 		var val = savedRow.cells[i].children[0].value;
 		savedRow.cells[i].innerHTML = val;
     }
+    $name = savedRow.cells[1].innerHTML;
+    
+    $price = savedRow.cells[2].innerHTML;
+    
+    $machine = savedRow.cells[3].innerHTML;
 
     //swap the save button for a delete button
     savedRow.cells[4].innerHTML = '<button type="button" class="btn btn-outline-danger" onclick="deleteRow(this)"><i class="fas fa-trash"></i>&nbsp;Delete</button>';
     
 	//save the new row to the database
-    //coming soon
+    $sql = INSERT INTO `Product`(`name`, `price`, `machines`) VALUES ($name, $price, $machine);
 }
