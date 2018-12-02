@@ -1,4 +1,4 @@
-var lineColor = ['255, 99, 132', '54, 162, 235', '255, 206, 86', '75, 192, 192', '153, 102, 255'];
+var color = ['255, 99, 132', '54, 162, 235', '255, 206, 86', '75, 192, 192', '153, 102, 255'];
 
 $(document).ready(function(){
 	$.ajax({
@@ -9,17 +9,27 @@ $(document).ready(function(){
 			var item = [];
 			var would = [];
 			
-			var borderColors = [];
+			//
+        	var borderColors = [];
         	var backgroundColors = [];
         	
-        	for (var i=0; i<lineColor.length; i++) {
-        		backgroundColors.push("rgba(" + lineColor[i] + ", 0.2)");
-        		borderColors.push("rgba(" +lineColor[i] + ", 1.0)");
+        	for (var i=0; i<color.length; i++) {
+        		backgroundColors.push("rgba(" + color[i] + ", 0.2)");
+        		borderColors.push("rgba(" +color[i] + ", 1.0)");
         	}
-
-            for(var i in data) {
+            
+            // calculate two values : (result) = (wouldPurchase) - (wouldRemove)
+			for(var i in data) {
 				item.push(data[i].name);
-				would.push(data[i].wouldPurchase);
+							var first = data[i].wouldPurchase;
+							var second = data[i].wouldRemove;
+							
+				 first = parseFloat(first.replace(',','')); 
+				 console.log(first); 
+				 
+				 var total = (first - second);
+				 console.log(total); 
+				would.push(total);
 			}
 			
 			//chart data
