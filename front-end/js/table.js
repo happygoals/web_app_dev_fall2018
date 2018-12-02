@@ -17,11 +17,12 @@ function addRow() {
 }
 						
 function deleteRow(btn) {
-    var confirmed = confirm("This will delete the row from the DB and cannot be undone. Are you sure? (it actually doesn't though)");
+    var confirmed = confirm("This will delete the row from the DB and cannot be undone. Are you sure?");
     
     if (confirmed == true) {
         //remove the row
     	var removedRow = btn.parentNode.parentNode;
+    	var removedName = removedRow.cells[1].innerHTML;
 	    removedRow.parentNode.removeChild(removedRow);
 
         //reset indexes for each remaining row
@@ -30,7 +31,36 @@ function deleteRow(btn) {
             row = table.rows[i];
 		    row.cells[0].innerHTML = i + 1;
 	    }
+	    
+	    //delete from db
+	    deleteFromDB(removedName);
     }
+}
+
+function addToDB(row) {
+    $.ajax({
+        type: "POST",
+        url: "insertProduct.php",
+        data: {productName:row[0], productLocation:row[1], productPrice:row[2]},
+        dataType: "JSON",
+        success: function(data) {
+        },
+        error: function(err) {
+        }
+	});
+}
+
+function deleteFromDB(name) {
+    $.ajax({
+        type: "POST",
+        url: "deleteProduct.php",
+        data: {productName:name},
+        dataType: "JSON",
+        success: function(data) {
+        },
+        error: function(err) {
+        }
+	});
 }
 
 function saveRow(btn) {
@@ -46,5 +76,5 @@ function saveRow(btn) {
     savedRow.cells[4].innerHTML = '<button type="button" class="btn btn-outline-danger" onclick="deleteRow(this)"><i class="fas fa-trash"></i>&nbsp;Delete</button>';
     
 	//save the new row to the database
-    //coming soon
+    addToDB([savedRow.cells[1].innerHTML, savedRow.cells[2].innerHTML, savedRow.cells[3].innerHTML]);
 }
