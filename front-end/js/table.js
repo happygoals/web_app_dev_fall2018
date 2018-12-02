@@ -1,7 +1,7 @@
 function addRow() {
     var table = document.getElementById('table').getElementsByTagName('tbody')[0];
 
-	// Insert a row in the table at the last row
+	//Insert a row in the table at the last row
 	var newRow = table.insertRow(table.rows.length);
 
 	var newRowHTML = '<th scope="row">' + table.rows.length + '</th>\
@@ -10,10 +10,22 @@ function addRow() {
 		<td><input type="text" name="price' + table.rows.length + '"></td>\
 		<td style="text-align: center;">\
 			<button type="button" class="btn btn-outline-primary" onclick="saveRow(this)">&nbsp;Save</button>\
-			<button type="button" class="btn btn-outline-primary" onclick="deleteRow(this)">&nbsp;Cancel</button>\
+			<button type="button" class="btn btn-outline-primary" onclick="cancelRow(this)">&nbsp;Cancel</button>\
 		</td>';
 							
 	newRow.innerHTML = newRowHTML;
+}
+
+function cancelRow(btn) {
+    var removedRow = btn.parentNode.parentNode;
+    removedRow.parentNode.removeChild(removedRow);
+    
+    //reset indexes for each remaining row
+    var table = document.getElementById("table").getElementsByTagName('tbody')[0];
+    for (var i = 0, row; i<table.rows.length; i++) {
+        row = table.rows[i];
+	    row.cells[0].innerHTML = i + 1;
+	}
 }
 						
 function deleteRow(btn) {

@@ -137,7 +137,7 @@ while ($result = $stmt4->fetch()) {
 				<div class="row">
 					<?php
 						olistbox("#17a2b8", "Today's Sale List", $TodaySale);
-						ulistbox("#6c757d", "New Entry Lank", array("Cute Cookie", "Buritto", "Banana"));
+						ulistbox("#6c757d", "New Entry Rank", array("Cute Cookie", "Buritto", "Banana"));
 					?>
 				</div>
 				<!-- Table -->
