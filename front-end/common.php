@@ -49,12 +49,7 @@ function simpleBox($background, $icon, $title, $value) { ?>
 	</div>
 <?php } ?>
 
-<?php
 
-function deleteR() {
-    
-}
-<?php } ?>
 <?php
 function productRow($rowNum, $name, $vmNum, $price, $adminPriv) { ?>
     <tr>
