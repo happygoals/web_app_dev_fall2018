@@ -37,6 +37,7 @@ $(document).ready(function() {
 						label: '# of Votes',
         				backgroundColor: backgroundColors,
         				borderColor: borderColors,
+        				hoverBackgroundColor: borderColors,
         				borderWidth: 1,
 						data: would
 					}
