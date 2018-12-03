@@ -25,7 +25,7 @@ $stmt3 = $connection->prepare("SELECT name FROM Product");
 $stmt3->execute() or die(mysqli_error());
 $mostPopular = $stmt3->fetch()[0];
 //get Top Sale List
-$stmt4 = $connection->prepare("SELECT question9 FROM survey1 LIMIT 4");
+$stmt4 = $connection->prepare("SELECT question9 FROM survey1 LIMIT 3");
 $stmt4->execute() or die(mysqli_error());
 //that query returns several rows (up to 3), so we put each row into a new array
 $i = 0;
@@ -34,7 +34,7 @@ while ($result = $stmt4->fetch()) {
     $i++;
 }
 //get Popular vending machine building
-$stmt5 = $connection->prepare("SELECT question13 FROM survey1 LIMIT 4");
+$stmt5 = $connection->prepare("SELECT question13 FROM survey1 LIMIT 3");
 $stmt5->execute() or die(mysqli_error());
 //that query returns several rows (up to 3), so we put each row into a new array
 $j = 0;
@@ -138,7 +138,7 @@ while ($result = $stmt5->fetch()) {
                 <!--list boxes-->
                 <div class="row">
                     <?php
-                        ulistbox("#17a2b8", "Today's Sale List", $TodaySale);
+                        olistbox("#17a2b8", "Today's Sale List", $TodaySale);
                         ulistbox("#6c757d", "Popular Vending Machine Building", $Vending);
                     ?>
                 </div>

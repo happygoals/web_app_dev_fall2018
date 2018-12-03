@@ -16,7 +16,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query = sprintf("SELECT name, wouldPurchase, wouldRemove FROM Product ORDER BY wouldPurchase DESC");
+$query = sprintf("SELECT name, wouldPurchase, wouldRemove FROM Product ORDER BY wouldPurchase DESC LIMIT 6"); //limit to top 6 items because graph space is limited
 
 //execute query
 $result = $mysqli->query($query);
@@ -35,4 +35,3 @@ $mysqli->close();
 
 //now print the data
 print json_encode($data);
-

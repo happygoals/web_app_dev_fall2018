@@ -46,8 +46,14 @@ function deleteRow(btn) {
 		    row.cells[0].innerHTML = i + 1;
 	    }
 <<<<<<< HEAD
+<<<<<<< HEAD
 	    //delete the row
 	    $sql = DELETE FROM `Product` WHERE name=prodRemove;
+=======
+	    
+	    //delete from db
+	    deleteFromDB(removedName);
+>>>>>>> 8023dfb0c230777da2273369b6ab4ce896c41525
 =======
 	    
 	    //delete from db
@@ -100,9 +106,13 @@ function saveRow(btn) {
     savedRow.cells[4].innerHTML = '<button type="button" class="btn btn-outline-danger" onclick="deleteRow(this)"><i class="fas fa-trash"></i>&nbsp;Delete</button>';
     
 	//save the new row to the database
+<<<<<<< HEAD
 <<<<<<<<< saved version
 
 =========
 
 >>>>>>>>> local version
+=======
+    addToDB([savedRow.cells[1].innerHTML, savedRow.cells[2].innerHTML, savedRow.cells[3].innerHTML]);
+>>>>>>> 8023dfb0c230777da2273369b6ab4ce896c41525
 }
