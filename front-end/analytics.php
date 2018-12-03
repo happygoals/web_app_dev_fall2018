@@ -138,7 +138,7 @@ while ($result = $stmt5->fetch()) {
                 <!--list boxes-->
                 <div class="row">
                     <?php
-                        ulistbox("#17a2b8", "Today's Sale List", $TodaySale);
+                        olistbox("#17a2b8", "Today's Sale List", $TodaySale);
                         ulistbox("#6c757d", "Popular Vending Maching Building", $Vending);
                     ?>
                 </div>
