@@ -2,6 +2,15 @@
 
 Snackfacts 
 
+**Result Images
+<img src="screenshot/main.png" alt="Main"/ height="400">
+<img src="screenshot/survey.png" alt="Survey"/ height="400">
+<img src="screenshot/analytics1.png" alt="Analytics1"/ height="400">
+<img src="screenshot/analytics2.png" alt="Analytics2"/ height="400">
+<img src="screenshot/signin.png" alt="Sign in"/ height="400">
+<img src="screenshot/signup.png" alt="Sign up"/ height="400">
+
+
 <User Story>
 **Necessary
 
