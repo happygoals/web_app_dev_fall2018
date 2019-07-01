@@ -1,9 +1,9 @@
 # web_app_dev_fall2018 - Snackfacts 
 
 **Result Images
-|<img src="/screenshot/main.png" alt="Main"/>|<img src="/screenshot/survey.png" alt="Survey"/>|
-|<img src="/screenshot/analytics1.png" alt="Analytics1"/ width="300">|<img src="/screenshot/analytics2.png" alt="Analytics2"/ width="300">|
-|<img src="/screenshot/signin.png" alt="Sign in"/ width="300">|<img src="/screenshot/signup.png" alt="Sign up"/ width="300">|
+|<img src="/screenshot/main.png" alt="Main"/ width="40%">|<img src="/screenshot/survey.png" alt="Survey"/ width="40%">|
+|<img src="/screenshot/analytics1.png" alt="Analytics1"/ width="40%">|<img src="/screenshot/analytics2.png" alt="Analytics2"/ width="40%">|
+|<img src="/screenshot/signin.png" alt="Sign in"/ width="40%">|<img src="/screenshot/signup.png" alt="Sign up"/ width="40%">|
 
 <User Story>
 **Necessary
