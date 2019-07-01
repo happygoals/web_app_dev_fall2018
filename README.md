@@ -3,6 +3,7 @@
 Snackfacts 
 
 **Result Images
+<img src="/screenshot/main.png" alt="My cool logo"/>
 
 <img src="/screenshot/main.png" alt="Main"/ >
 <img src="/screenshot/survey.png" alt="Survey"/ >
